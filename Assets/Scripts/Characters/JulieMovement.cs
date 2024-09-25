@@ -7,7 +7,7 @@ public class JulieMovement : MonoBehaviour
     Animator julieAnimControl;
 
     float axisH, axisV;
-    List<string> animationParamControls = new List<string> { "isWalking", "isWalkingBackward" };
+    List<string> animationParamControls = new List<string> { "isWalking", "isWalkingBackward", "isWalkingLeft", "isWalkingRight", "isIdle" };
 
     private void Awake()
     {
@@ -20,31 +20,30 @@ public class JulieMovement : MonoBehaviour
         axisH = Input.GetAxis("Horizontal");
         axisV = Input.GetAxis("Vertical");
 
-        // code répétitif, doit changer ou créer fonction
-        if(axisV > 0)
+        // pour avancer et reculer
+        if(axisV != 0)
         {
             transform.Translate(Vector3.forward * 2f * axisV * Time.deltaTime);
-            foreach(string param in animationParamControls)
-            {
-                julieAnimControl.SetBool(param, param.Equals("isWalking"));
-            }
+            changeMovement(axisV > 0 ? "isWalking" : "isWalkingBackward");
         }
 
-        else if(axisV < 0)
+        if(axisH != 0)
         {
-            transform.Translate(Vector3.forward * 2f * axisV * Time.deltaTime);
-            foreach (string param in animationParamControls)
-            {
-                julieAnimControl.SetBool(param, param.Equals("isWalkingBackward"));
-            }
+            transform.Translate(Vector3.right * 2f * axisH * Time.deltaTime);
+            //changeMovement(axisH > 0 ? "isWalkingRight" : "isWalkingLeft");
+            changeMovement(axisH > 0 ? "isWalkingRight" : "isWalkingLeft");
         }
 
-        else
+        if(axisH == 0 && axisV == 0)
         {
-            foreach (string param in animationParamControls)
-            {
-                julieAnimControl.SetBool(param, param.Equals("isIdle"));
-            }
+            changeMovement("isIdle");
+        }
+    }
+
+    private void changeMovement(string movementToActivate){
+        foreach(string param in animationParamControls)
+        {
+            julieAnimControl.SetBool(param, param.Equals(movementToActivate));
         }
     }
 }
