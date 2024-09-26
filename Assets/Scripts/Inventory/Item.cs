@@ -7,9 +7,9 @@ public class Item : MonoBehaviour
     [SerializeField] 
     private Inventory inventory;
 
-    private void itemPickup(Collision other) {
+    private void OnCollisionEnter(Collision other) {
         if (other.collider.CompareTag("Player")) {
-            inventory.AddItem(gameObject);
+            inventory.AddItem(gameObject.name);
             Debug.Log("Item picked up");
             Destroy(gameObject);
         }

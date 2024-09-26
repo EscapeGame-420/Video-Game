@@ -3,22 +3,32 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    private List<GameObject> items = new List<GameObject>();
+    private List<string> items = new List<string>();
 
-    public void AddItem(GameObject item){
-
-        items.Add(item);
-        Debug.Log(item.name + " added to inventory.");
+    void Update(){
+        
+        if (Input.GetKeyDown("tab")){
+            for (int i = 0; i < items.Count; i++){
+                Debug.Log(items[i]);
+            }
+        }
 
     }
 
-    public void UseItem(GameObject item){
+    public void AddItem(string item){
+
+        items.Add(item);
+        Debug.Log(item + " added to inventory.");
+
+    }
+
+    public void UseItem(string item){
 
         if (items.Contains(item)){
             items.Remove(item);
-            Debug.Log(item.name + " removed from inventory.");
+            Debug.Log(item + " removed from inventory.");
         }else{
-            Debug.Log(item.name + " not found in inventory.");
+            Debug.Log(item + " not found in inventory.");
         }
         
     }
