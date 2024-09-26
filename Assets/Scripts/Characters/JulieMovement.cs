@@ -5,6 +5,10 @@ using UnityEngine;
 public class JulieMovement : MonoBehaviour
 {
     Animator julieAnimControl;
+    AudioSource JulieAudioSource;
+
+    [SerializeField] AudioClip sndLeftFoot, sndRightFoot;
+    bool switchFoot = false;
 
     float axisH, axisV;
     List<string> animationParamControls = new List<string> { "isWalking", "isWalkingBackward", "isWalkingLeft", "isWalkingRight", "isIdle" };
@@ -13,7 +17,11 @@ public class JulieMovement : MonoBehaviour
     {
         julieAnimControl = GetComponent<Animator>();
         julieAnimControl.SetBool("isIdle", true);
+
+        JulieAudioSource = GetComponent<AudioSource>();
     }
+
+
     // Update is called once per frame
     void Update()
     {
@@ -39,6 +47,32 @@ public class JulieMovement : MonoBehaviour
             changeMovement("isIdle");
         }
     }
+
+    //public void PlayFootStep()
+    //{
+    //    //if(!JulieAudioSource.isPlaying)
+    //    //{
+    //    //    leftFoot = !leftFoot;
+
+    //    //    JulieAudioSource.pitch = 2f;
+    //    //    JulieAudioSource.PlayOneShot(leftFoot ? sndLeftFoot : sndRightFoot);
+    //    //}
+    //    if (!JulieAudioSource.isPlaying)
+    //    {
+    //        switchFoot = !switchFoot;
+
+    //        if (switchFoot)
+    //        {
+    //            JulieAudioSource.pitch = 2f;
+    //            JulieAudioSource.PlayOneShot(sndLeftFoot);
+    //        }
+    //        else
+    //        {
+    //            JulieAudioSource.pitch = 2f;
+    //            JulieAudioSource.PlayOneShot(sndRightFoot);
+    //        }
+    //    }
+    //}
 
     private void changeMovement(string movementToActivate){
         foreach(string param in animationParamControls)
