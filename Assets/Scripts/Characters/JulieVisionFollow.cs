@@ -7,6 +7,10 @@ public class JulieVisionFollow : MonoBehaviour
     public Transform player;
     public Vector3 offset;
 
+    public int sensitivity = 30;
+    private float xRotation = 0f;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,22 +18,25 @@ public class JulieVisionFollow : MonoBehaviour
         {
             offset = transform.position - player.position;
         }
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
-    void LateUpdate()
+    void Update()
     {
-        Vector3 desiredPosition = player.position + player.rotation * offset;
+        Vector3 desiredPosition = player.position + player.rotation  * offset;
         transform.position = desiredPosition;
         transform.LookAt(player.position + player.forward * 20f);
 
 
 
-        // YAHYA: J'ai fait un petit code ici c'est un début pour le mouvement de la souris mais ca marche pas trop bien. pour Aya
-        //float mouseX = Input.GetAxis("Mouse X") * 100.0f * Time.deltaTime;
-        //float mouseY = Input.GetAxis("Mouse Y") * 100.0f * Time.deltaTime;
+        float mouseY = Input.GetAxis("Mouse Y") * sensitivity * Time.deltaTime;
 
-        //transform.Rotate(Vector3.up, mouseX);
-        //transform.Rotate(Vector3.ri);
+        xRotation -= mouseY;
+        xRotation = Mathf.Clamp(xRotation, -10f, 25f);
+
+        transform.localRotation = Quaternion.Euler(xRotation, player.eulerAngles.y, 0f);
 
     }
+
+    
 }

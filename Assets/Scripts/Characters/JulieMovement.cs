@@ -7,6 +7,9 @@ public class JulieMovement : MonoBehaviour
     Animator julieAnimControl;
     AudioSource JulieAudioSource;
 
+    public int sensitivity = 70;
+    private float yRotation = 0f;
+
     [SerializeField] AudioClip sndLeftFoot, sndRightFoot;
     bool switchFoot = false;
 
@@ -25,6 +28,11 @@ public class JulieMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        float mouseX = Input.GetAxis("Mouse X") * sensitivity * Time.deltaTime;
+        yRotation += mouseX;
+
+        transform.localRotation = Quaternion.Euler(0f, yRotation, 0f);
+
         axisH = Input.GetAxis("Horizontal");
         axisV = Input.GetAxis("Vertical");
 
@@ -38,7 +46,6 @@ public class JulieMovement : MonoBehaviour
         if(axisH != 0)
         {
             transform.Translate(Vector3.right * 2f * axisH * Time.deltaTime);
-            //changeMovement(axisH > 0 ? "isWalkingRight" : "isWalkingLeft");
             changeMovement(axisH > 0 ? "isWalkingRight" : "isWalkingLeft");
         }
 
@@ -48,31 +55,24 @@ public class JulieMovement : MonoBehaviour
         }
     }
 
-    //public void PlayFootStep()
-    //{
-    //    //if(!JulieAudioSource.isPlaying)
-    //    //{
-    //    //    leftFoot = !leftFoot;
+    public void PlayFootStep()
+    {
+        if (!JulieAudioSource.isPlaying)
+        {
+            switchFoot = !switchFoot;
 
-    //    //    JulieAudioSource.pitch = 2f;
-    //    //    JulieAudioSource.PlayOneShot(leftFoot ? sndLeftFoot : sndRightFoot);
-    //    //}
-    //    if (!JulieAudioSource.isPlaying)
-    //    {
-    //        switchFoot = !switchFoot;
-
-    //        if (switchFoot)
-    //        {
-    //            JulieAudioSource.pitch = 2f;
-    //            JulieAudioSource.PlayOneShot(sndLeftFoot);
-    //        }
-    //        else
-    //        {
-    //            JulieAudioSource.pitch = 2f;
-    //            JulieAudioSource.PlayOneShot(sndRightFoot);
-    //        }
-    //    }
-    //}
+            if (switchFoot)
+            {
+                JulieAudioSource.pitch = 2f;
+                JulieAudioSource.PlayOneShot(sndLeftFoot);
+            }
+            else
+            {
+                JulieAudioSource.pitch = 2f;
+                JulieAudioSource.PlayOneShot(sndRightFoot);
+            }
+        }
+    }
 
     private void changeMovement(string movementToActivate){
         foreach(string param in animationParamControls)
