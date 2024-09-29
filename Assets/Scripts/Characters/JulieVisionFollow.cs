@@ -7,6 +7,10 @@ public class JulieVisionFollow : MonoBehaviour
     public Transform player;
     public Vector3 offset;
 
+    public int sensitivity = 30;
+    private float xRotation = 0f;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,12 +18,25 @@ public class JulieVisionFollow : MonoBehaviour
         {
             offset = transform.position - player.position;
         }
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
-    void LateUpdate()
+    void Update()
     {
-        Vector3 desiredPosition = player.position + player.rotation * offset;
+        Vector3 desiredPosition = player.position + player.rotation  * offset;
         transform.position = desiredPosition;
-        transform.LookAt(player.position + player.forward * 10f);
+        transform.LookAt(player.position + player.forward * 20f);
+
+
+
+        float mouseY = Input.GetAxis("Mouse Y") * sensitivity * Time.deltaTime;
+
+        xRotation -= mouseY;
+        xRotation = Mathf.Clamp(xRotation, -10f, 25f);
+
+        transform.localRotation = Quaternion.Euler(xRotation, player.eulerAngles.y, 0f);
+
     }
+
+    
 }

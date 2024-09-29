@@ -5,46 +5,99 @@ using UnityEngine;
 public class JulieMovement : MonoBehaviour
 {
     Animator julieAnimControl;
+    AudioSource JulieAudioSource;
+
+
+    public int sensitivity = 70;
+    private float yRotation = 0f;
+    private float stepCooldown = 0.6f; 
+    private float nextStepTime = 0f;
+
+    [SerializeField] AudioClip sndLeftFoot, sndRightFoot;
+    bool switchFoot = false;
 
     float axisH, axisV;
-    List<string> animationParamControls = new List<string> { "isWalking", "isWalkingBackward" };
+    List<string> animationParamControls = new List<string> { "isWalking", "isWalkingBackward", "isWalkingLeft", "isWalkingRight", "isIdle" };
 
     private void Awake()
     {
         julieAnimControl = GetComponent<Animator>();
         julieAnimControl.SetBool("isIdle", true);
+
+        JulieAudioSource = GetComponent<AudioSource>();
     }
+
+
     // Update is called once per frame
     void Update()
     {
+        float mouseX = Input.GetAxis("Mouse X") * sensitivity * Time.deltaTime;
+        yRotation += mouseX;
+
+        transform.localRotation = Quaternion.Euler(0f, yRotation, 0f);
+
         axisH = Input.GetAxis("Horizontal");
         axisV = Input.GetAxis("Vertical");
 
-        // code répétitif, doit changer ou créer fonction
-        if(axisV > 0)
+        // pour avancer et reculer
+        if (axisV != 0)
         {
             transform.Translate(Vector3.forward * 2f * axisV * Time.deltaTime);
-            foreach(string param in animationParamControls)
-            {
-                julieAnimControl.SetBool(param, param.Equals("isWalking"));
-            }
+            changeMovement(axisV > 0 ? "isWalking" : "isWalkingBackward");
+            PlayFootStep();
         }
 
-        else if(axisV < 0)
+        if (axisH != 0)
         {
-            transform.Translate(Vector3.forward * 2f * axisV * Time.deltaTime);
-            foreach (string param in animationParamControls)
-            {
-                julieAnimControl.SetBool(param, param.Equals("isWalkingBackward"));
-            }
+            transform.Translate(Vector3.right * 2f * axisH * Time.deltaTime);
+            changeMovement(axisH > 0 ? "isWalkingRight" : "isWalkingLeft");
+            PlayFootStep();
+
         }
 
-        else
+        if (axisH == 0 && axisV == 0)
         {
-            foreach (string param in animationParamControls)
+            changeMovement("isIdle");
+            StopFootStep();
+        }
+
+      
+    }
+
+    public void PlayFootStep()
+    {
+        if (Time.time >= nextStepTime && !JulieAudioSource.isPlaying)
+        {
+            switchFoot = !switchFoot;
+
+            JulieAudioSource.pitch = Random.Range(0.7f, 0.9f);
+
+            if (switchFoot)
             {
-                julieAnimControl.SetBool(param, param.Equals("isIdle"));
+                JulieAudioSource.pitch = 2f;
+                JulieAudioSource.PlayOneShot(sndLeftFoot);
             }
+            else
+            {
+                JulieAudioSource.pitch = 2f;
+                JulieAudioSource.PlayOneShot(sndRightFoot);
+            }
+            nextStepTime = Time.time + stepCooldown;
+        }
+    }
+
+    public void StopFootStep()
+    {
+        if (!JulieAudioSource.isPlaying)
+        {
+            JulieAudioSource.Stop();
+        }
+    }
+
+    private void changeMovement(string movementToActivate){
+        foreach(string param in animationParamControls)
+        {
+            julieAnimControl.SetBool(param, param.Equals(movementToActivate));
         }
     }
 }
