@@ -7,8 +7,11 @@ public class JulieMovement : MonoBehaviour
     Animator julieAnimControl;
     AudioSource JulieAudioSource;
 
+
     public int sensitivity = 70;
     private float yRotation = 0f;
+    private float stepCooldown = 0.6f; 
+    private float nextStepTime = 0f;
 
     [SerializeField] AudioClip sndLeftFoot, sndRightFoot;
     bool switchFoot = false;
@@ -37,29 +40,37 @@ public class JulieMovement : MonoBehaviour
         axisV = Input.GetAxis("Vertical");
 
         // pour avancer et reculer
-        if(axisV != 0)
+        if (axisV != 0)
         {
             transform.Translate(Vector3.forward * 2f * axisV * Time.deltaTime);
             changeMovement(axisV > 0 ? "isWalking" : "isWalkingBackward");
+            PlayFootStep();
         }
 
-        if(axisH != 0)
+        if (axisH != 0)
         {
             transform.Translate(Vector3.right * 2f * axisH * Time.deltaTime);
             changeMovement(axisH > 0 ? "isWalkingRight" : "isWalkingLeft");
+            PlayFootStep();
+
         }
 
-        if(axisH == 0 && axisV == 0)
+        if (axisH == 0 && axisV == 0)
         {
             changeMovement("isIdle");
+            StopFootStep();
         }
+
+      
     }
 
     public void PlayFootStep()
     {
-        if (!JulieAudioSource.isPlaying)
+        if (Time.time >= nextStepTime && !JulieAudioSource.isPlaying)
         {
             switchFoot = !switchFoot;
+
+            JulieAudioSource.pitch = Random.Range(0.7f, 0.9f);
 
             if (switchFoot)
             {
@@ -71,6 +82,15 @@ public class JulieMovement : MonoBehaviour
                 JulieAudioSource.pitch = 2f;
                 JulieAudioSource.PlayOneShot(sndRightFoot);
             }
+            nextStepTime = Time.time + stepCooldown;
+        }
+    }
+
+    public void StopFootStep()
+    {
+        if (!JulieAudioSource.isPlaying)
+        {
+            JulieAudioSource.Stop();
         }
     }
 
