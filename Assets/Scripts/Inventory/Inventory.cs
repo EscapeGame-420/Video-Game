@@ -3,33 +3,35 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    private List<string> items = new List<string>();
+    public List<Item> items = new List<Item>();
 
-    void Update(){
-        
-        if (Input.GetKeyDown("tab")){
-            for (int i = 0; i < items.Count; i++){
-                Debug.Log(items[i]);
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            for (int i = 0; i < items.Count; i++)
+            {
+                Debug.Log(items[i].itemName);  
             }
         }
-
     }
 
-    public void AddItem(string item){
-
+    public void AddItem(Item item)
+    {
         items.Add(item);
-        Debug.Log(item + " added to inventory.");
-
+        Debug.Log(item.name + " added to inventory.");
     }
 
-    public void UseItem(string item){
-
-        if (items.Contains(item)){
+    public void UseItem(Item item)
+    {
+        if (items.Contains(item))
+        {
             items.Remove(item);
-            Debug.Log(item + " removed from inventory.");
-        }else{
-            Debug.Log(item + " not found in inventory.");
+            Debug.Log(item.name + " removed from inventory.");
         }
-        
+        else
+        {
+            Debug.Log(item.name + " not found in inventory.");
+        }
     }
 }

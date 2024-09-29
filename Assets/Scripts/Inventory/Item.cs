@@ -13,6 +13,9 @@ public class Item : MonoBehaviour
     [SerializeField]
     private Canvas canvas;
 
+    public string itemName;   
+    public Sprite sprite;
+
     void Update()
     {
         float distance = Vector3.Distance(transform.position, player.position);
@@ -20,7 +23,7 @@ public class Item : MonoBehaviour
         if (distance <= activationDistance){
             canvas.enabled = true;
             if (Input.GetKeyDown("e")){
-                inventory.AddItem(gameObject.name);
+                inventory.AddItem(this);
                 Debug.Log("Item picked up");
                 Destroy(gameObject);
             }

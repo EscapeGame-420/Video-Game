@@ -38,27 +38,34 @@ public class JulieMovement : MonoBehaviour
 
         axisH = Input.GetAxis("Horizontal");
         axisV = Input.GetAxis("Vertical");
+        try
+        {
 
         // pour avancer et reculer
-        if (axisV != 0)
-        {
-            transform.Translate(Vector3.forward * 2f * axisV * Time.deltaTime);
-            changeMovement(axisV > 0 ? "isWalking" : "isWalkingBackward");
-            PlayFootStep();
+            if (axisV != 0)
+            {
+                transform.Translate(Vector3.forward * 2f * axisV * Time.deltaTime);
+                changeMovement(axisV > 0 ? "isWalking" : "isWalkingBackward");
+                PlayFootStep();
+            }
+
+            if (axisH != 0)
+            {
+                transform.Translate(Vector3.right * 2f * axisH * Time.deltaTime);
+                changeMovement(axisH > 0 ? "isWalkingRight" : "isWalkingLeft");
+                PlayFootStep();
+
+            }
+
+            if (axisH == 0 && axisV == 0)
+            {
+                changeMovement("isIdle");
+                StopFootStep();
+            }
         }
-
-        if (axisH != 0)
+        catch(System.Exception e)
         {
-            transform.Translate(Vector3.right * 2f * axisH * Time.deltaTime);
-            changeMovement(axisH > 0 ? "isWalkingRight" : "isWalkingLeft");
-            PlayFootStep();
 
-        }
-
-        if (axisH == 0 && axisV == 0)
-        {
-            changeMovement("isIdle");
-            StopFootStep();
         }
 
       
