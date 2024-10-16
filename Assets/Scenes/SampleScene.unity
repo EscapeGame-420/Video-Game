@@ -2064,7 +2064,7 @@ Transform:
   m_GameObject: {fileID: 1017016671}
   serializedVersion: 2
   m_LocalRotation: {x: -0.061135706, y: 0, z: 0, w: 0.9981295}
-  m_LocalPosition: {x: -2.943, y: 1.681, z: 0.078}
+  m_LocalPosition: {x: -2.943, y: 1.686, z: 0.118}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2084,7 +2084,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1963577580}
   offset: {x: 0, y: 0, z: 0}
-  sensitivity: 30
+  sensitivity: 50
 --- !u!1001 &1047668507
 PrefabInstance:
   m_ObjectHideFlags: 0
