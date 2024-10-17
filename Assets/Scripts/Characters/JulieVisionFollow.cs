@@ -21,7 +21,7 @@ public class JulieVisionFollow : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
     }
 
-    void Update()
+    void LateUpdate()
     {
         Vector3 desiredPosition = player.position + player.rotation  * offset;
         transform.position = desiredPosition;
