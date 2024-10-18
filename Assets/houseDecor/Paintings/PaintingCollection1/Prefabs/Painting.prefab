@@ -226,7 +226,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9150187250805139214}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 0.1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.017}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -234,7 +234,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.005, y: -0.1147}
+  m_AnchoredPosition: {x: -0.0236, y: -0.1068}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &2854816137174264633
@@ -299,7 +299,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "pour voir ce qui est cach\xE9, apporte la lumiere."
+  m_text: "pour voir ce qui est cach\xE9, apporte la lumiere verte."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c0551010a82e9f447b18dd0af0a95679, type: 2}
   m_sharedMaterial: {fileID: 670045773493236077, guid: c0551010a82e9f447b18dd0af0a95679, type: 2}
@@ -362,7 +362,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 9.926347, y: 2.3995214, z: 9.912176, w: 2.4336028}
+  m_margin: {x: 9.864387, y: 2.4896464, z: 9.912176, w: 2.4336028}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   _SortingLayer: 0
