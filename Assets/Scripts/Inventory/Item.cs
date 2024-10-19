@@ -13,6 +13,7 @@ public class Item : MonoBehaviour
     [SerializeField]
     private Canvas canvas;
 
+    
     void Update()
     {
         float distance = Vector3.Distance(transform.position, player.position);
