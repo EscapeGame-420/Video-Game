@@ -18,7 +18,7 @@ public class Item : MonoBehaviour
     
     void Start()
     {
-        createCanvas(this.gameObject);
+        canvas = createCanvas(this.gameObject);
     }
 
     void Update()
@@ -42,10 +42,10 @@ public class Item : MonoBehaviour
         
     }
 
-    private void createCanvas(GameObject itemObject)
+    private Canvas createCanvas(GameObject itemObject)
     {
         // Create a new canvas object
-        GameObject canvasObject = new GameObject("testCanvas");
+        GameObject canvasObject = new GameObject(itemObject.name + "Canvas");
         canvasObject.AddComponent<Canvas>();
         canvasObject.transform.position = itemObject.transform.position;
 
@@ -92,5 +92,7 @@ public class Item : MonoBehaviour
         grabText.horizontalAlignment = HorizontalAlignmentOptions.Center;
         textObject.transform.SetParent(canvasObject.transform, false);
 
+
+        return canvasObject.GetComponent<Canvas>();
     }
 }
