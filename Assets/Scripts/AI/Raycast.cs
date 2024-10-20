@@ -16,6 +16,12 @@ public class Raycast : MonoBehaviour {
  
     // Variables sérialisées pour assigner les capteurs gauche et droit du robot dans l'éditeur Unity
     [SerializeField] Transform leftSensor, rightSensor;
+
+    Animator animator;
+
+    void private void Start() {
+        animator = GetComponent<Animator>();
+    }
  
     // Méthode Update appelée à chaque frame du jeu (environ 60 fois par seconde)
     void Update () {
@@ -67,5 +73,6 @@ public class Raycast : MonoBehaviour {
  
         // Déplace le robot vers l'avant selon sa direction actuelle avec la vitesse définie
         transform.Translate(Vector3.forward * speed * (Time.deltaTime / 4));
+        animator.SetBool("walking",true);
     }
 }
