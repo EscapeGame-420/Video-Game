@@ -3,8 +3,9 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    private List<string> items = new List<string>();
+    //private List<string> items = new List<string>();
 
+    public static List<string> items = new List<string>();
     void Update(){
         
         if (Input.GetKeyDown("tab")){

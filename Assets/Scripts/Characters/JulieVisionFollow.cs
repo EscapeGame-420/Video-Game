@@ -7,7 +7,7 @@ public class JulieVisionFollow : MonoBehaviour
     public Transform player;
     public Vector3 offset;
 
-    public int sensitivity = 30;
+    public int sensitivity = 60;
     private float xRotation = 0f;
 
 
@@ -21,7 +21,7 @@ public class JulieVisionFollow : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
     }
 
-    void Update()
+    void LateUpdate()
     {
         Vector3 desiredPosition = player.position + player.rotation  * offset;
         transform.position = desiredPosition;
@@ -32,7 +32,7 @@ public class JulieVisionFollow : MonoBehaviour
         float mouseY = Input.GetAxis("Mouse Y") * sensitivity * Time.deltaTime;
 
         xRotation -= mouseY;
-        xRotation = Mathf.Clamp(xRotation, -10f, 25f);
+        xRotation = Mathf.Clamp(xRotation, -30f, 50f);
 
         transform.localRotation = Quaternion.Euler(xRotation, player.eulerAngles.y, 0f);
 

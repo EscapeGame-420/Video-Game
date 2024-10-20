@@ -29,6 +29,7 @@ public class JulieMovement : MonoBehaviour
 
 
     // Update is called once per frame
+    // should i put late update?
     void Update()
     {
         float mouseX = Input.GetAxis("Mouse X") * sensitivity * Time.deltaTime;
