@@ -24,7 +24,7 @@ public class Painting : MonoBehaviour
         {
             float distance = Vector3.Distance(transform.position, player.position);
             
-            if (distance <= activationDistance && isCandleNear && !GetComponent<Animator>().enabled)
+            if (distance <= activationDistance && Inventory.items.Contains("greenFlameCandle") && !GetComponent<Animator>().enabled)
             {
                 GetComponent<Animator>().enabled = true;
                 Debug.Log("Le joueur s'approche avec la bougie. Activation du tableau");
