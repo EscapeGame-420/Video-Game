@@ -54,30 +54,43 @@ public class Item : MonoBehaviour
         canvasRectTransform.sizeDelta = new Vector2(1101, 514);
         canvasRectTransform.anchorMin = new Vector2(0, 0);
         canvasRectTransform.anchorMax = new Vector2(0, 0);
+
+        // for some reasons this is the only way to correctly change the position
+        canvasRectTransform.localPosition = new Vector3(
+            canvasRectTransform.localPosition.x + -0.036f * 2,
+            canvasRectTransform.localPosition.y + 0.106f * 3,
+            canvasRectTransform.localPosition.z + 0.003f
+        );
         canvasObject.AddComponent<LookAtCam>();
         canvasObject.transform.SetParent(itemObject.transform, true);
+
+
+        // Create a new Image object
+        GameObject imageObject = new GameObject("GrabBackground");
+        Image image = imageObject.AddComponent<Image>();
+        image.color = Color.white;
+        
+        RectTransform imageRectTransform = imageObject.GetComponent<RectTransform>();
+        imageRectTransform.sizeDelta = new Vector2(100, 100);
+        imageRectTransform.position = new Vector3(0, 1.75f, 0);
+        imageRectTransform.localScale = new Vector3(0.5f, 0.5f, 1);
+        imageObject.transform.SetParent(canvasObject.transform, false);
 
 
         // Create a new text object
         GameObject textObject = new GameObject("GrabText");
         RectTransform textRectTransform = textObject.AddComponent<RectTransform>();
         textRectTransform.sizeDelta = new Vector2(50, 50);
-        textRectTransform.position = new Vector3(0, 65.5f, 0);
+        textRectTransform.position = new Vector3(0, 12.45f, 0);
+        textRectTransform.localScale = new Vector3(0.5f, 0.5f, 1);
 
-        textObject.AddComponent<CanvasRenderer>();
         TextMeshProUGUI grabText = textObject.AddComponent<TextMeshProUGUI>();
         grabText.text = "E";
-        grabText.fontSize = 60;
+        grabText.fontSize = 80;
         grabText.color = Color.black;
-        
+        grabText.fontStyle = FontStyles.Bold;
+        grabText.horizontalAlignment = HorizontalAlignmentOptions.Center;
         textObject.transform.SetParent(canvasObject.transform, false);
-
-        // Create a new Image object
-        GameObject imageObject = new GameObject("GrabBackground");
-        textObject.AddComponent<CanvasRenderer>();
-        Image image = imageObject.AddComponent<Image>();
-        image.color = Color.white;
-        imageObject.transform.SetParent(canvasObject.transform, false);
 
     }
 }
