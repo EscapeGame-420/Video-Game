@@ -19,7 +19,7 @@ public class Raycast : MonoBehaviour {
 
     Animator animator;
 
-    void private void Start() {
+    void Start() {
         animator = GetComponent<Animator>();
     }
  
