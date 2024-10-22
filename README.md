@@ -1,5 +1,20 @@
 # Video-Game
 This is the official repo for the escape game project
+
+ 
+## Authors
+&nbsp; 🧍 [@YahyaMawhoub](https://www.github.com/yahyamaw311)
+
+&nbsp; 🧍 [@MathisNormand](https://www.github.com/2060485)
+
+&nbsp; 🧍‍♀️ [@AyaIssa](https://www.github.com/AyaIssa1)
+
+&nbsp; 🧍 [@DangMinhTriTran](https://www.github.com/Fingernamedkid)
+
+&nbsp; 🧍 [@NhatKhangAlanTo](https://www.github.com/2289642)
+
+&nbsp; 🧍 [@NassimElhaji](https://www.github.com/Nassimelhaji)
+
 ## Sources
 
 Here are the Unity assets used in this project:
