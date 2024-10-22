@@ -8,7 +8,7 @@ public class JulieMovement : MonoBehaviour
     AudioSource JulieAudioSource;
 
 
-    public int sensitivity = 70;
+    public int sensitivity = 150;
     private float yRotation = 0f;
     private float stepCooldown = 0.6f; 
     private float nextStepTime = 0f;

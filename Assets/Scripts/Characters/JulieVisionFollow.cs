@@ -7,7 +7,7 @@ public class JulieVisionFollow : MonoBehaviour
     public Transform player;
     public Vector3 offset;
 
-    public int sensitivity = 60;
+    public int sensitivity = 150;
     private float xRotation = 0f;
 
 
