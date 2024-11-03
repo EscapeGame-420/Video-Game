@@ -7,13 +7,14 @@ public class JulieMovement : MonoBehaviour
     Animator julieAnimControl;
     AudioSource JulieAudioSource;
 
+    [SerializeField] AudioClip sndLeftFoot, sndRightFoot;
+    [SerializeField] float walkSpeed = 5f;
 
     public int sensitivity = 70;
     private float yRotation = 0f;
     private float stepCooldown = 0.6f; 
     private float nextStepTime = 0f;
 
-    [SerializeField] AudioClip sndLeftFoot, sndRightFoot;
     bool switchFoot = false;
 
     float axisH, axisV;
@@ -43,14 +44,14 @@ public class JulieMovement : MonoBehaviour
         // pour avancer et reculer
         if (axisV != 0)
         {
-            transform.Translate(Vector3.forward * 2f * axisV * Time.deltaTime);
+            transform.Translate(Vector3.forward * walkSpeed * axisV * Time.deltaTime);
             changeMovement(axisV > 0 ? "isWalking" : "isWalkingBackward");
             PlayFootStep();
         }
 
         if (axisH != 0)
         {
-            transform.Translate(Vector3.right * 2f * axisH * Time.deltaTime);
+            transform.Translate(Vector3.right * walkSpeed * axisH * Time.deltaTime);
             changeMovement(axisH > 0 ? "isWalkingRight" : "isWalkingLeft");
             PlayFootStep();
 
