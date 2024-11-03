@@ -8422,15 +8422,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1567779241189673870, guid: cdd0b7e38ade70e4ca95357ad29b7bf4, type: 3}
       propertyPath: m_LocalScale.y
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1567779241189673870, guid: cdd0b7e38ade70e4ca95357ad29b7bf4, type: 3}
       propertyPath: m_LocalScale.z
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1567779241189673870, guid: cdd0b7e38ade70e4ca95357ad29b7bf4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 175.7
+      value: 152.4
       objectReference: {fileID: 0}
     - target: {fileID: 1567779241189673870, guid: cdd0b7e38ade70e4ca95357ad29b7bf4, type: 3}
       propertyPath: m_LocalPosition.y
@@ -9102,9 +9102,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b674426be1aee444480327dd6ea13c6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensitivity: 50
   sndLeftFoot: {fileID: 8300000, guid: 2a991779597b78144ac4fdcbedd26b21, type: 3}
   sndRightFoot: {fileID: 8300000, guid: 9da830b0f02eb13488cd158c5cf1cdb3, type: 3}
+  walkSpeed: 5
+  sensitivity: 50
 --- !u!136 &1963577586
 CapsuleCollider:
   m_ObjectHideFlags: 0
