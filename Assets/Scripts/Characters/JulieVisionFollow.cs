@@ -7,7 +7,7 @@ public class JulieVisionFollow : MonoBehaviour
     public Transform player;
     public Vector3 offset;
 
-    public int sensitivity = 60;
+    //public int sensitivity = 60;
     private float xRotation = 0f;
 
 
@@ -29,7 +29,7 @@ public class JulieVisionFollow : MonoBehaviour
 
 
 
-        float mouseY = Input.GetAxis("Mouse Y") * sensitivity * Time.deltaTime;
+        float mouseY = Input.GetAxis("Mouse Y") * JulieMovement.rotationSpeedStatic * Time.deltaTime;
 
         xRotation -= mouseY;
         xRotation = Mathf.Clamp(xRotation, -30f, 50f);

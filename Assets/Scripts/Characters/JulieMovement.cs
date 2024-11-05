@@ -4,16 +4,26 @@ using UnityEngine;
 
 public class JulieMovement : MonoBehaviour
 {
-    Animator julieAnimControl;
-    AudioSource JulieAudioSource;
+    // https://www.youtube.com/watch?v=vdOFUFMiPDU for jump
+    [SerializeField] Animator julieAnimControl;
+    [SerializeField] AudioSource JulieAudioSource;
+    [SerializeField] Rigidbody rb;
+    
+    [SerializeField] CapsuleCollider col;
+    [SerializeField] LayerMask groundLayers;
+    [SerializeField] AudioClip sndLeftFoot, sndRightFoot;
 
+    [SerializeField] float walkSpeed = 5f;
+    [SerializeField] public float jumpForce = 4;
+    [SerializeField] public int rotationSpeed = 100;
 
-    public int sensitivity = 70;
+    public static int rotationSpeedStatic;
     private float yRotation = 0f;
     private float stepCooldown = 0.6f; 
     private float nextStepTime = 0f;
 
-    [SerializeField] AudioClip sndLeftFoot, sndRightFoot;
+    
+
     bool switchFoot = false;
 
     float axisH, axisV;
@@ -21,10 +31,15 @@ public class JulieMovement : MonoBehaviour
 
     private void Awake()
     {
-        julieAnimControl = GetComponent<Animator>();
+        if(!julieAnimControl) julieAnimControl = GetComponent<Animator>();
+        if(!JulieAudioSource) JulieAudioSource = GetComponent<AudioSource>();
+        if(!rb) rb = GetComponent<Rigidbody>();
+        if(!col) col = GetComponent<CapsuleCollider>();
+
         julieAnimControl.SetBool("isIdle", true);
 
-        JulieAudioSource = GetComponent<AudioSource>();
+        rotationSpeedStatic = rotationSpeed;
+
     }
 
 
@@ -32,7 +47,7 @@ public class JulieMovement : MonoBehaviour
     // should i put late update?
     void Update()
     {
-        float mouseX = Input.GetAxis("Mouse X") * sensitivity * Time.deltaTime;
+        float mouseX = Input.GetAxis("Mouse X") * rotationSpeed * Time.deltaTime;
         yRotation += mouseX;
 
         transform.localRotation = Quaternion.Euler(0f, yRotation, 0f);
@@ -41,28 +56,31 @@ public class JulieMovement : MonoBehaviour
         axisV = Input.GetAxis("Vertical");
 
         // pour avancer et reculer
+
         if (axisV != 0)
         {
-            transform.Translate(Vector3.forward * 2f * axisV * Time.deltaTime);
+            transform.Translate(Vector3.forward * walkSpeed * axisV * Time.deltaTime);
             changeMovement(axisV > 0 ? "isWalking" : "isWalkingBackward");
             PlayFootStep();
         }
 
         if (axisH != 0)
         {
-            transform.Translate(Vector3.right * 2f * axisH * Time.deltaTime);
+            transform.Translate(Vector3.right * walkSpeed * axisH * Time.deltaTime);
             changeMovement(axisH > 0 ? "isWalkingRight" : "isWalkingLeft");
             PlayFootStep();
-
         }
 
         if (axisH == 0 && axisV == 0)
         {
             changeMovement("isIdle");
             StopFootStep();
-        }
+        } 
 
-      
+        if(IsGrounded() && Input.GetKeyDown(KeyCode.Space))
+        {
+            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+        }
     }
 
     public void PlayFootStep()
@@ -100,5 +118,10 @@ public class JulieMovement : MonoBehaviour
         {
             julieAnimControl.SetBool(param, param.Equals(movementToActivate));
         }
+    }
+
+    private bool IsGrounded(){
+        return Physics.CheckCapsule(col.bounds.center, 
+        new Vector3(col.bounds.center.x, col.bounds.min.y, col.bounds.center.z), col.radius * .9f, groundLayers);
     }
 }
