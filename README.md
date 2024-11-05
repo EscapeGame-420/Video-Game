@@ -17,6 +17,7 @@ This is the official repo for the escape game project
 
 ## Sources
 
+### Assets
 Here are the Unity assets used in this project:
 
 - [Unity Asset Store](https://assetstore.unity.com/)
@@ -31,4 +32,7 @@ Here are the Unity assets used in this project:
 - [Small furniture pack](https://assetstore.unity.com/packages/3d/props/furniture/small-furniture-pack-224492)
 - [Flooded Ground](https://assetstore.unity.com/packages/3d/environments/flooded-grounds-48529)
 
-Feel free to explore these resources for more assets.
+### Code snipets
+Here are the code snipetsused in this project:
+
+- [Jumping](https://www.youtube.com/watch?v=vdOFUFMiPDU)

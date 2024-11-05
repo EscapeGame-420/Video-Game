@@ -7,15 +7,22 @@ public class JulieMovement : MonoBehaviour
     // https://www.youtube.com/watch?v=vdOFUFMiPDU for jump
     [SerializeField] Animator julieAnimControl;
     [SerializeField] AudioSource JulieAudioSource;
+    [SerializeField] Rigidbody rb;
+    
+    [SerializeField] CapsuleCollider col;
+    [SerializeField] LayerMask groundLayers;
     [SerializeField] AudioClip sndLeftFoot, sndRightFoot;
 
     [SerializeField] float walkSpeed = 5f;
+    [SerializeField] public float jumpForce = 4;
     [SerializeField] public int rotationSpeed = 100;
 
     public static int rotationSpeedStatic;
     private float yRotation = 0f;
     private float stepCooldown = 0.6f; 
     private float nextStepTime = 0f;
+
+    
 
     bool switchFoot = false;
 
@@ -26,6 +33,8 @@ public class JulieMovement : MonoBehaviour
     {
         if(!julieAnimControl) julieAnimControl = GetComponent<Animator>();
         if(!JulieAudioSource) JulieAudioSource = GetComponent<AudioSource>();
+        if(!rb) rb = GetComponent<Rigidbody>();
+        if(!col) col = GetComponent<CapsuleCollider>();
 
         julieAnimControl.SetBool("isIdle", true);
 
@@ -67,6 +76,11 @@ public class JulieMovement : MonoBehaviour
             changeMovement("isIdle");
             StopFootStep();
         } 
+
+        if(IsGrounded() && Input.GetKeyDown(KeyCode.Space))
+        {
+            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+        }
     }
 
     public void PlayFootStep()
@@ -104,5 +118,10 @@ public class JulieMovement : MonoBehaviour
         {
             julieAnimControl.SetBool(param, param.Equals(movementToActivate));
         }
+    }
+
+    private bool IsGrounded(){
+        return Physics.CheckCapsule(col.bounds.center, 
+        new Vector3(col.bounds.center.x, col.bounds.min.y, col.bounds.center.z), col.radius * .9f, groundLayers);
     }
 }
