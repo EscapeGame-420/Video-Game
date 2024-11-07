@@ -42,7 +42,7 @@ public class Item : MonoBehaviour
         
     }
 
-    private Canvas createCanvas(GameObject itemObject)
+    public static Canvas createCanvas(GameObject itemObject)
     {
         // Create a new canvas object
         GameObject canvasObject = new GameObject(itemObject.name + "Canvas");

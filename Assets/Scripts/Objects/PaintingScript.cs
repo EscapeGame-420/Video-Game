@@ -20,24 +20,19 @@ public class Painting : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (player != null)
-        {
-            float distance = Vector3.Distance(transform.position, player.position);
-            
-            if (distance <= activationDistance && Inventory.items.Contains("greenFlameCandle") && !GetComponent<Animator>().enabled)
-            {
-                GetComponent<Animator>().enabled = true;
-                Debug.Log("Le joueur s'approche avec la bougie. Activation du tableau");
-            }
-            // if (distance <= activationDistance && isCandleNear)
-            // {
-            //     Debug.Log("Le joueur s'approche avec la bougie. Activation du tableau");
-                
-            // }
-            // else if (distance <= activationDistance && !isCandleNear)
-            // {
-            //     Debug.Log("Le joueur s'approche sans la bougie");
-            // }
+
+        if(player == null) return;
+
+        float distance = Vector3.Distance(transform.position, player.position);
+        if (!(distance <= activationDistance && Inventory.items.Contains("greenFlameCandle") && !GetComponent<Animator>().enabled)) return;
+
+        if(!transform.Find("PaintingCanvas")) Item.createCanvas(this.gameObject);
+        //GetComponent<Animator>().enabled = true;
+        Debug.Log("Le joueur s'approche avec la bougie. Activation du tableau");
+
+        if (Input.GetKeyDown("e")){
+            GetComponent<Animator>().enabled = true;
         }
+        
     }
 }
