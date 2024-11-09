@@ -33,7 +33,7 @@ public class State {
     // Variables de distance et d'angle pour détecter le joueur
     float visDist = 10.0f;               // Distance de vision
     float visAngle = 30.0f;              // Angle de vision
-    float shootDist = 7.0f;              // Distance de tir
+    float attackDist = 2.0f;              // Distance de tir
  
     // Constructeur pour initialiser les paramètres de l'état
     public State(GameObject _npc, NavMeshAgent _agent, Animator _anim, Transform _player) {
@@ -81,7 +81,7 @@ public class State {
     // Méthode pour vérifier si le NPC est à distance d'attaque du joueur
     public bool CanAttackPlayer() {
         Vector3 direction = player.position - npc.transform.position;
-        if (direction.magnitude < shootDist) {
+        if (direction.magnitude < attackDist) {
             return true;
         }
         return false;
@@ -96,7 +96,7 @@ public class Idle : State {
     }
  
     public override void Enter() {
-        anim.SetTrigger("isIdle"); // Déclenche l'animation d'attente
+        anim.SetTrigger("Idle"); // Déclenche l'animation d'attente
         base.Enter();
     }
  
@@ -111,7 +111,7 @@ public class Idle : State {
     }
  
     public override void Exit() {
-        anim.ResetTrigger("isIdle"); // Réinitialise l'animation d'attente
+        anim.ResetTrigger("Idle"); // Réinitialise l'animation d'attente
         base.Exit();
     }
 }
@@ -138,7 +138,7 @@ public class Patrol : State {
                 lastDistance = distance;
             }
         }
-        anim.SetTrigger("isWalking");
+        anim.SetTrigger("Walk");
         base.Enter();
     }
  
@@ -159,7 +159,7 @@ public class Patrol : State {
     }
  
     public override void Exit() {
-        anim.ResetTrigger("isWalking");
+        anim.ResetTrigger("Walk");
         base.Exit();
     }
 }
@@ -174,7 +174,7 @@ public class Pursue : State {
     }
  
     public override void Enter() {
-        anim.SetTrigger("isRunning");
+        anim.SetTrigger("Run");
         base.Enter();
     }
  
@@ -193,7 +193,7 @@ public class Pursue : State {
     }
  
     public override void Exit() {
-        anim.ResetTrigger("isRunning");
+        anim.ResetTrigger("Run");
         base.Exit();
     }
 }
@@ -201,18 +201,18 @@ public class Pursue : State {
 // État "Attack" : NPC attaque le joueur
 public class Attack : State {
     float rotationSpeed = 2.0f;
-    AudioSource shoot;
+    //AudioSource shoot;
  
     public Attack(GameObject _npc, NavMeshAgent _agent, Animator _anim, Transform _player)
         : base(_npc, _agent, _anim, _player) {
         name = STATE.ATTACK;
-        shoot = _npc.GetComponent<AudioSource>();
+        //shoot = _npc.GetComponent<AudioSource>();
     }
  
     public override void Enter() {
-        anim.SetTrigger("isAttacking");
+        anim.SetTrigger("Attack");
         agent.isStopped = true;
-        shoot.Play();
+        //shoot.Play();
         base.Enter();
     }
  
@@ -225,13 +225,13 @@ public class Attack : State {
  
         if (!CanAttackPlayer()) {
             nextState = new Idle(npc, agent, anim, player);
-            shoot.Stop();
+            //shoot.Stop();
             stage = EVENT.EXIT;
         }
     }
  
     public override void Exit() {
-        anim.ResetTrigger("isAttacking");
+        anim.ResetTrigger("Attack");
         base.Exit();
     }
 }
