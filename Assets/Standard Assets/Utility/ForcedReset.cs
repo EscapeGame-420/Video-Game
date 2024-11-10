@@ -1,17 +1,19 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI; // Import pour l'UI
 using UnityStandardAssets.CrossPlatformInput;
 
-[RequireComponent(typeof (GUITexture))]
+[RequireComponent(typeof(RawImage))] // Utilise RawImage au lieu de GUITexture
 public class ForcedReset : MonoBehaviour
 {
     private void Update()
     {
-        // if we have forced a reset ...
+        // si le bouton "ResetObject" est pressé ...
         if (CrossPlatformInputManager.GetButtonDown("ResetObject"))
         {
-            //... reload the scene
-            Application.LoadLevelAsync(Application.loadedLevelName);
+            //... rechargez la scène
+            SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
         }
     }
 }
