@@ -13,7 +13,8 @@ public class Painting : MonoBehaviour
         // Si le joueur n'est pas assign� manuellement dans l'inspecteur, trouvez-le automatiquement
         if (player == null)
         {
-            player = GameObject.FindGameObjectWithTag("Player").transform;
+             player = GameObject.FindGameObjectWithTag("Player").transform;
+
         }
     }
 
@@ -24,14 +25,16 @@ public class Painting : MonoBehaviour
         if(player == null) return;
 
         float distance = Vector3.Distance(transform.position, player.position);
-        if (!(distance <= activationDistance && Inventory.items.Contains("greenFlameCandle") && !GetComponent<Animator>().enabled)) return;
+        Inventory inventory = FindFirstObjectByType <Inventory>();
+        if (!(distance <= activationDistance && inventory.IncludeItem("greenFlameCandle") && !GetComponent<Animator>().enabled) ) return;
 
         if(!transform.Find("PaintingCanvas")) Item.createCanvas(this.gameObject);
         //GetComponent<Animator>().enabled = true;
         Debug.Log("Le joueur s'approche avec la bougie. Activation du tableau");
 
-        if (Input.GetKeyDown("e")){
+        if (Input.GetKeyDown("e") && inventory.IsSelectingItem("greenFlameCandle")){
             GetComponent<Animator>().enabled = true;
+            inventory.UseItem("greenFlameCandle");
         }
         
     }
