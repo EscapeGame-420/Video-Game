@@ -9,6 +9,9 @@ TagManager:
   - Selectable
   - MBS:Wall
   - Checkpoint
+  - Enemy
+  - Good
+  - Bad
   layers:
   - Default
   - TransparentFX
