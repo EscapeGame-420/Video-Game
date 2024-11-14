@@ -9,21 +9,10 @@ public class DeathSequence : MonoBehaviour
     public Image gameOverImage;
     public JulieMovement julieMovement;
     public JulieVisionFollow julieVisionFollow;
+    public GameObject enemy;
 
     private void Start() {
         if (deathCanvas != null) deathCanvas.SetActive(false);
-
-        if (blackScreen != null) {
-            Color blackColor = blackScreen.color;
-            blackColor.a = 0;
-            blackScreen.color = blackColor;
-        }
-
-        if (gameOverImage != null) {
-            Color imageColor = gameOverImage.color;
-            imageColor.a = 0;
-            gameOverImage.color = imageColor;
-        }
     }
 
     public void TriggerDeathSequence() {
@@ -51,6 +40,10 @@ public class DeathSequence : MonoBehaviour
             blackColor.a = Mathf.Lerp(0, 1, elapsedTime / fadeDuration);
             blackScreen.color = blackColor;
             yield return null;
+        }
+
+        if (enemy != null) {
+            enemy.SetActive(false);
         }
 
         yield return new WaitForSeconds(1f);
