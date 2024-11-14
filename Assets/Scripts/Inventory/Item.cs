@@ -14,6 +14,11 @@ public class Item : MonoBehaviour
     private float activationDistance = 1.5f;
     [SerializeField]
     private Canvas canvas;
+    //[SerializeField]
+    //private AudioClip selectionSound;
+    //private AudioSource
+
+
     public string itemName;
     public Sprite sprite;
     

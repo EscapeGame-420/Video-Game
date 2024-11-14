@@ -91,7 +91,7 @@ public class AI : MonoBehaviour {
     }
 
     private void PlayAttackSound() {
-        if (!audioSource.isPlaying) {
+        if (!attackSoundPlayed) {
             audioSource.volume = 0.8f;
             audioSource.pitch = 1.5f;
             audioSource.PlayOneShot(sndAttack);
