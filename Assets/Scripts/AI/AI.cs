@@ -46,9 +46,11 @@ public class AI : MonoBehaviour {
             } else if (currentState is Pursue) {  // l'orsqu'il voit la victime et la poursuie
                 PlayGrowlSound(); // Grognement 
                 PlayFootStep();
-            } else if (currentState is Attack) {
-                PlayAttackSound(); // lorsqu'il attaque
-            } else {
+            } 
+            //else if (currentState is Attack) {
+            //     PlayAttackSound(); // lorsqu'il attaque
+            // } 
+            else {
                 StopFootStep(); // lorsqu'il arrete de marcher
             }
         }
@@ -87,15 +89,6 @@ public class AI : MonoBehaviour {
     private void StopFootStep() {
         if (audioSource.isPlaying) {
             audioSource.Stop();
-        }
-    }
-
-    private void PlayAttackSound() {
-        if (!audioSource.isPlaying) {
-            audioSource.volume = 0.8f;
-            audioSource.pitch = 1.5f;
-            audioSource.PlayOneShot(sndAttack);
-            attackSoundPlayed = true;
         }
     }
 

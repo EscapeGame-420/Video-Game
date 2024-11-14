@@ -39558,6 +39558,9 @@ MonoBehaviour:
   gameOverImage: {fileID: 1192342742}
   julieMovement: {fileID: 1963577584}
   julieVisionFollow: {fileID: 1017016675}
+  audibleDistance: 15
+  sndGrowl: {fileID: 8300000, guid: 8d2639f2bc6f04baeae43f9b113adbc6, type: 3}
+  sndAttack: {fileID: 8300000, guid: 973b19772fd6248c3a374802f03d1022, type: 3}
 --- !u!114 &1963577592
 MonoBehaviour:
   m_ObjectHideFlags: 0
