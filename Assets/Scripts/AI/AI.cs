@@ -60,7 +60,7 @@ public class AI : MonoBehaviour {
 
     private void PlayGrowlSound() {
         if (!audioSource.isPlaying) {
-            audioSource.volume = 1.0f // volume pour le grognement
+            audioSource.volume = 1.0f; // volume pour le grognement
             audioSource.pitch = 1f;
             audioSource.PlayOneShot(sndGrowl);
         }
@@ -70,7 +70,7 @@ public class AI : MonoBehaviour {
         if (Time.time >= nextStepTime && !audioSource.isPlaying) {
             switchFoot = !switchFoot;
             
-            audioSource.volume = 0.3f // volume moins fort pour les pas
+            audioSource.volume = 0.3f; // volume moins fort pour les pas
             audioSource.pitch = Random.Range(0.7f, 0.9f);
             
             if (switchFoot) {
