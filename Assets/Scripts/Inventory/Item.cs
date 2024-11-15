@@ -14,12 +14,19 @@ public class Item : MonoBehaviour
     private float activationDistance = 1.5f;
     [SerializeField]
     private Canvas canvas;
+    [SerializeField]
+    private AudioClip selectionSound;
+    private AudioSource audioSource;
+
+
     public string itemName;
     public Sprite sprite;
     
     void Start()
     {
-        canvas = createCanvas(this.gameObject);
+        canvas = CreateCanvas(this.gameObject);
+        audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource.playOnAwake = false;
     }
 
     void Update()
@@ -29,6 +36,7 @@ public class Item : MonoBehaviour
         if (distance <= activationDistance){
             canvas.enabled = true;
             if (Input.GetKeyDown("e")){
+                PlaySelectionSound();
                 inventory.AddItem(this);
                 Debug.Log("Item picked up");
                 Destroy(gameObject);
@@ -43,9 +51,9 @@ public class Item : MonoBehaviour
         
     }
 
-    public static Canvas createCanvas(GameObject itemObject)
+    public static Canvas CreateCanvas(GameObject itemObject)
     {
-        // Create a new canvas object
+        //Create a new canvas object;
         GameObject canvasObject = new GameObject(itemObject.name + "Canvas");
         canvasObject.AddComponent<Canvas>();
         canvasObject.transform.position = itemObject.transform.position;
@@ -82,7 +90,7 @@ public class Item : MonoBehaviour
         GameObject textObject = new GameObject("GrabText");
         RectTransform textRectTransform = textObject.AddComponent<RectTransform>();
         textRectTransform.sizeDelta = new Vector2(50, 50);
-        textRectTransform.position = new Vector3(0, 12.45f, 0);
+        textRectTransform.localPosition = new Vector3(0, 12.45f, 0);
         textRectTransform.localScale = new Vector3(0.5f, 0.5f, 1);
 
         TextMeshProUGUI grabText = textObject.AddComponent<TextMeshProUGUI>();
@@ -95,5 +103,13 @@ public class Item : MonoBehaviour
 
 
         return canvasObject.GetComponent<Canvas>();
+    }
+
+    private void PlaySelectionSound(){
+        if(selectionSound != null){
+            audioSource.clip = selectionSound;
+            audioSource.Play();
+        }
+
     }
 }

@@ -201,17 +201,25 @@ public class Pursue : State {
 // État "Attack" : NPC attaque le joueur
 public class Attack : State {
     float rotationSpeed = 2.0f;
+    //private bool attackSoundPlayed = false;
+    //private AudioSource audioSource;
     //AudioSource shoot;
  
     public Attack(GameObject _npc, NavMeshAgent _agent, Animator _anim, Transform _player)
         : base(_npc, _agent, _anim, _player) {
         name = STATE.ATTACK;
-        //shoot = _npc.GetComponent<AudioSource>();
+        //audioSource = _npc.GetComponent<AudioSource>();
     }
  
     public override void Enter() {
         anim.SetTrigger("Attack");
         agent.isStopped = true;
+        //npc.GetComponent<AI>().PlayAttackSound(); // jouer attack sound
+        //if (!attackSoundPlayed && audioSource != null) {
+        //    audioSource.PlayOneShot(audioSource.clip); // Play attack sound
+        //    attackSoundPlayed = true; // Set the flag to prevent replaying
+        //}
+        
         //shoot.Play();
         base.Enter();
     }
@@ -232,6 +240,8 @@ public class Attack : State {
  
     public override void Exit() {
         anim.ResetTrigger("Attack");
-        base.Exit();
+        //npc.GetComponent<AI>().ResetAttackSound(); // Reset attack sound flag when exiting the attack state
+        base.Exit(); 
+        //attackSoundPlayed = false;
     }
 }

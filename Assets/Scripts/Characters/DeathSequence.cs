@@ -9,8 +9,19 @@ public class DeathSequence : MonoBehaviour
     public Image gameOverImage;
     public JulieMovement julieMovement;
     public JulieVisionFollow julieVisionFollow;
+    AudioSource audioSource; // AudioSource reference for NPC sounds
+    [SerializeField] float audibleDistance = 15f;
+    [SerializeField] AudioClip sndGrowl, sndAttack;
+    
+    private bool attackSoundPlayed = false;
 
     private void Start() {
+        audioSource = GetComponent<AudioSource>(); // Initialisation du son
+
+        audioSource.spatialBlend = 1.0f; // Set to 3D sound
+        audioSource.maxDistance = audibleDistance;
+        audioSource.rolloffMode = AudioRolloffMode.Linear;
+
         if (deathCanvas != null) deathCanvas.SetActive(false);
 
         if (blackScreen != null) {
@@ -27,6 +38,7 @@ public class DeathSequence : MonoBehaviour
     }
 
     public void TriggerDeathSequence() {
+        PlayAttackSound();
         if (deathCanvas != null) {
             deathCanvas.SetActive(true);
             StartCoroutine(DeathEffectCoroutine());
@@ -38,6 +50,15 @@ public class DeathSequence : MonoBehaviour
 
         if (julieVisionFollow != null) {
             julieVisionFollow.enabled = false;
+        }
+    }
+
+    public void PlayAttackSound() {
+        if (!audioSource.isPlaying) {
+            audioSource.volume = 0.8f;
+            audioSource.pitch = 1.5f;
+            audioSource.PlayOneShot(sndAttack);
+            attackSoundPlayed = true;
         }
     }
 
