@@ -1430,6 +1430,7 @@ MonoBehaviour:
   player: {fileID: 1963577580}
   activationDistance: 1.5
   canvas: {fileID: 0}
+  selectionSound: {fileID: 0}
   itemName: 
   sprite: {fileID: 0}
 --- !u!4 &65914577 stripped
@@ -5915,6 +5916,7 @@ MonoBehaviour:
   player: {fileID: 1963577580}
   activationDistance: 1.5
   canvas: {fileID: 0}
+  selectionSound: {fileID: 0}
   itemName: 
   sprite: {fileID: 0}
 --- !u!4 &304486939 stripped
@@ -7187,6 +7189,7 @@ MonoBehaviour:
   player: {fileID: 1963577580}
   activationDistance: 1.5
   canvas: {fileID: 0}
+  selectionSound: {fileID: 0}
   itemName: 
   sprite: {fileID: 0}
 --- !u!1001 &346096047
@@ -12941,6 +12944,7 @@ MonoBehaviour:
   player: {fileID: 1963577580}
   activationDistance: 1.5
   canvas: {fileID: 0}
+  selectionSound: {fileID: 0}
   itemName: 
   sprite: {fileID: 0}
 --- !u!4 &659246741 stripped
@@ -14012,6 +14016,7 @@ MonoBehaviour:
   player: {fileID: 1963577580}
   activationDistance: 1.5
   canvas: {fileID: 0}
+  selectionSound: {fileID: 0}
   itemName: 
   sprite: {fileID: 0}
 --- !u!4 &699968959 stripped
@@ -41015,6 +41020,7 @@ MonoBehaviour:
   player: {fileID: 1963577580}
   activationDistance: 1.5
   canvas: {fileID: 0}
+  selectionSound: {fileID: 0}
   itemName: 
   sprite: {fileID: 0}
 --- !u!1001 &2034264928
@@ -41179,6 +41185,7 @@ MonoBehaviour:
   player: {fileID: 1963577580}
   activationDistance: 1.5
   canvas: {fileID: 0}
+  selectionSound: {fileID: 0}
   itemName: 
   sprite: {fileID: 0}
 --- !u!4 &2035088605 stripped
