@@ -9,36 +9,13 @@ public class DeathSequence : MonoBehaviour
     public Image gameOverImage;
     public JulieMovement julieMovement;
     public JulieVisionFollow julieVisionFollow;
-    AudioSource audioSource; // AudioSource reference for NPC sounds
-    [SerializeField] float audibleDistance = 15f;
-    [SerializeField] AudioClip sndGrowl, sndAttack;
-    
-    private bool attackSoundPlayed = false;
+    public GameObject enemy;
 
     private void Start() {
-        audioSource = GetComponent<AudioSource>(); // Initialisation du son
-
-        audioSource.spatialBlend = 1.0f; // Set to 3D sound
-        audioSource.maxDistance = audibleDistance;
-        audioSource.rolloffMode = AudioRolloffMode.Linear;
-
         if (deathCanvas != null) deathCanvas.SetActive(false);
-
-        if (blackScreen != null) {
-            Color blackColor = blackScreen.color;
-            blackColor.a = 0;
-            blackScreen.color = blackColor;
-        }
-
-        if (gameOverImage != null) {
-            Color imageColor = gameOverImage.color;
-            imageColor.a = 0;
-            gameOverImage.color = imageColor;
-        }
     }
 
     public void TriggerDeathSequence() {
-        PlayAttackSound();
         if (deathCanvas != null) {
             deathCanvas.SetActive(true);
             StartCoroutine(DeathEffectCoroutine());
@@ -53,15 +30,6 @@ public class DeathSequence : MonoBehaviour
         }
     }
 
-    public void PlayAttackSound() {
-        if (!audioSource.isPlaying) {
-            audioSource.volume = 0.8f;
-            audioSource.pitch = 1.5f;
-            audioSource.PlayOneShot(sndAttack);
-            attackSoundPlayed = true;
-        }
-    }
-
     private IEnumerator DeathEffectCoroutine() {
         float fadeDuration = 2.0f;
         float elapsedTime = 0f;
@@ -72,6 +40,10 @@ public class DeathSequence : MonoBehaviour
             blackColor.a = Mathf.Lerp(0, 1, elapsedTime / fadeDuration);
             blackScreen.color = blackColor;
             yield return null;
+        }
+
+        if (enemy != null) {
+            enemy.SetActive(false);
         }
 
         yield return new WaitForSeconds(1f);

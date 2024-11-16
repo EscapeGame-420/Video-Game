@@ -6,15 +6,9 @@ public class ItemSlot : MonoBehaviour, IDropHandler
 {
     public InventoryManager inventoryManage;  // Reference to your InventoryManage instance
     private Inventory inventory;             // Reference to the Inventory instance
-    [SerializeField]
-    private AudioClip selectionSound;
-    private AudioSource audioSource;
 
     void Start()
     {
-        audioSource = gameObject.AddComponent<AudioSource>();
-        audioSource.playOnAwake = false;
-
         // Find the InventoryManage and Inventory instances in the scene
         inventoryManage = FindFirstObjectByType<InventoryManager>();
         inventory = FindFirstObjectByType<Inventory>();
@@ -30,8 +24,6 @@ public class ItemSlot : MonoBehaviour, IDropHandler
     {
         if (eventData.pointerDrag != null)
         {
-            PlaySelectionSound();
-
             GameObject draggedObject = eventData.pointerDrag;
             DragNDrop dragNDropScript = draggedObject.GetComponent<DragNDrop>();
 
@@ -97,12 +89,5 @@ public class ItemSlot : MonoBehaviour, IDropHandler
         // This is just a placeholder example
         Match match = Regex.Match(name, @"\d+");
         return match.Success ? int.Parse(match.Value) : -1;
-    }
-
-    public void PlaySelectionSound(){
-        if(selectionSound != null){
-            audioSource.clip = selectionSound;
-            audioSource.Play();
-        }
     }
 }

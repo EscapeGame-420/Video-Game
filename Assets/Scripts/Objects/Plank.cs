@@ -29,7 +29,7 @@ public class Plank : MonoBehaviour
         // Check if the canvas has already been created
         if (!canvasCreated)
         {
-            Item.CreateCanvas(this.gameObject);
+            Item.createCanvas(this.gameObject);
             canvasCreated = true; // Set the flag to true after creating the canvas
 
             // Find the created canvas and set its position
