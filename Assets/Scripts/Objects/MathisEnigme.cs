@@ -7,12 +7,17 @@ public class MathisEnigme : MonoBehaviour
     private string prefabPath = "UI/Canvas";
     private int enigmeCounter = 0;
     private Canvas canvas;
+    private Coroutine flameCoroutine;
+    private bool hasRun = false;
 
     [SerializeField]
     private SpriteRenderer bigFlame;
 
     [SerializeField]
     private GameObject fire;
+
+    [SerializeField]
+    private GameObject aiguille;
 
     [SerializeField]
     private Animator candleAnimator;
@@ -38,6 +43,7 @@ public class MathisEnigme : MonoBehaviour
         canvas.gameObject.AddComponent<LookAtCam>();
         canvas.transform.position = transform.position + canvasOffset;
         bigFlame.enabled = false;
+        aiguille.SetActive(false);
     }
 
     // Update is called once per frame
@@ -47,7 +53,14 @@ public class MathisEnigme : MonoBehaviour
 
         if (candleAnimator.GetInteger("candleCount") == 2)
         {
-            bigFlame.enabled = true;
+            if (!hasRun)
+            {
+                flameCoroutine = StartCoroutine(ShowFlame(3f));
+                aiguille.SetActive(true);
+                canvas.enabled = false;
+                fire.SetActive(false);
+                hasRun = true;
+            }   
         }
         else
         {
@@ -98,5 +111,12 @@ public class MathisEnigme : MonoBehaviour
         }
 
 
+    }
+
+    private IEnumerator ShowFlame(float seconds)
+    {
+        bigFlame.enabled = true;
+        yield return new WaitForSeconds(seconds);
+        bigFlame.enabled = false;
     }
 }
