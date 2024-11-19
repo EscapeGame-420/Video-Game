@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
-public class bucket : MonoBehaviour
+public class Bucket : MonoBehaviour
 {
     public Transform player;
     public float activationDistance = 7.0f;
@@ -12,11 +12,14 @@ public class bucket : MonoBehaviour
     public float x =0;
     public float y =0;
     public float z =0;
-    public Sprite sprite;
     public string itemName;
-    public Sprite sprite1;
+    public Sprite sprite;
     public string itemName1;
+    public Sprite sprite1;
     private Transform canvasTransform; 
+    public GameObject goodeffect;
+    public GameObject badeffect;
+
     public List<string> mixItems;
     public GameObject bucketObject;
 
@@ -27,11 +30,13 @@ public class bucket : MonoBehaviour
         if (player == null)
         {
             player = GameObject.FindGameObjectWithTag("Player").transform;
+            goodeffect.SetActive(false);
+            badeffect.SetActive(false);
 
         }
     }
 
-    void FixedUpdate()
+    void Update()
     {
         if (player == null) return;
 
@@ -51,7 +56,7 @@ public class bucket : MonoBehaviour
             }
         }
 
-        if (!(distance <= activationDistance))
+        if (!(distance <= activationDistance && (inventory.IncludeItem("bones")|| inventory.IncludeItem("eyeball")|| mixItems.Count == 3)))
         {
             canvasTransform.gameObject.SetActive(false);
             return;
@@ -62,7 +67,23 @@ public class bucket : MonoBehaviour
         }
 
         Debug.Log("Le joueur s'approche");
-
+        if (mixItems.Count == 3)
+        {
+            mixItems.Sort();
+            if (string.Join(",", mixItems) == "bones,eyeball,eyeball")
+            {
+            goodeffect.SetActive(true);
+            }
+            else
+            {
+            badeffect.SetActive(true);
+            }
+        }
+        else
+        {
+            goodeffect.SetActive(false);
+            badeffect.SetActive(false);
+        }
         if (Input.GetKeyDown("e"))
         {
             if (mixItems.Count == 3)
@@ -101,8 +122,10 @@ public class bucket : MonoBehaviour
                 {
                     inventory.UseItem("eyeball");
                     mixItems.Add("eyeball");
+                    
                 }
             }
         }
     }
+    
 }

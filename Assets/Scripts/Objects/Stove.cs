@@ -11,7 +11,7 @@ public class Stove : MonoBehaviour
     public Sprite spritetorch;
     private Transform canvasTransform; // Reference to the created canvas
     public GameObject fireparticleEffect;
-
+    public string itemName;
     void Start()
     {
         // If the player is not assigned manually in the inspector, find it automatically
@@ -23,7 +23,7 @@ public class Stove : MonoBehaviour
         }
     }
 
-    void FixedUpdate()
+    void Update()
     {
         if (player == null) return;
 
@@ -58,7 +58,7 @@ public class Stove : MonoBehaviour
             inventory.UseItem("torch");
             Item item = new Item // Create NEW instance per slot
             {
-                itemName = "burning_torch",
+                itemName = itemName,
                 sprite = spritetorch
             };
             inventory.AddItem(item);
