@@ -49,7 +49,7 @@ public class Obstacle : MonoBehaviour
              canvasTransform = transform.Find(this.gameObject.name +"Canvas");
             if (canvasTransform != null)
             {
-                canvasTransform.localPosition = new Vector3(0,5, 1); // Set the desired position
+                canvasTransform.localPosition = new Vector3(-0.69f,2.174f, 0.5f); // Set the desired position
             }
         }
         if (!(distance <= activationDistance && inventory.IncludeItem(itemName) || (inventory.IncludeItem(itemName1) && isGassed))){
