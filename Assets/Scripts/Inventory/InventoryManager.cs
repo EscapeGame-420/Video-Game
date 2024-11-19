@@ -128,13 +128,7 @@ public class InventoryManager : MonoBehaviour
     void Update()
     {
         toolbarArray = Toolbar.items.Take(7).ToArray(); // Get the first 8 items from the Toolbar
-        for (int ii = 0; ii < toolbarArray.Length; ii++)
-        {
-            if (toolbarArray[ii].itemName != "Empty Slot")
-            {
-                Debug.Log("there is a " + toolbarArray[ii].itemName + " in slot " + ii);
-            }
-        }
+        
         if (oldList == null || !AreItemsEqual(oldList, toolbarArray))
         {
             

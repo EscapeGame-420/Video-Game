@@ -34,6 +34,7 @@ public class Item : MonoBehaviour
         audioSource = gameObject.AddComponent<AudioSource>();
         audioSource.playOnAwake = false;
     }
+    
 
     void Update()
     {
