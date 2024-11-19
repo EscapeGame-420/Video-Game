@@ -63,7 +63,7 @@ public class Obstacle : MonoBehaviour
         
         Debug.Log("Le joueur s'approche avec la bougie. Activation du tableau");
 
-        if (Input.GetKeyDown("e") && inventory.IsSelectingItem(itemName) || inventory.IsSelectingItem(itemName1))
+        if (Input.GetKeyDown("e") && (inventory.IsSelectingItem(itemName) || inventory.IsSelectingItem(itemName1)))
         {
             switch (isGassed)
             {

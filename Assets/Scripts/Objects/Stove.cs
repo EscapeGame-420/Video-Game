@@ -23,7 +23,7 @@ public class Stove : MonoBehaviour
         }
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (player == null) return;
 
