@@ -51,7 +51,7 @@ public class bucket : MonoBehaviour
             }
         }
 
-        if (!(distance <= activationDistance && (inventory.IncludeItem("bones") || inventory.IncludeItem("eyeball"))))
+        if (!(distance <= activationDistance))
         {
             canvasTransform.gameObject.SetActive(false);
             return;
@@ -92,12 +92,12 @@ public class bucket : MonoBehaviour
             }
             else
             {
-                if (inventory.IncludeItem("bones") && inventory.is)
+                if (inventory.IncludeItem("bones") && inventory.IsSelectingItem("bones"))
                 {
                     inventory.UseItem("bones");
                     mixItems.Add("bones");
                 }
-                else if (inventory.IncludeItem("eyeball"))
+                else if (inventory.IncludeItem("eyeball") && inventory.IsSelectingItem("eyeball"))
                 {
                     inventory.UseItem("eyeball");
                     mixItems.Add("eyeball");
