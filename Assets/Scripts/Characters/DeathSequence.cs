@@ -85,5 +85,6 @@ public class DeathSequence : MonoBehaviour
             gameOverImage.color = imageColor;
             yield return null;
         }
+
     }
 }

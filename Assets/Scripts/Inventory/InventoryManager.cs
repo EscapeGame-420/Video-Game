@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
 using System.Linq;
+using System.Collections;
 
 public class InventoryManager : MonoBehaviour
 {
@@ -17,16 +18,30 @@ public class InventoryManager : MonoBehaviour
 
     void Start()
     {
-        toolbar = GameObject.Find("Toolbar").transform;
+        StartCoroutine(WaitForToolbar());
+    }
 
-        if (Toolbar != null && toolbar != null)
+    IEnumerator WaitForToolbar()
+    {
+        // Wait for the death sequence to complete (adjust the delay as needed)
+        yield return new WaitForSeconds(2.0f); // Delay of 1 second (or more) to allow the death sequence to finish
+
+        // Now, wait for the toolbar to be active in the hierarchy
+        while (toolbar == null || !toolbar.gameObject.activeInHierarchy)
+        {
+            toolbar = GameObject.Find("Toolbar")?.transform;
+            yield return null; // Wait for the next frame
+        }
+
+        // Once the toolbar is active, proceed with initialization
+        if (toolbar != null)
         {
             totalSlots = toolbar.childCount;
             MapAllSprites(); // Initial sprite mapping for all slots
         }
         else
         {
-            Debug.LogError("Toolbar or Toolbar not assigned or found!");
+            Debug.LogError("Toolbar not found or inactive!");
         }
     }
 
