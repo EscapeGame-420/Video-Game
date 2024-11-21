@@ -9,7 +9,7 @@ public class ShadowManConvo : MonoBehaviour
     [SerializeField] private TextMeshPro manConvo;
     [SerializeField] private TMP_Text JulieConvo;
     [SerializeField] private TextMeshPro FToTalk;
-    [SerializeField] private GameObject dialoguePanel;
+    [SerializeField] private GameObject continuePanel;
 
     private List<string> messagesJulie;
     private List<string> messagesHomme;
@@ -63,14 +63,6 @@ public class ShadowManConvo : MonoBehaviour
         isPlayerNear = distance < 4f && !isConvoStarted && isPlayerInFront > 0;
 
         FToTalk.gameObject.SetActive(isPlayerNear);
-
-
-        if(Input.GetKeyDown(KeyCode.T) && isPlayerNear){
-            isConvoStarted = true;
-            dialoguePanel.SetActive(true);
-            StartDialogue();
-        }
-
     }
 
     void StartDialogue()
@@ -79,6 +71,11 @@ public class ShadowManConvo : MonoBehaviour
     }
 
     void Update(){
+        if(Input.GetKeyDown(KeyCode.T) && isPlayerNear){
+            isConvoStarted = true;
+            continuePanel.SetActive(true);
+        }
+        
         if(isConvoStarted && Input.GetKeyDown(KeyCode.T)){
             ShowNextMessage();
         }
