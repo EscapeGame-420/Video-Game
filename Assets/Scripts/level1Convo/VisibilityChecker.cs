@@ -6,23 +6,10 @@ public class VisibilityChecker : MonoBehaviour
 
     void Start()
     {
-        // objectRenderer = GetComponent<Renderer>();
-        // if (objectRenderer == null)
-        // {
-        //     Debug.LogError("No Renderer found on this GameObject.");
-        // }
     }
 
     void Update()
     {
-        // Vector3 screenCenter = new Vector3(Screen.width / 2, Screen.height / 2, Camera.main.transform.position.z);
-        // Debug.Log("screenCenter "+screenCenter);
-
-        // Vector3 screenHeight = new Vector3(Screen.width / 2, Screen.height, Camera.main.transform.position.z);
-        // Debug.Log("screenHeight " + screenHeight);
-
-        // Vector3 screenWidth = new Vector3(Screen.width, Screen.height/2, Camera.main.transform.position.z);
-        // Debug.Log("screenWidth " + screenWidth);
 
         Vector3 goscreen = Camera.main.WorldToScreenPoint(transform.position);
         Debug.Log("GoPos " + goscreen);

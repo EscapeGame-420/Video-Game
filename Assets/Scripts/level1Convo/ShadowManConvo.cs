@@ -9,6 +9,7 @@ public class ShadowManConvo : MonoBehaviour
     [SerializeField] private TextMeshPro manConvo;
     [SerializeField] private TMP_Text JulieConvo;
     [SerializeField] private TextMeshPro FToTalk;
+    [SerializeField] private GameObject dialoguePanel;
 
     private List<string> messagesJulie;
     private List<string> messagesHomme;
@@ -49,19 +50,24 @@ public class ShadowManConvo : MonoBehaviour
             "Exactement, cette peinture semble trop récente, trop propre.",
             "Peut-être qu'il y a quelque chose derrière.",
             "Je préfère rester ici et attendre que quelqu'un vienne nous chercher. Mais rien ne vous empêche de chercher une issue."
+            // or something like "ma place est ici dans ce sous-sol, il est trop tard pour moi" to make the player feel like they have to escape alone
+            // et peut etre rajouter plus de temps a la sentence du mec pour faire genre qu<il a arret/ de compter
+            // je suis ici depuis tellement longtemps que j<ai arrete de compter
         };
     }
 
     void FixedUpdate()
     {
         float distance = Vector3.Distance(transform.position, player.transform.position);
-        isPlayerNear = distance < 4f && !isConvoStarted;
+        float isPlayerInFront = Vector3.Dot(transform.forward, player.transform.position - transform.position);
+        isPlayerNear = distance < 4f && !isConvoStarted && isPlayerInFront > 0;
 
         FToTalk.gameObject.SetActive(isPlayerNear);
 
 
         if(Input.GetKeyDown(KeyCode.T) && isPlayerNear){
             isConvoStarted = true;
+            dialoguePanel.SetActive(true);
             StartDialogue();
         }
 
@@ -70,6 +76,12 @@ public class ShadowManConvo : MonoBehaviour
     void StartDialogue()
     {
         ShowNextMessage();
+    }
+
+    void Update(){
+        if(isConvoStarted && Input.GetKeyDown(KeyCode.T)){
+            ShowNextMessage();
+        }
     }
 
     void ShowNextMessage()
@@ -92,7 +104,7 @@ public class ShadowManConvo : MonoBehaviour
             isConvoFinished = true;
         }
         
-        Invoke("ShowNextMessage", 1f);
+        //Invoke("ShowNextMessage", 1f);
     }
 }
 
