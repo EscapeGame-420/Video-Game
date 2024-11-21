@@ -83,7 +83,7 @@ public class ShadowManConvo : MonoBehaviour
             isManSpeaking = false;
         }
         else if(!isManSpeaking && currentJulieMessageIndex < messagesJulie.Count){
-            JulieConvo.text = messagesJulie[currentJulieMessageIndex];
+            JulieConvo.text = "YOU: " + messagesJulie[currentJulieMessageIndex];
             currentJulieMessageIndex++;
             isManSpeaking = true;
         }
