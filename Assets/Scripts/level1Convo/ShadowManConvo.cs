@@ -5,14 +5,20 @@ using TMPro;
 
 public class ShadowManConvo : MonoBehaviour
 {
+    [SerializeField] private GameObject player;
     [SerializeField] private TextMeshPro manConvo;
-    [SerializeField] private TextMeshPro JulieConvo;
+    [SerializeField] private TMP_Text JulieConvo;
+    [SerializeField] private TextMeshPro FToTalk;
+
     private List<string> messagesJulie;
     private List<string> messagesHomme;
     private int currentManMessageIndex = 0;
     private int currentJulieMessageIndex = 0;
     private bool isManSpeaking = false;
+    private bool isPlayerNear;
+
     public static bool isConvoFinished = false;
+    public static bool isConvoStarted = false;
 
 
     void Start()
@@ -44,8 +50,21 @@ public class ShadowManConvo : MonoBehaviour
             "Peut-être qu'il y a quelque chose derrière.",
             "Je préfère rester ici et attendre que quelqu'un vienne nous chercher. Mais rien ne vous empêche de chercher une issue."
         };
+    }
 
-        StartDialogue();
+    void FixedUpdate()
+    {
+        float distance = Vector3.Distance(transform.position, player.transform.position);
+        isPlayerNear = distance < 4f && !isConvoStarted;
+
+        FToTalk.gameObject.SetActive(isPlayerNear);
+
+
+        if(Input.GetKeyDown(KeyCode.T) && isPlayerNear){
+            isConvoStarted = true;
+            StartDialogue();
+        }
+
     }
 
     void StartDialogue()
