@@ -19,7 +19,7 @@ public class SecretRoomActivator : MonoBehaviour
 
     private AudioSource audioSource;
     private bool bookActivated = false;
-    private bool shelfRevealed = false;
+    // private bool shelfRevealed = false;
 
     private void Start()
     {
@@ -47,6 +47,7 @@ public class SecretRoomActivator : MonoBehaviour
         // }
     }
 
+    // IEnumerator used to create coroutines(useful for tasks needing to occur over time, like in animations)
     private IEnumerator ActivateSecretRoom()
     {
         bookActivated = true;
@@ -112,7 +113,7 @@ public class SecretRoomActivator : MonoBehaviour
         libraryShelf.transform.position = revealShelfPosition.position;
 
         // Mark shelf as Revealed (Moved)
-        shelfRevealed = true;
+        // shelfRevealed = true;
         Debug.Log("Secret room revealed!");
     }
 
