@@ -28,11 +28,11 @@ public class Painting : MonoBehaviour
         Inventory inventory = FindFirstObjectByType <Inventory>();
         if (!(distance <= activationDistance && inventory.IncludeItem("greenFlameCandle") && !GetComponent<Animator>().enabled) ) return;
 
-        if(!transform.Find("PaintingCanvas")) Item.CreateCanvas(this.gameObject);
+        //if(!transform.Find("PaintingCanvas")) Item.CreateCanvas(this.gameObject);
         //GetComponent<Animator>().enabled = true;
         Debug.Log("Le joueur s'approche avec la bougie. Activation du tableau");
 
-        if (Input.GetKeyDown("e") && inventory.IsSelectingItem("greenFlameCandle")){
+        if (inventory.IsSelectingItem("greenFlameCandle")){
             GetComponent<Animator>().enabled = true;
             inventory.UseItem("greenFlameCandle");
         }
