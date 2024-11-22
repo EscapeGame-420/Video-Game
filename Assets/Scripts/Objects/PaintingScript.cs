@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Painting : MonoBehaviour
 {
+    public GameObject crowbar;
     public Transform player;
     public float activationDistance = 7.0f;
     public bool isCandleNear = false;
@@ -14,7 +15,8 @@ public class Painting : MonoBehaviour
         if (player == null)
         {
              player = GameObject.FindGameObjectWithTag("Player").transform;
-
+            crowbar = GameObject.Find("crowbar (1)");
+            crowbar.SetActive(false);
         }
     }
 
@@ -36,6 +38,7 @@ public class Painting : MonoBehaviour
             GetComponent<Animator>().enabled = true;
             inventory.UseItem("greenFlameCandle");
             Destroy(GameObject.Find("ToShowCandle"));
+            crowbar.SetActive(true);
         }
         
     }

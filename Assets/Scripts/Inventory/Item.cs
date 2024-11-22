@@ -33,6 +33,8 @@ public class Item : MonoBehaviour
         canvas = CreateCanvas(this.gameObject);
         audioSource = gameObject.AddComponent<AudioSource>();
         audioSource.playOnAwake = false;
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+        inventory = player.GetComponent<Inventory>();
     }
     
 
