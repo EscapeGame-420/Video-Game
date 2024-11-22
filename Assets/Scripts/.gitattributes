@@ -1,0 +1,6 @@
+Assets/Horror[[:space:]]Environment[[:space:]]Pack[[:space:]]1/Toilet_Props/Textures/Toilet_Combined_basecolor.psd filter=lfs diff=lfs merge=lfs -text
+git filter=lfs diff=lfs merge=lfs -text
+lfs filter=lfs diff=lfs merge=lfs -text
+track filter=lfs diff=lfs merge=lfs -text
+Assets/Horror[[:space:]]Environment[[:space:]]Pack[[:space:]]1/Architectural/Textures/Architect_ALB.psd filter=lfs diff=lfs merge=lfs -text
+*.psd filter=lfs diff=lfs merge=lfs -text

@@ -41,6 +41,9 @@ public class WardrobeDoorController : MonoBehaviour
         // }
 
         // canvas.enabled = false; // Hide the interaction prompt initially
+
+        // 
+
     }
 
     private void Update()
@@ -147,7 +150,7 @@ public class WardrobeDoorController : MonoBehaviour
     //     isAnimating = false;
     // }
 
-    
+
 
     // public static Canvas CreateCanvas(GameObject wardrobeObject)
     // {

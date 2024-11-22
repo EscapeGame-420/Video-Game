@@ -6,7 +6,7 @@ using TMPro;
 
 public class Item : MonoBehaviour
 {
-    [SerializeField] 
+    [SerializeField]
     private Inventory inventory;
     [SerializeField]
     private Transform player;
@@ -18,98 +18,101 @@ public class Item : MonoBehaviour
     private AudioClip selectionSound;
     private AudioSource audioSource;
 
+    [SerializeField]
+    private float canvasHeightOffset = 0f; // Offset for the canvas height
+    [SerializeField]
+    private float canvasxOffset = 0f; // Offset for the canvas X position
+    [SerializeField]
+    private float canvaszOffset = -0.1f; // Offset for the canvas Z position
 
     public string itemName;
     public Sprite sprite;
-    
+
     void Start()
     {
         canvas = CreateCanvas(this.gameObject);
         audioSource = gameObject.AddComponent<AudioSource>();
         audioSource.playOnAwake = false;
     }
+    
 
     void Update()
     {
         float distance = Vector3.Distance(transform.position, player.position);
 
-        if (distance <= activationDistance){
+        if (distance <= activationDistance)
+        {
             canvas.enabled = true;
-            if (Input.GetKeyDown("e")){
+            if (Input.GetKeyDown(KeyCode.E))
+            {
                 PlaySelectionSound();
                 inventory.AddItem(this);
                 Debug.Log("Item picked up");
                 Destroy(gameObject);
             }
         }
-        else{
+        else
+        {
             canvas.enabled = false;
         }
-    }
 
-    private void UIKey  () {
-        
+        if (canvas != null)
+        {
+            RectTransform canvasRectTransform = canvas.GetComponent<RectTransform>();
+            canvasRectTransform.position = transform.position + new Vector3(canvasxOffset, canvasHeightOffset, canvaszOffset);
+        }
     }
 
     public static Canvas CreateCanvas(GameObject itemObject)
     {
-        //Create a new canvas object;
+        // Create a new canvas object
         GameObject canvasObject = new GameObject(itemObject.name + "Canvas");
-        canvasObject.AddComponent<Canvas>();
-        canvasObject.transform.position = itemObject.transform.position;
+        Canvas canvas = canvasObject.AddComponent<Canvas>();
+        canvas.renderMode = RenderMode.WorldSpace;
+
+        CanvasScaler canvasScaler = canvasObject.AddComponent<CanvasScaler>();
+        canvasScaler.dynamicPixelsPerUnit = 10f;
 
         RectTransform canvasRectTransform = canvasObject.GetComponent<RectTransform>();
+        canvasRectTransform.sizeDelta = new Vector2(1, 1); // Square canvas
         canvasRectTransform.localScale = new Vector3(0.01f, 0.01f, 0.01f);
-        canvasRectTransform.sizeDelta = new Vector2(1101, 514);
-        canvasRectTransform.anchorMin = new Vector2(0, 0);
-        canvasRectTransform.anchorMax = new Vector2(0, 0);
-
-        // for some reasons this is the only way to correctly change the position
-        canvasRectTransform.localPosition = new Vector3(
-            canvasRectTransform.localPosition.x + -0.036f * 2,
-            canvasRectTransform.localPosition.y + 0.106f * 3,
-            canvasRectTransform.localPosition.z + 0.003f
-        );
+        canvasRectTransform.position = itemObject.transform.position + new Vector3(0, 0.7f, 0); // Default offset above the item
         canvasObject.AddComponent<LookAtCam>();
+
+        // Attach to the item
         canvasObject.transform.SetParent(itemObject.transform, true);
 
-
-        // Create a new Image object
+        // Create a background image
         GameObject imageObject = new GameObject("GrabBackground");
         Image image = imageObject.AddComponent<Image>();
-        image.color = Color.white;
-        
+        image.color = new Color(0.2f, 0.2f, 0.2f, 0.8f); // Semi-transparent background
+
         RectTransform imageRectTransform = imageObject.GetComponent<RectTransform>();
-        imageRectTransform.sizeDelta = new Vector2(100, 100);
-        imageRectTransform.position = new Vector3(0, 1.75f, 0);
-        imageRectTransform.localScale = new Vector3(0.5f, 0.5f, 1);
+        imageRectTransform.sizeDelta = new Vector2(50, 50); // Background size
         imageObject.transform.SetParent(canvasObject.transform, false);
 
-
-        // Create a new text object
+        // Create a text object for the interaction prompt
         GameObject textObject = new GameObject("GrabText");
-        RectTransform textRectTransform = textObject.AddComponent<RectTransform>();
-        textRectTransform.sizeDelta = new Vector2(50, 50);
-        textRectTransform.localPosition = new Vector3(0, 12.45f, 0);
-        textRectTransform.localScale = new Vector3(0.5f, 0.5f, 1);
-
         TextMeshProUGUI grabText = textObject.AddComponent<TextMeshProUGUI>();
         grabText.text = "E";
-        grabText.fontSize = 80;
-        grabText.color = Color.black;
+        grabText.fontSize = 50;
+        grabText.color = Color.white;
         grabText.fontStyle = FontStyles.Bold;
-        grabText.horizontalAlignment = HorizontalAlignmentOptions.Center;
+        grabText.alignment = TextAlignmentOptions.Center;
+
+        RectTransform textRectTransform = textObject.GetComponent<RectTransform>();
+        textRectTransform.sizeDelta = new Vector2(150, 150); // Text size
         textObject.transform.SetParent(canvasObject.transform, false);
 
-
-        return canvasObject.GetComponent<Canvas>();
+        return canvas;
     }
 
-    private void PlaySelectionSound(){
-        if(selectionSound != null){
+    private void PlaySelectionSound()
+    {
+        if (selectionSound != null)
+        {
             audioSource.clip = selectionSound;
             audioSource.Play();
         }
-
     }
 }
