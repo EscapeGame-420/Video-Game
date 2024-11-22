@@ -35,6 +35,7 @@ public class Painting : MonoBehaviour
         if (inventory.IsSelectingItem("greenFlameCandle")){
             GetComponent<Animator>().enabled = true;
             inventory.UseItem("greenFlameCandle");
+            Destroy(GameObject.Find("ToShowCandle"));
         }
         
     }

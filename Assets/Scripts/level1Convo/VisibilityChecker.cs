@@ -11,7 +11,7 @@ public class VisibilityChecker : MonoBehaviour
 
     void Update()
     {
-
+        if(elementToCheck == null) return;
         Vector3 goscreen = Camera.main.WorldToScreenPoint(elementToCheck.transform.position);
         Debug.Log("GoPos " + goscreen);
 
