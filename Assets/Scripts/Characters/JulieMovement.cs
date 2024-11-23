@@ -18,6 +18,8 @@ public class JulieMovement : MonoBehaviour
     [SerializeField] public int rotationSpeed = 100;
 
     public static int rotationSpeedStatic;
+    public static bool isInConversationLevel1 = false;
+
     private float yRotation = 0f;
     private float stepCooldown = 0.6f; 
     private float nextStepTime = 0f;
@@ -56,7 +58,7 @@ public class JulieMovement : MonoBehaviour
         axisV = Input.GetAxis("Vertical");
 
         // pour avancer et reculer
-
+        if(ShadowManConvo.isConvoStarted && !ShadowManConvo.isConvoFinished) return;
         if (axisV != 0)
         {
             transform.Translate(Vector3.forward * walkSpeed * axisV * Time.deltaTime);

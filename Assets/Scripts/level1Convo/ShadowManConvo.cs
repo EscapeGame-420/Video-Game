@@ -123,14 +123,14 @@ public class ShadowManConvo : MonoBehaviour
         }
     }
     void disablePlayerMovement(){
-        player.GetComponent<JulieMovement>().enabled = false;
+        //player.GetComponent<JulieMovement>().enabled = false;
         player.GetComponent<Animator>().enabled = false;
         player.transform.position = PlaceToStay.transform.position;
         player.transform.LookAt(transform);
     }
 
     void enablePlayerMovement(){
-        player.GetComponent<JulieMovement>().enabled = true;
+        //player.GetComponent<JulieMovement>().enabled = true;
         player.GetComponent<Animator>().enabled = true;
     }
 }
