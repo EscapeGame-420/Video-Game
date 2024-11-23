@@ -95,6 +95,7 @@ public class Obstacle : MonoBehaviour
             shelf.SetActive(false);
             shelf1.SetActive(false);
             flames.SetActive(false);
+            steaming.SetActive(false);
         }
     }
 }
