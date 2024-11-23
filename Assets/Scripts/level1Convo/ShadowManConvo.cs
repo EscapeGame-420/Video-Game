@@ -10,6 +10,7 @@ public class ShadowManConvo : MonoBehaviour
     [SerializeField] private TMP_Text JulieConvo;
     [SerializeField] private TextMeshPro FToTalk;
     [SerializeField] private GameObject continuePanel;
+    [SerializeField] private GameObject PlaceToStay;
 
     private List<string> messagesJulie;
     private List<string> messagesHomme;
@@ -89,10 +90,14 @@ public class ShadowManConvo : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.T) && isPlayerNear){
             isConvoStarted = true;
             continuePanel.SetActive(true);
+            disablePlayerMovement();
         }
         
         if(isConvoStarted && Input.GetKeyDown(KeyCode.T)){
             ShowNextMessage();
+            if(isConvoFinished){
+                continuePanel.SetActive(false);
+            }
         }
     }
 
@@ -102,21 +107,31 @@ public class ShadowManConvo : MonoBehaviour
         JulieConvo.text = "";
 
         if(isManSpeaking && currentManMessageIndex < messagesHomme.Count){
-            manConvo.text = "MAN: " + messagesHomme[currentManMessageIndex];
+            manConvo.text = messagesHomme[currentManMessageIndex];
             currentManMessageIndex++;
             isManSpeaking = false;
         }
         else if(!isManSpeaking && currentJulieMessageIndex < messagesJulie.Count){
-            JulieConvo.text = "YOU: " + messagesJulie[currentJulieMessageIndex];
+            JulieConvo.text = messagesJulie[currentJulieMessageIndex];
             currentJulieMessageIndex++;
             isManSpeaking = true;
         }
 
         if(currentManMessageIndex == messagesHomme.Count && currentJulieMessageIndex == messagesJulie.Count){
             isConvoFinished = true;
+            enablePlayerMovement();
         }
-        
-        //Invoke("ShowNextMessage", 1f);
+    }
+    void disablePlayerMovement(){
+        player.GetComponent<JulieMovement>().enabled = false;
+        player.GetComponent<Animator>().enabled = false;
+        player.transform.position = PlaceToStay.transform.position;
+        player.transform.LookAt(transform);
+    }
+
+    void enablePlayerMovement(){
+        player.GetComponent<JulieMovement>().enabled = true;
+        player.GetComponent<Animator>().enabled = true;
     }
 }
 
