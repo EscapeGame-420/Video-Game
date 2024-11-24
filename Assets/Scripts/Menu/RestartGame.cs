@@ -15,6 +15,6 @@ public class RestartGame : MonoBehaviour
 
     void Restart()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("featureInteractions");
     }
 }
