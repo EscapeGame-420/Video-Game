@@ -8,6 +8,11 @@ public class Plank : MonoBehaviour
     public float activationDistance = 7.0f;
     public bool isCandleNear = false;
     private bool canvasCreated = false; // Flag to track if the canvas has been created
+<<<<<<< Updated upstream
+=======
+    public GameObject obstacle;
+    
+>>>>>>> Stashed changes
 
     void Start()
     {
