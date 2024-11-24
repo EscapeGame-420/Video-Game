@@ -17660,7 +17660,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 299040102}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
   m_Name: 
@@ -100954,6 +100954,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -7.37
       objectReference: {fileID: 0}
+    - target: {fileID: 3781170308854262431, guid: 870f4b33ef79be141bfa8effa00bf269, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4403997230731849702, guid: 870f4b33ef79be141bfa8effa00bf269, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -100966,6 +100970,14 @@ PrefabInstance:
       propertyPath: m_RenderMode
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4875654424951419038, guid: 870f4b33ef79be141bfa8effa00bf269, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1963577580}
+    - target: {fileID: 4875654424951419038, guid: 870f4b33ef79be141bfa8effa00bf269, type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 1963577590}
     - target: {fileID: 5148411113400648856, guid: 870f4b33ef79be141bfa8effa00bf269, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.436
@@ -100974,6 +100986,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -8.163
       objectReference: {fileID: 0}
+    - target: {fileID: 5165764762733564712, guid: 870f4b33ef79be141bfa8effa00bf269, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1963577580}
+    - target: {fileID: 5165764762733564712, guid: 870f4b33ef79be141bfa8effa00bf269, type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 1963577590}
     - target: {fileID: 5321658511690147944, guid: 870f4b33ef79be141bfa8effa00bf269, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.042
