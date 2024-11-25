@@ -6,7 +6,7 @@ public class WardrobeDoorController : MonoBehaviour
 {
     [SerializeField] private Transform player; // Reference to player
     [SerializeField] private float activationDistance = 2f; // Distance to activate interaction
-    [SerializeField] private AudioClip doorOpenSound; // Sound to play when door opens
+    [SerializeField] private AudioClip doorSound; // Sound to play when doors open and close
     [SerializeField] private Transform leftDoor; // Reference Left Door
     [SerializeField] private Transform rightDoor; //  Right Door
     [SerializeField] private Vector3 leftDoorOpenRotation = new Vector3(0, 90, 0); // Open rotation for left door
@@ -42,7 +42,10 @@ public class WardrobeDoorController : MonoBehaviour
 
         // canvas.enabled = false; // Hide the interaction prompt initially
 
-        // 
+        // AudioSource
+        audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource.playOnAwake = false;
+        audioSource.clip = doorSound;
 
     }
 
@@ -92,6 +95,11 @@ public class WardrobeDoorController : MonoBehaviour
         }
 
         isOpen = !isOpen;
+
+        if(audioSource != null && doorSound != null)
+        {
+            audioSource.Play();
+        }
     }
 
 
