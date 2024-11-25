@@ -20,7 +20,7 @@ public class ThrowTrash : MonoBehaviour
         if (player == null)
         {
             player = GameObject.FindGameObjectWithTag("Player").transform;
-            bucket = GameObject.Find("Bucket");
+            bucket = GameObject.Find("bucket");
             bucketScript = GameObject.Find("bucketScript").GetComponent<Bucket>();
         }
     }
