@@ -18,6 +18,7 @@ public class FadeOutEffect : MonoBehaviour
     {
         if (fadeImage != null)
         {
+            fadeImage.color = new Color(0f, 0f, 0f, 1f);
             StartCoroutine(FadeOut());
         }
 
