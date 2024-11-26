@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Painting : MonoBehaviour
 {
+    public GameObject crowbar;
     public Transform player;
     public float activationDistance = 7.0f;
     public bool isCandleNear = false;
@@ -14,7 +15,8 @@ public class Painting : MonoBehaviour
         if (player == null)
         {
              player = GameObject.FindGameObjectWithTag("Player").transform;
-
+            crowbar = GameObject.Find("crowbar (1)");
+            crowbar.SetActive(false);
         }
     }
 
@@ -28,13 +30,15 @@ public class Painting : MonoBehaviour
         Inventory inventory = FindFirstObjectByType <Inventory>();
         if (!(distance <= activationDistance && inventory.IncludeItem("greenFlameCandle") && !GetComponent<Animator>().enabled) ) return;
 
-        if(!transform.Find("PaintingCanvas")) Item.CreateCanvas(this.gameObject);
+        //if(!transform.Find("PaintingCanvas")) Item.CreateCanvas(this.gameObject);
         //GetComponent<Animator>().enabled = true;
         Debug.Log("Le joueur s'approche avec la bougie. Activation du tableau");
 
-        if (Input.GetKeyDown("e") && inventory.IsSelectingItem("greenFlameCandle")){
+        if (inventory.IsSelectingItem("greenFlameCandle")){
             GetComponent<Animator>().enabled = true;
             inventory.UseItem("greenFlameCandle");
+            Destroy(GameObject.Find("ToShowCandle"));
+            crowbar.SetActive(true);
         }
         
     }

@@ -8,6 +8,7 @@ public class Plank : MonoBehaviour
     public float activationDistance = 7.0f;
     public bool isCandleNear = false;
     private bool canvasCreated = false; // Flag to track if the canvas has been created
+    public GameObject obstacle;
 
     void Start()
     {
@@ -15,6 +16,8 @@ public class Plank : MonoBehaviour
         if (player == null)
         {
             player = GameObject.FindGameObjectWithTag("Player").transform;
+            obstacle = GameObject.Find("obstacle");
+            obstacle.SetActive(false);
         }
     }
 
@@ -46,6 +49,7 @@ public class Plank : MonoBehaviour
         {
             Destroy(gameObject);
             inventory.UseItem("crowbar");
+            obstacle.SetActive(true);
         }
     }
 }
