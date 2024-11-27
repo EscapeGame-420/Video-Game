@@ -49,8 +49,8 @@ public class DeathSequence : MonoBehaviour
         if (julieMovement != null) julieMovement.enabled = false;
         if (julieVisionFollow != null) julieVisionFollow.enabled = false;
 
-        Cursor.lockState = CursorLockMode.None;  // Unlock the cursor
-        Cursor.visible = true;  // Ensure the cursor is visible
+        Cursor.lockState = CursorLockMode.None; 
+        Cursor.visible = true;
     }
 
     public void PlayAttackSound()

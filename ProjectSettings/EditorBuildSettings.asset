@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/featureInteractions.unity
     guid: 60c19fb090a2ddd4da43db87ae75d1a8
   - enabled: 1
+    path: Assets/Scenes/Level1.unity
+    guid: dc8f4fc0fce1d6a4eab17870d9ae037b
+  - enabled: 1
     path: Assets/Scenes/DeathScene.unity
     guid: 020dffb18e3d56648b5865ed1f62bf94
   m_configObjects: {}

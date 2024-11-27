@@ -13,6 +13,6 @@ public class StartGame : MonoBehaviour
 
     void ChangeScene()
     {
-        SceneManager.LoadScene("featureInteractions", LoadSceneMode.Single);
+        SceneManager.LoadScene("Level1", LoadSceneMode.Single);
     }
 }
