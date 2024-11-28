@@ -100826,6 +100826,10 @@ PrefabInstance:
       propertyPath: obstacle
       value: 
       objectReference: {fileID: 2097933885}
+    - target: {fileID: 1121302510952783549, guid: 870f4b33ef79be141bfa8effa00bf269, type: 3}
+      propertyPath: activationDistance
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 1285361783127129456, guid: 870f4b33ef79be141bfa8effa00bf269, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.0533
