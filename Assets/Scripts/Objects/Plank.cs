@@ -45,11 +45,16 @@ public class Plank : MonoBehaviour
 
         Debug.Log("Le joueur s'approche avec la bougie. Activation du tableau");
 
-        if (Input.GetKeyDown("e") && inventory.IsSelectingItem("crowbar"))
+        if (Input.GetKeyDown("e") && inventory.IsSelectingItem("crowbar") && gameObject.transform.childCount > 1)
         {
-            Destroy(gameObject);
-            inventory.UseItem("crowbar");
+            Destroy(gameObject.transform.GetChild(0).gameObject);
             obstacle.SetActive(true);
+        }
+
+        if(gameObject.transform.childCount <= 1)
+        {
+            inventory.UseItem("crowbar");
+            Destroy(gameObject);
         }
     }
 }
