@@ -36,3 +36,4 @@ Here are the Unity assets used in this project:
 Here are the code snipetsused in this project:
 
 - [Jumping](https://www.youtube.com/watch?v=vdOFUFMiPDU)
+- [man disapearing on lvl 1](https://discussions.unity.com/t/check-if-gameobject-in-visible-on-screen/635654/4)
