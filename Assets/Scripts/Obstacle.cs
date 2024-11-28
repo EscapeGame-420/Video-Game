@@ -7,8 +7,8 @@ public class Obstacle : MonoBehaviour
     public Transform player;
     public float activationDistance = 2.0f;
     public bool isCandleNear = false;
-    private bool canvasCreated = false; 
-    private Transform canvasTransform; 
+    private bool canvasCreated = false;
+    private Transform canvasTransform;
     public string itemName;
     public string itemName1;
     public GameObject barrier;
@@ -46,21 +46,24 @@ public class Obstacle : MonoBehaviour
             canvasCreated = true; // Set the flag to true after creating the canvas
 
             // Find the created canvas and set its position
-             canvasTransform = transform.Find(this.gameObject.name +"Canvas");
+            canvasTransform = transform.Find(this.gameObject.name + "Canvas");
             if (canvasTransform != null)
             {
-                canvasTransform.localPosition = new Vector3(-0.69f,2.174f, 0.5f); // Set the desired position
+                canvasTransform.localPosition = new Vector3(-0.69f, 2.174f, 0.5f); // Set the desired position
             }
         }
-        if (!(distance <= activationDistance && inventory.IncludeItem(itemName) || (inventory.IncludeItem(itemName1) && isGassed))){
+        if (!(distance <= activationDistance && inventory.IncludeItem(itemName) || (inventory.IncludeItem(itemName1) && isGassed)))
+        {
             canvasTransform.gameObject.SetActive(false);
-        return;
-        }else{
+            return;
+        }
+        else
+        {
             canvasTransform.gameObject.SetActive(true);
         }
 
         // Check if the canvas has already been created
-        
+
         Debug.Log("Le joueur s'approche avec la bougie. Activation du tableau");
 
         if (Input.GetKeyDown("e") && (inventory.IsSelectingItem(itemName) || inventory.IsSelectingItem(itemName1)))
@@ -80,8 +83,8 @@ public class Obstacle : MonoBehaviour
                     steaming.SetActive(false);
                     break;
             }
-            
-            
+
+
         }
     }
     IEnumerator StartFlameTimer()
