@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//toilette
 public class secondfloortoilet : MonoBehaviour
 {
      public GameObject door;  
