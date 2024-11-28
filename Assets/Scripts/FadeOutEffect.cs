@@ -55,8 +55,6 @@ public class FadeOutEffect : MonoBehaviour
             yield return null;
         }
 
-        fadeImage.color = new Color(0f, 0f, 0f, 0f);
-
         if (crosshair != null)
         {
             crosshair.enabled = true;
