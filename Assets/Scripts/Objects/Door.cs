@@ -6,7 +6,6 @@ public class Door : MonoBehaviour
 {
     public Transform player;
     public float activationDistance = 7.0f;
-    public bool isCandleNear = false;
     private bool canvasCreated = false; // Flag to track if the canvas has been created
     Animator animator;
     public static float lockopened = 0;
@@ -16,18 +15,23 @@ public class Door : MonoBehaviour
         // If the player is not assigned manually in the inspector, find it automatically
         if (player == null)
         {
-            player = GameObject.FindGameObjectWithTag("Player").transform;
+            player = GameObject.Find("Julie").transform;
 
         }
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (player == null) return;
         animator = GetComponent<Animator>();
         float distance = Vector3.Distance(transform.position, player.position);
         Inventory inventory = FindFirstObjectByType<Inventory>();
-        if (!(distance <= activationDistance && lockopened==3)) return;
+        if (!(distance <= activationDistance && lockopened==3)) {
+            return;
+        }else{
+
+        }
+        
 
         // Check if the canvas has already been created
         if (!canvasCreated)
@@ -43,18 +47,20 @@ public class Door : MonoBehaviour
             }
         }
 
-        Debug.Log("Le joueur s'approche avec la bougie. Activation du tableau");
+            Debug.LogError("too far");
 
         if (Input.GetKeyDown("e") && lockopened== 3)
         {
             GetComponent<Animator>().enabled = true;
             Destroy(canvasTransform.gameObject);
+            GetComponent<BoxCollider>().enabled = false;
     
         }
         }
         public void OpenLock()
         {
             lockopened = lockopened + 1;
+            Debug.LogError("Lock opened: " + lockopened);
         }
         }
     

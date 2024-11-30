@@ -6,7 +6,7 @@ using System.Collections;
 
 public class InventoryManager : MonoBehaviour
 {
-    public Inventory Toolbar;          // Reference to your Toolbar script
+    public Inventory inventory;          // Reference to your Toolbar script
     public Transform toolbar;          // Reference to the Toolbar Transform
     public Sprite outline;             // Outline sprite for the selected slot
     public Sprite outlineEmpty;        // Outline sprite for unselected slots
@@ -36,6 +36,7 @@ public class InventoryManager : MonoBehaviour
         // Once the toolbar is active, proceed with initialization
         if (toolbar != null)
         {
+            inventory = GameObject.Find("Julie").GetComponent<Inventory>();
             totalSlots = toolbar.childCount;
             MapAllSprites(); // Initial sprite mapping for all slots
         }
@@ -43,12 +44,15 @@ public class InventoryManager : MonoBehaviour
         {
             Debug.LogError("Toolbar not found or inactive!");
         }
+       
+        
+        
     }
 
     // Method to map sprites to all toolbar slots
     public void MapAllSprites()
     {
-        for (int i = 0; i < Toolbar.items.Length; i++)
+        for (int i = 0; i < inventory.items.Length; i++)
         {
             MapSprite(i);
             Debug.Log("Mapping all sprites");
@@ -58,9 +62,9 @@ public class InventoryManager : MonoBehaviour
     // Method to map sprite to a specific toolbar slot
     public void MapSprite(int x)
     {
-        if (x < Toolbar.items.Length && x < toolbar.childCount)
+        if (x < inventory.items.Length && x < toolbar.childCount)
         {
-            Item currentItem = Toolbar.items[x];
+            Item currentItem = inventory.items[x];
             Transform toolbarSlot = toolbar.GetChild(x);
 
             // Log item mapping
@@ -106,12 +110,12 @@ public class InventoryManager : MonoBehaviour
 
         Image itemImageComponent = newItemImage.AddComponent<Image>();
         itemImageComponent.sprite = currentItem.sprite;
-        itemImageComponent.raycastTarget = true; // Ensure Raycast Target is enabled
+        // itemImageComponent.raycastTarget = true; // Ensure Raycast Target is enabled
 
-        //DragNDrop dragNDrop = newItemImage.AddComponent<DragNDrop>();
-        CanvasGroup canvasGroup = newItemImage.AddComponent<CanvasGroup>();
-        canvasGroup.interactable = true; // Ensure CanvasGroup is interactable
-        canvasGroup.blocksRaycasts = true; // Ensure CanvasGroup blocks raycasts
+        // //DragNDrop dragNDrop = newItemImage.AddComponent<DragNDrop>();
+        // CanvasGroup canvasGroup = newItemImage.AddComponent<CanvasGroup>();
+        // canvasGroup.interactable = true; // Ensure CanvasGroup is interactable
+        // canvasGroup.blocksRaycasts = true; // Ensure CanvasGroup blocks raycasts
 
         // Set the dragNDrop's canvasGroup reference
         //dragNDrop.SetCanvasGroup(canvasGroup);
@@ -127,13 +131,19 @@ public class InventoryManager : MonoBehaviour
 
     void Update()
     {
-        toolbarArray = Toolbar.items.Take(7).ToArray(); // Get the first 8 items from the Toolbar
+          if (inventory == null)
+        {
+            Debug.LogError("Inventory not found!");
+        }
+
+
+        toolbarArray = inventory.items.Take(7).ToArray(); // Get the first 8 items from the Toolbar
         
         if (oldList == null || !AreItemsEqual(oldList, toolbarArray))
         {
             
             MapAllSprites();
-            oldList = (Item[])Toolbar.items.Clone(); // Clone the array for future comparisons
+            oldList = (Item[])inventory.items.Clone(); // Clone the array for future comparisons
         }
 
         for (int i = 1; i <= 8; i++)
@@ -145,11 +155,11 @@ public class InventoryManager : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.Tab))
-        {
-            Cursor.lockState = openingInvent ? CursorLockMode.None : CursorLockMode.Locked;
-            openingInvent = !openingInvent;
-        }
+        // if (Input.GetKeyDown(KeyCode.Tab))
+        // {
+        //     Cursor.lockState = openingInvent ? CursorLockMode.None : CursorLockMode.Locked;
+        //     openingInvent = !openingInvent;
+        // }
 
         float scroll = Input.GetAxis("Mouse ScrollWheel");
         if (scroll != 0f)
