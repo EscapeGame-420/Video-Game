@@ -7567,7 +7567,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c712297d417981846810a488fef230f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1595688607}
+  player: {fileID: 1963577580}
   activationDistance: 5
   canvasOffset: {x: 0, y: -0.5, z: 0.2}
   aiguille: {fileID: 118561693}
@@ -23671,7 +23671,7 @@ MonoBehaviour:
   aiguille: {fileID: 1357782141}
   candleAnimator: {fileID: 1800983622}
   activationDistance: 3
-  player: {fileID: 1595688607}
+  player: {fileID: 1963577580}
   canvasOffset: {x: 0, y: 0.7, z: 0}
 --- !u!1001 &359770528
 PrefabInstance:
@@ -35870,7 +35870,7 @@ MonoBehaviour:
   aiguille: {fileID: 1357782141}
   candleAnimator: {fileID: 1800983622}
   activationDistance: 3
-  player: {fileID: 1595688607}
+  player: {fileID: 1963577580}
   canvasOffset: {x: 0, y: 0.5, z: 0}
 --- !u!1001 &546057834
 PrefabInstance:
@@ -52821,7 +52821,7 @@ MonoBehaviour:
   aiguille: {fileID: 1357782141}
   candleAnimator: {fileID: 1800983622}
   activationDistance: 3
-  player: {fileID: 1595688607}
+  player: {fileID: 1963577580}
   canvasOffset: {x: 0, y: 1, z: 0}
 --- !u!1001 &800603465
 PrefabInstance:
@@ -65306,7 +65306,7 @@ MonoBehaviour:
   aiguille: {fileID: 1357782141}
   candleAnimator: {fileID: 1800983622}
   activationDistance: 3
-  player: {fileID: 1595688607}
+  player: {fileID: 1963577580}
   canvasOffset: {x: 0, y: 1, z: 0}
 --- !u!1 &997031580
 GameObject:
@@ -83445,7 +83445,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventory: {fileID: 0}
-  player: {fileID: 0}
+  player: {fileID: 1963577580}
   activationDistance: 2
   canvas: {fileID: 0}
   selectionSound: {fileID: 0}
@@ -97001,15 +97001,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000010216183578, guid: 343c9a4090cefb44dac8053ed8f009ef, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 125.19048
+      value: 125.191
       objectReference: {fileID: 0}
     - target: {fileID: 4000010216183578, guid: 343c9a4090cefb44dac8053ed8f009ef, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.6251593
+      value: -5.769
       objectReference: {fileID: 0}
     - target: {fileID: 4000010216183578, guid: 343c9a4090cefb44dac8053ed8f009ef, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -28.37395
+      value: -28.3739
       objectReference: {fileID: 0}
     - target: {fileID: 4000010216183578, guid: 343c9a4090cefb44dac8053ed8f009ef, type: 3}
       propertyPath: m_LocalRotation.w
@@ -98232,7 +98232,7 @@ MonoBehaviour:
   speed: 2
   interactionDistance: 5
   opening: 0
-  interactableObject: {fileID: 1595688607}
+  interactableObject: {fileID: 1963577580}
 --- !u!64 &1533079903
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -125811,7 +125811,7 @@ MonoBehaviour:
   aiguille: {fileID: 1357782141}
   candleAnimator: {fileID: 1800983622}
   activationDistance: 3
-  player: {fileID: 1595688607}
+  player: {fileID: 1963577580}
   canvasOffset: {x: 0, y: 1, z: 0}
 --- !u!1 &1898417278
 GameObject:
