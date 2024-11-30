@@ -32,6 +32,7 @@ public class Item : MonoBehaviour
     {
         canvas = CreateCanvas(this.gameObject);
         audioSource = gameObject.AddComponent<AudioSource>();
+        //selectionSound = "Retro Ambience Acute 01";
         audioSource.playOnAwake = false;
         player = GameObject.FindGameObjectWithTag("Player").transform;
         inventory = player.GetComponent<Inventory>();
@@ -47,7 +48,12 @@ public class Item : MonoBehaviour
             canvas.enabled = true;
             if (Input.GetKeyDown(KeyCode.E))
             {
-                PlaySelectionSound();
+                //PlaySelectionSound();
+                if (selectionSound != null)
+                {
+                    audioSource.clip = selectionSound;
+                    audioSource.Play();
+                }
                 inventory.AddItem(this);
                 Debug.Log("Item picked up");
                 Destroy(gameObject);

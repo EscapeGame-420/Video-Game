@@ -7,7 +7,7 @@ MonoImporter:
   - inventory: {instanceID: 0}
   - player: {instanceID: 0}
   - canvas: {instanceID: 0}
-  - selectionSound: {fileID: 8300000, guid: 198eda04417854d0ab1a36bfc3bc7a04, type: 3}
+  - selectionSound: {fileID: 8300000, guid: 5ba0d5c963b9d4cf3b8b5934e8af6513, type: 3}
   - sprite: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}

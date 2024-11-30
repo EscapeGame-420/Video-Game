@@ -22582,7 +22582,7 @@ MonoBehaviour:
   player: {fileID: 1963577580}
   activationDistance: 3
   canvas: {fileID: 0}
-  selectionSound: {fileID: 0}
+  selectionSound: {fileID: 8300000, guid: 5ba0d5c963b9d4cf3b8b5934e8af6513, type: 3}
   canvasHeightOffset: 0.7
   canvasxOffset: 0
   canvaszOffset: 0
@@ -61393,63 +61393,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -7102098529378349463, guid: dd41abc040aa57d449592ae5a29ec2c8, type: 3}
---- !u!1001 &926835954
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 619942122889794000, guid: cb685cee637fdb146a1dfffe6bbef909, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 140.96686
-      objectReference: {fileID: 0}
-    - target: {fileID: 619942122889794000, guid: cb685cee637fdb146a1dfffe6bbef909, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 6.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 619942122889794000, guid: cb685cee637fdb146a1dfffe6bbef909, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 501.99194
-      objectReference: {fileID: 0}
-    - target: {fileID: 619942122889794000, guid: cb685cee637fdb146a1dfffe6bbef909, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7103709
-      objectReference: {fileID: 0}
-    - target: {fileID: 619942122889794000, guid: cb685cee637fdb146a1dfffe6bbef909, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 619942122889794000, guid: cb685cee637fdb146a1dfffe6bbef909, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.7038275
-      objectReference: {fileID: 0}
-    - target: {fileID: 619942122889794000, guid: cb685cee637fdb146a1dfffe6bbef909, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 619942122889794000, guid: cb685cee637fdb146a1dfffe6bbef909, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 619942122889794000, guid: cb685cee637fdb146a1dfffe6bbef909, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 619942122889794000, guid: cb685cee637fdb146a1dfffe6bbef909, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3115606826466327550, guid: cb685cee637fdb146a1dfffe6bbef909, type: 3}
-      propertyPath: m_Name
-      value: GameObject
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: cb685cee637fdb146a1dfffe6bbef909, type: 3}
 --- !u!1001 &927041888
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -80057,6 +80000,10 @@ PrefabInstance:
       propertyPath: crosshair
       value: 
       objectReference: {fileID: 281852217}
+    - target: {fileID: 4495440068938622727, guid: 6ffcb973189e15740b1810b4b7eff2ae, type: 3}
+      propertyPath: startSound
+      value: 
+      objectReference: {fileID: 8300000, guid: f218daef0d2324c119a8f63dc8c8a98d, type: 3}
     - target: {fileID: 4495440068938622727, guid: 6ffcb973189e15740b1810b4b7eff2ae, type: 3}
       propertyPath: julieMovement
       value: 
@@ -111981,6 +111928,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2097933885}
     - target: {fileID: 1121302510952783549, guid: 870f4b33ef79be141bfa8effa00bf269, type: 3}
+      propertyPath: selectionSound
+      value: 
+      objectReference: {fileID: 8300000, guid: fdd29a6a862b84058a3d98521b7f9204, type: 3}
+    - target: {fileID: 1121302510952783549, guid: 870f4b33ef79be141bfa8effa00bf269, type: 3}
       propertyPath: activationDistance
       value: 4
       objectReference: {fileID: 0}
@@ -114740,7 +114691,7 @@ Transform:
   m_GameObject: {fileID: 1760504863}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -334.43, y: 6.09, z: 21.37}
+  m_LocalPosition: {x: -298.41, y: 0.17, z: 60.54}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -131472,6 +131423,7 @@ MonoBehaviour:
   emptySprite: {fileID: 0}
   itemInArray: []
   selecting: 0
+  selectionSound: {fileID: 8300000, guid: 5ba0d5c963b9d4cf3b8b5934e8af6513, type: 3}
 --- !u!114 &1963577591
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -148404,7 +148356,6 @@ SceneRoots:
   - {fileID: 917989245}
   - {fileID: 802514420}
   - {fileID: 2131560272}
-  - {fileID: 926835954}
   - {fileID: 1814898381}
   - {fileID: 662786049}
   - {fileID: 765253142}

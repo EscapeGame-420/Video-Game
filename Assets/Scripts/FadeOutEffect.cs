@@ -4,11 +4,14 @@ using UnityEngine.UI;
 
 public class FadeOutEffect : MonoBehaviour
 {
+    [SerializeField] private AudioClip startSound;
+    private AudioSource audioSource;
     public Image fadeImage;
     public Image crosshair;
     public GameObject toolbar;
     public JulieMovement julieMovement;
     public JulieVisionFollow julieVisionFollow;
+
     public float fadeDuration = 2.0f;
     public float delayBeforeFade = 2.0f;
 
@@ -41,6 +44,11 @@ public class FadeOutEffect : MonoBehaviour
         {
             julieVisionFollow.enabled = false;
         }
+
+        audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource.clip = startSound;
+        audioSource.volume = 0.06f;
+        audioSource.Play();
     }
 
     private IEnumerator FadeOut()

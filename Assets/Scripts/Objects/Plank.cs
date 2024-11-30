@@ -11,6 +11,10 @@ public class Plank : MonoBehaviour
     public GameObject obstacle;
     private Transform canvasTransform;
 
+    [SerializeField]
+    private AudioClip selectionSound;
+    private AudioSource audioSource;
+
     void Start()
     {
         // If the player is not assigned manually in the inspector, find it automatically
@@ -20,6 +24,8 @@ public class Plank : MonoBehaviour
             obstacle = GameObject.Find("obstacle");
             obstacle.SetActive(false);
         }
+        audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource.playOnAwake = false;
     }
 
     void FixedUpdate()
@@ -52,9 +58,14 @@ public class Plank : MonoBehaviour
 
         if (Input.GetKeyDown("e") && inventory.IsSelectingItem("crowbar") && gameObject.transform.childCount > 1)
         {
+            if (selectionSound != null)
+            {
+                audioSource.clip = selectionSound;
+                audioSource.Play();
+            }
             Destroy(gameObject.transform.GetChild(0).gameObject);
             obstacle.SetActive(true);
-
+    
             if(gameObject.transform.childCount <= 3)
             {
                 Destroy(gameObject);
