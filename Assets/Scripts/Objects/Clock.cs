@@ -13,6 +13,7 @@ public class Clock : MonoBehaviour
     public GameObject aiguille;
     public GameObject cle;
     private bool hasRun = false;
+    private bool canPick = false;
     
     // Start is called before the first frame update
     void Start()
@@ -42,6 +43,7 @@ public class Clock : MonoBehaviour
                     inventory.UseItem("aiguille");
                     aiguille.SetActive(true);
                     hasRun = true;
+                    canPick = true;
                 }
             }
             else{
@@ -49,7 +51,11 @@ public class Clock : MonoBehaviour
             }
         }else{
             canvas.enabled = false;
-            cle.SetActive(true);
+            if (canPick)
+            {
+                cle.SetActive(true);
+                canPick = false;
+            }
         }
         
 
