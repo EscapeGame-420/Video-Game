@@ -26548,8 +26548,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f8f337285a8851498ef12c36a88a5b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PaintingMovingSound: {fileID: 8300000, guid: feac5e40ad57747de83a1ba77f95f2c9, type: 3}
-  crowbar: {fileID: 483842590}
+  PaintingMovingSound: {fileID: 0}
+  crowbar: {fileID: 0}
   player: {fileID: 0}
   activationDistance: 4
   isCandleNear: 0
@@ -32349,11 +32349,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 24b4d8ad04155c244b2b776c5532e76f, type: 3}
---- !u!1 &483842590 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5948282298584414209, guid: 870f4b33ef79be141bfa8effa00bf269, type: 3}
-  m_PrefabInstance: {fileID: 1731930525}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &484787870
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -101847,7 +101842,7 @@ MonoBehaviour:
   emptySprite: {fileID: 0}
   itemInArray: []
   selecting: 0
-  selectionSound: {fileID: 8300000, guid: 5ba0d5c963b9d4cf3b8b5934e8af6513, type: 3}
+  selectionSound: {fileID: 0}
 --- !u!82 &1595688611
 AudioSource:
   m_ObjectHideFlags: 0
@@ -131609,7 +131604,7 @@ MonoBehaviour:
   emptySprite: {fileID: 0}
   itemInArray: []
   selecting: 0
-  selectionSound: {fileID: 8300000, guid: 5ba0d5c963b9d4cf3b8b5934e8af6513, type: 3}
+  selectionSound: {fileID: 0}
 --- !u!114 &1963577591
 MonoBehaviour:
   m_ObjectHideFlags: 0
