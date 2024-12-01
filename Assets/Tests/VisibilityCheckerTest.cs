@@ -43,14 +43,13 @@ public class VisibilityCheckerTest
     {
         visibilityChecker.elementThatChangeVisibility = elementThatChangesVisibility;
         visibilityChecker.deleteOrShow = "delete";
+        ShadowManConvo.isConvoFinished = true;
 
         Assert.IsNotNull(elementThatChangesVisibility);
 
         cameraObject.transform.position = new Vector3(0, 1080, 0);
-        // cameraObject.transform.rotation = Quaternion.Euler(0, 180, 0);
         visibilityChecker.CheckVisibility();
 
-        //Object.Destroy(elementThatChangesVisibility);
         yield return null;
 
         try

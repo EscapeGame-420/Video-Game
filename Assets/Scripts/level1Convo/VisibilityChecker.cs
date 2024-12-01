@@ -26,7 +26,7 @@ public class VisibilityChecker : MonoBehaviour
         float distY = Vector3.Distance(new Vector3(0f, Screen.height / 2, 0f), new Vector3(0f, goscreen.y, 0f));
         Debug.Log("distY " + distY);
 
-        if((distX > Screen.width || distY > Screen.height) && true)
+        if((distX > Screen.width || distY > Screen.height) && ShadowManConvo.isConvoFinished)
         {
             if(deleteOrShow == "delete")
             {
