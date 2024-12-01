@@ -23654,7 +23654,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34ed2cd8377069841a4594e6a2bb3293, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  elementToCheck: {fileID: 344251635}
+  elementThatChangeVisibility: {fileID: 344251635}
   deleteOrShow: show
 --- !u!64 &364088177
 MeshCollider:
@@ -53086,7 +53086,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &806542524
 Transform:
   m_ObjectHideFlags: 0
@@ -68373,7 +68373,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34ed2cd8377069841a4594e6a2bb3293, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  elementToCheck: {fileID: 955241854}
+  elementThatChangeVisibility: {fileID: 955241854}
   deleteOrShow: delete
 --- !u!1001 &1075105598
 PrefabInstance:
@@ -114926,7 +114926,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1760504864
 Transform:
   m_ObjectHideFlags: 0
@@ -129534,6 +129534,8 @@ MonoBehaviour:
   FToTalk: {fileID: 223014019}
   continuePanel: {fileID: 281991078}
   PlaceToStay: {fileID: 1360841200}
+  messagesJulie: []
+  messagesHomme: []
 --- !u!1001 &1939912848
 PrefabInstance:
   m_ObjectHideFlags: 0
