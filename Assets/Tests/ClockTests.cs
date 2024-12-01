@@ -43,9 +43,7 @@ public class ClockTests
     {
         clockObject.transform.position = Vector3.zero;
         playerObject.transform.position = new Vector3(3, 4, 0);
-
         float distance = clockScript.CalculateDistanceToPlayer();
-
         Assert.AreEqual(5f, distance);
     }
 
@@ -53,7 +51,6 @@ public class ClockTests
     public void EnableCanvasTest()
     {
         clockScript.EnableCanvas();
-
         Assert.IsTrue(clockScript.canvas.enabled);
     }
 
@@ -61,9 +58,7 @@ public class ClockTests
     public void DisableCanvasTest()
     {
         clockScript.canvas.enabled = true;
-
         clockScript.DisableCanvas();
-
         Assert.IsFalse(clockScript.canvas.enabled);
     }
 
@@ -76,25 +71,20 @@ public class ClockTests
         Resources.Load<GameObject>("UI/Canvas");
         clockObject.AddComponent<Animator>();
         clockScript.InitializeClock();
-        Assert.IsNotNull(clockScript.canvas, "Canvas should be initialized.");
-        Assert.AreEqual(clockObject.transform.position + clockScript.canvasOffset, clockScript.canvas.transform.position, "Canvas position should match the offset.");
-        Assert.IsFalse(clockScript.cle.activeSelf, "Cle object should be inactive after initialization.");
+        Assert.IsNotNull(clockScript.canvas);
+        Assert.AreEqual(clockObject.transform.position + clockScript.canvasOffset, clockScript.canvas.transform.position);
+        Assert.IsFalse(clockScript.cle.activeSelf);
     }
 
     [Test]
-public void FinalizeClockInteractionTest()
-{
-    // Arrange
-    clockScript.canvas.enabled = true;  // Ensure the canvas is enabled
-    clockScript.canPick = true;         // Set canPick to true so cle will be activated
-
-    // Act
-    clockScript.FinalizeClockInteraction();
-
-    // Assert
-    Assert.IsFalse(clockScript.canvas.enabled, "Canvas should be disabled after FinalizeClockInteraction.");
-    Assert.IsTrue(clockScript.cle.activeSelf, "Cle object should be active after FinalizeClockInteraction.");
-    Assert.IsFalse(clockScript.canPick, "canPick should be false after FinalizeClockInteraction.");
-}
+    public void FinalizeClockInteractionTest()
+    {
+        clockScript.canvas.enabled = true;
+        clockScript.canPick = true;
+        clockScript.FinalizeClockInteraction();
+        Assert.IsFalse(clockScript.canvas.enabled);
+        Assert.IsTrue(clockScript.cle.activeSelf);
+        Assert.IsFalse(clockScript.canPick);
+    }
 
 }
