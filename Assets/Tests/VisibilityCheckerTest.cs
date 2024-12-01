@@ -48,20 +48,12 @@ public class VisibilityCheckerTest
         Assert.IsNotNull(elementThatChangesVisibility);
 
         cameraObject.transform.position = new Vector3(0, 1080, 0);
+
         visibilityChecker.CheckVisibility();
 
         yield return null;
 
-        try
-        {
-            //Assert.IsNull(elementThatChangesVisibility);
-            Assert.IsTrue(elementThatChangesVisibility == null);
-        }
-        catch (System.Exception ex)
-        {
-            Debug.LogError($"An error occurred: {ex.Message}");
-            throw;
-        }
+        Assert.IsTrue(elementThatChangesVisibility == null);
         
     }
 }
