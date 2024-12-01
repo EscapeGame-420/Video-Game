@@ -2,20 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Drawer1 : MonoBehaviour
+
+// drawer with the key
+public class Drawer2 : MonoBehaviour
 {
 
     [SerializeField] private Transform player; // Reference to the player
     [SerializeField] private float activationDistance = 2f; // Distance to activate interaction
     [SerializeField] private Transform drawer; // Reference to the drawer
     [SerializeField] private Vector3 openPositionOffset = new Vector3(0f, 0f, 0.35f); // Offset to slide the drawer out
-    [SerializeField] private float animationSpeed = 2f; // Speed of drawer animation
+    [SerializeField] private float animationSpeed = 1f; // Speed of drawer animation
     [SerializeField] private AudioClip drawerOpenSound; // Sound played when drawer opens
     [SerializeField] private AudioClip drawerCloseSound; // Sound played when drawer closes
 
     private AudioSource audioSource;
     private bool isDrawerOpen = false; // Tracks the state of the drawer
     private bool isAnimating = false; // Prevents multiple activations during animation
+    private bool isLocked = true; // is drawer locked(at the bigining)
 
     private Vector3 closedPosition;
     private Vector3 openPosition;
@@ -44,22 +47,39 @@ public class Drawer1 : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.T))
             {
-                //interactionCanvas.enabled = false; // Hide prompt during interaction
-                if (!isDrawerOpen)
+                if(isLocked)
                 {
-                    StartCoroutine(OpenDrawer());
+                    //interactionCanvas.enabled = false; // Hide prompt during interaction
+ 
+                    Debug.Log("This drawer is locked. Find the required item to unlock it!");
                 }
                 else
                 {
-                    StartCoroutine(CloseDrawer());
+                    if (!isDrawerOpen)
+                    {
+                        StartCoroutine(OpenDrawer());
+                    }
+                    else
+                    {
+                        StartCoroutine(CloseDrawer());
+                    }
                 }
+
             }
         }
     }
 
-
-    private IEnumerator OpenDrawer()
+    public void UnlockDrawer()
     {
+        isLocked = false;
+        Debug.Log("This drawer is now unlocked!");
+    }
+
+
+    public IEnumerator OpenDrawer()
+    {
+        if(isLocked || isAnimating || isDrawerOpen ) yield break; // if one of these situations is true, gets out of this function with yield break
+
         isAnimating = true;
         isDrawerOpen = true;
 
@@ -84,8 +104,10 @@ public class Drawer1 : MonoBehaviour
         isAnimating = false;
     }
 
-    private IEnumerator CloseDrawer()
+    public IEnumerator CloseDrawer()
     {
+        if(isLocked || isAnimating || !isDrawerOpen ) yield break; // if one of these situations is true, gets out of this function with yield break
+
         isAnimating = true;
         isDrawerOpen = false;
 

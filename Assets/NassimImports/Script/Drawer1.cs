@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Drawer : MonoBehaviour
+public class Drawer1 : MonoBehaviour
 {
 
     [SerializeField] private Transform player; // Reference to the player
     [SerializeField] private float activationDistance = 2f; // Distance to activate interaction
     [SerializeField] private Transform drawer; // Reference to the drawer
     [SerializeField] private Vector3 openPositionOffset = new Vector3(0f, 0f, 0.35f); // Offset to slide the drawer out
-    [SerializeField] private float animationSpeed = 2f; // Speed of drawer animation
+    [SerializeField] private float animationSpeed = 1f; // Speed of drawer animation
     [SerializeField] private AudioClip drawerOpenSound; // Sound played when drawer opens
     [SerializeField] private AudioClip drawerCloseSound; // Sound played when drawer closes
 

@@ -24,8 +24,10 @@ public class WardrobeDoorController : MonoBehaviour
 
     private void Start()
     {
+        // AudioSource
         audioSource = gameObject.AddComponent<AudioSource>();
         audioSource.playOnAwake = false;
+        audioSource.clip = doorSound;
 
         // initial closed rotations
         leftDoorClosedRotation = leftDoor.rotation;
@@ -42,37 +44,32 @@ public class WardrobeDoorController : MonoBehaviour
 
         // canvas.enabled = false; // Hide the interaction prompt initially
 
-        // AudioSource
-        audioSource = gameObject.AddComponent<AudioSource>();
-        audioSource.playOnAwake = false;
-        audioSource.clip = doorSound;
-
     }
 
     private void Update()
     {
         float distance = Vector3.Distance(transform.position, player.position);
 
-        if (distance <= activationDistance && Input.GetKeyDown(KeyCode.E))
+        if (distance <= activationDistance)
         {
             // canvas.enabled = true; // Show interaction prompt
 
-            AnimateDoors();
+            
 
             // Display prompt or other UI if needed
-            // if (Input.GetKeyDown(KeyCode.E))
-            // {
-            //     // canvas.enabled = false; // Hide canvas during interaction
-            //     if (!isDoorOpen)
-            //     {
-            //         StartCoroutine(OpenDoor());
-            //     }
-            //     else
-            //     {
-            //         StartCoroutine(CloseDoor());
-            //     }
-            // }
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                // canvas.enabled = false; // Hide canvas during interaction
+
+                AnimateDoors();
+
+            }
         }
+        // else
+        // {
+        //     canvas.enabled =false; // hide if out of range
+        // }
+
         // Smoothly rotate the door toward the target rotation
         leftDoor.rotation = Quaternion.Slerp(leftDoor.rotation, leftDoorTargetRotation, Time.deltaTime * animationSpeed);
         rightDoor.rotation = Quaternion.Slerp(rightDoor.rotation, rightDoorTargetRotation, Time.deltaTime * animationSpeed);
@@ -102,6 +99,36 @@ public class WardrobeDoorController : MonoBehaviour
         }
     }
 
+
+    // public static Canvas CreateCanvas(GameObject wardrobeObject)
+    // {
+    //     // Create and configure the canvas
+    //     GameObject canvasObject = new GameObject(wardrobeObject.name + "Canvas");
+    //     Canvas canvas = Object.AddComponent<Canvas>();
+    //     canvas.renderMode = RenderMode.WorldSpace;
+
+    //     canvasObject.AddComponent<CanvasScaler>();
+    //     canvasObject.AddComponent<GraphicRaycaster>();
+
+    //     RectTransform canvasRectTransform = canvas.GetComponent<RectTransform>();
+    //     canvasRectTransform.sizeDelta = new Vector2(200, 100);
+    //     canvasObject.transform.SetParent(wardrobeObject.transform, false);
+
+    //     // Create the prompt text
+    //     GameObject textObject = new GameObject("InteractionText");
+    //     TextMeshProUGUI text = textObject.AddComponent<TextMeshProUGUI>();
+    //     text.text = "Press E";
+    //     text.fontSize = 24;
+    //     text.alignment = TextAlignmentOptions.Center;
+    //     text.color = Color.white;
+
+    //     RectTransform textRectTransform = textObject.GetComponent<RectTransform>();
+    //     textRectTransform.sizeDelta = new Vector2(200, 50);
+    //     textRectTransform.SetParent(canvasObject.transform, false);
+
+    //     return canvas;
+    // }
+}
 
 
 
@@ -157,38 +184,3 @@ public class WardrobeDoorController : MonoBehaviour
     //     isDoorOpen = false;
     //     isAnimating = false;
     // }
-
-
-
-    // public static Canvas CreateCanvas(GameObject wardrobeObject)
-    // {
-    //     // Create and configure the canvas
-    //     GameObject canvasObject = new GameObject(wardrobeObject.name + "Canvas");
-    //     canvasObject.AddComponent<Canvas>();
-    //     canvasObject.AddComponent<CanvasScaler>();
-    //     canvasObject.AddComponent<GraphicRaycaster>();
-
-    //     Canvas canvas = canvasObject.GetComponent<Canvas>();
-    //     canvas.renderMode = RenderMode.WorldSpace;
-    //     canvas.enabled = false;
-
-    //     RectTransform canvasRectTransform = canvas.GetComponent<RectTransform>();
-    //     canvasRectTransform.sizeDelta = new Vector2(200, 100);
-    //     canvasObject.transform.SetParent(wardrobeObject.transform, false);
-
-    //     // Create the prompt text
-    //     GameObject textObject = new GameObject("InteractionText");
-    //     TextMeshProUGUI text = textObject.AddComponent<TextMeshProUGUI>();
-    //     text.text = "Press E";
-    //     text.fontSize = 24;
-    //     text.alignment = TextAlignmentOptions.Center;
-    //     text.color = Color.white;
-
-    //     RectTransform textRectTransform = textObject.GetComponent<RectTransform>();
-    //     textRectTransform.sizeDelta = new Vector2(200, 50);
-    //     textRectTransform.SetParent(canvasObject.transform, false);
-
-    //     return canvas;
-    // }
-
-}
