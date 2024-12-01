@@ -4,37 +4,47 @@ using UnityEngine;
 
 public class MathisEnigme : MonoBehaviour
 {
-    private string prefabPath = "UI/Canvas";
-    private int enigmeCounter = 0;
-    private Canvas canvas;
-    private Coroutine flameCoroutine;
-    private bool hasRun = false;
+    public string prefabPath = "UI/Canvas";
+    public int enigmeCounter = 0;
+    public Canvas canvas;
+    public Coroutine flameCoroutine;
+    public bool hasRun = false;
 
     [SerializeField]
-    private SpriteRenderer bigFlame;
+    public SpriteRenderer bigFlame;
 
     [SerializeField]
-    private GameObject fire;
+    public GameObject fire;
 
     [SerializeField]
-    private GameObject aiguille;
+    public GameObject aiguille;
 
     [SerializeField]
-    private Animator candleAnimator;
+    public Animator candleAnimator;
 
     [SerializeField]
-    private float activationDistance = 1.5f;
+    public float activationDistance = 1.5f;
 
     [SerializeField]
-    private Transform player;
+    public Transform player;
 
     [SerializeField]
-    private Vector3 canvasOffset = new Vector3(0, 1, 0);
-
-
+    public Vector3 canvasOffset = new Vector3(0, 1, 0);
 
     // Start is called before the first frame update
     void Start()
+    {
+        InitializeCanvas();
+        InitializeObjects();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        HandleCandleState();
+    }
+
+    public void InitializeCanvas()
     {
         GameObject canvaToAdd = Resources.Load<GameObject>(prefabPath);
         GameObject newObject = Instantiate(canvaToAdd, transform.position, transform.rotation);
@@ -42,12 +52,15 @@ public class MathisEnigme : MonoBehaviour
         canvas = GetComponentInChildren<Canvas>();
         canvas.gameObject.AddComponent<LookAtCam>();
         canvas.transform.position = transform.position + canvasOffset;
+    }
+
+    public void InitializeObjects()
+    {
         bigFlame.enabled = false;
         aiguille.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void HandleCandleState()
     {
         float distance = Vector3.Distance(transform.position, player.position);
 
@@ -55,65 +68,77 @@ public class MathisEnigme : MonoBehaviour
         {
             if (!hasRun)
             {
-                flameCoroutine = StartCoroutine(ShowFlame(3f));
-                aiguille.SetActive(true);
-                canvas.enabled = false;
-                fire.SetActive(false);
-                hasRun = true;
-            }   
+                ActivateFinalState();
+            }
         }
         else
         {
-            if (distance <= activationDistance)
-            {
-                canvas.enabled = true;
+            HandlePlayerInteraction(distance);
+        }
+    }
 
-                if (Input.GetKeyDown(KeyCode.E))
-                {
-                    if (gameObject.CompareTag("Good") && fire.activeSelf)
-                    {
-                        int enigmeCounter = candleAnimator.GetInteger("candleCount");
-                        fire.SetActive(false);
-                        enigmeCounter--;
-                        candleAnimator.SetInteger("candleCount", enigmeCounter);
-                        Debug.Log(enigmeCounter);
-                    }
-                    else if (gameObject.CompareTag("Good"))
-                    {
-                        int enigmeCounter = candleAnimator.GetInteger("candleCount");
-                        fire.SetActive(true);
-                        enigmeCounter++;
-                        candleAnimator.SetInteger("candleCount", enigmeCounter);
-                        Debug.Log(enigmeCounter);
-                    }
-                    else if (gameObject.CompareTag("Bad") && fire.activeSelf)
-                    {
-                        int enigmeCounter = candleAnimator.GetInteger("candleCount");
-                        fire.SetActive(false);
-                        enigmeCounter++;
-                        candleAnimator.SetInteger("candleCount", enigmeCounter);
-                        Debug.Log(enigmeCounter);
-                    }
-                    else if (gameObject.CompareTag("Bad"))
-                    {
-                        int enigmeCounter = candleAnimator.GetInteger("candleCount");
-                        fire.SetActive(true);
-                        enigmeCounter--;
-                        candleAnimator.SetInteger("candleCount", enigmeCounter);
-                        Debug.Log(enigmeCounter);
-                    }
-                }
+    public void ActivateFinalState()
+    {
+        flameCoroutine = StartCoroutine(ShowFlame(3f));
+        aiguille.SetActive(true);
+        canvas.enabled = false;
+        fire.SetActive(false);
+        hasRun = true;
+    }
+
+    public void HandlePlayerInteraction(float distance)
+    {
+        if (distance <= activationDistance)
+        {
+            canvas.enabled = true;
+
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                UpdateCandleState();
+            }
+        }
+        else
+        {
+            canvas.enabled = false;
+        }
+    }
+
+    public void UpdateCandleState()
+    {
+        int enigmeCounter = candleAnimator.GetInteger("candleCount");
+
+        if (gameObject.CompareTag("Good"))
+        {
+            if (fire.activeSelf)
+            {
+                fire.SetActive(false);
+                enigmeCounter--;
             }
             else
             {
-                canvas.enabled = false;
+                fire.SetActive(true);
+                enigmeCounter++;
+            }
+        }
+        else if (gameObject.CompareTag("Bad"))
+        {
+            if (fire.activeSelf)
+            {
+                fire.SetActive(false);
+                enigmeCounter++;
+            }
+            else
+            {
+                fire.SetActive(true);
+                enigmeCounter--;
             }
         }
 
-
+        candleAnimator.SetInteger("candleCount", enigmeCounter);
+        Debug.Log(enigmeCounter);
     }
 
-    private IEnumerator ShowFlame(float seconds)
+    public IEnumerator ShowFlame(float seconds)
     {
         bigFlame.enabled = true;
         yield return new WaitForSeconds(seconds);

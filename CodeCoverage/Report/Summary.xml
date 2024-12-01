@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CoverageReport scope="Summary">
+  <Summary>
+    <Generatedon>2024-11-30 - 20:04:00</Generatedon>
+    <Parser>MultiReportParser (4x OpenCoverParser)</Parser>
+    <Assemblies>1</Assemblies>
+    <Classes>36</Classes>
+    <Files>32</Files>
+    <Coveredlines>123</Coveredlines>
+    <Uncoveredlines>1383</Uncoveredlines>
+    <Coverablelines>1506</Coverablelines>
+    <Totallines>2939</Totallines>
+    <Linecoverage>8.1</Linecoverage>
+    <Coveredbranches>0</Coveredbranches>
+    <Totalbranches>0</Totalbranches>
+    <Coveredmethods>32</Coveredmethods>
+    <Totalmethods>162</Totalmethods>
+    <Methodcoverage>19.7</Methodcoverage>
+  </Summary>
+  <Coverage>
+    <Assembly name="ScriptAssembly" classes="36" coverage="8.1" coveredlines="123" coverablelines="1506" totallines="3927" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="32" totalmethods="162" methodcoverage="19.7">
+      <Class name="AI" coverage="8.1" coveredlines="5" coverablelines="61" totallines="99" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="7" methodcoverage="14.2" />
+      <Class name="Attack" coverage="0" coveredlines="0" coverablelines="23" totallines="247" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="4" methodcoverage="0" />
+      <Class name="Bucket" coverage="7.5" coveredlines="6" coverablelines="80" totallines="131" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="3" methodcoverage="33.3" />
+      <Class name="Clock" coverage="17.7" coveredlines="14" coverablelines="79" totallines="108" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="4" totalmethods="13" methodcoverage="30.7" />
+      <Class name="DeathSequence" coverage="4" coveredlines="2" coverablelines="50" totallines="81" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="6" methodcoverage="16.6" />
+      <Class name="Door" coverage="5.1" coveredlines="2" coverablelines="39" totallines="66" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="4" methodcoverage="25" />
+      <Class name="FadeInTextOnStart" coverage="0" coveredlines="0" coverablelines="32" totallines="54" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="5" methodcoverage="0" />
+      <Class name="FadeOutEffect" coverage="5.3" coveredlines="3" coverablelines="56" totallines="86" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="3" methodcoverage="33.3" />
+      <Class name="Frame" coverage="5.4" coveredlines="2" coverablelines="37" totallines="57" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="3" methodcoverage="33.3" />
+      <Class name="GameEnvironment" coverage="0" coveredlines="0" coverablelines="10" totallines="39" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="3" methodcoverage="0" />
+      <Class name="GiveItems" coverage="15.3" coveredlines="6" coverablelines="39" totallines="74" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="3" methodcoverage="33.3" />
+      <Class name="Idle" coverage="0" coveredlines="0" coverablelines="20" totallines="247" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="4" methodcoverage="0" />
+      <Class name="Inventory" coverage="2.9" coveredlines="3" coverablelines="101" totallines="156" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="10" methodcoverage="10" />
+      <Class name="InventoryManager" coverage="1.6" coveredlines="2" coverablelines="119" totallines="209" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="10" methodcoverage="10" />
+      <Class name="Item" coverage="5.4" coveredlines="4" coverablelines="74" totallines="126" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="5" methodcoverage="20" />
+      <Class name="ItemSlot" coverage="0" coveredlines="0" coverablelines="28" totallines="58" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="4" methodcoverage="0" />
+      <Class name="JulieMovement" coverage="10.3" coveredlines="8" coverablelines="77" totallines="129" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="7" methodcoverage="14.2" />
+      <Class name="JulieVisionFollow" coverage="5.8" coveredlines="1" coverablelines="17" totallines="42" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="3" methodcoverage="33.3" />
+      <Class name="LoadMenuScene" coverage="0" coveredlines="0" coverablelines="3" totallines="11" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="1" methodcoverage="0" />
+      <Class name="Lock" coverage="14.2" coveredlines="6" coverablelines="42" totallines="67" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="3" methodcoverage="33.3" />
+      <Class name="LookAtCam" coverage="80" coveredlines="4" coverablelines="5" totallines="19" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="2" totalmethods="2" methodcoverage="100" />
+      <Class name="MathisEnigme" coverage="41.7" coveredlines="38" coverablelines="91" totallines="147" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="7" totalmethods="10" methodcoverage="70" />
+      <Class name="Obstacle" coverage="6.2" coveredlines="4" coverablelines="64" totallines="104" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="4" methodcoverage="25" />
+      <Class name="Painting" coverage="7.4" coveredlines="2" coverablelines="27" totallines="374" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="3" methodcoverage="33.3" />
+      <Class name="Patrol" coverage="0" coveredlines="0" coverablelines="37" totallines="247" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="4" methodcoverage="0" />
+      <Class name="Plank" coverage="4" coveredlines="2" coverablelines="49" totallines="77" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="3" methodcoverage="33.3" />
+      <Class name="PlayerController" coverage="0" coveredlines="0" coverablelines="9" totallines="17" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="2" methodcoverage="0" />
+      <Class name="Pursue" coverage="0" coveredlines="0" coverablelines="25" totallines="247" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="4" methodcoverage="0" />
+      <Class name="QuitGame" coverage="0" coveredlines="0" coverablelines="3" totallines="16" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="1" methodcoverage="0" />
+      <Class name="RestartGame" coverage="0" coveredlines="0" coverablelines="6" totallines="20" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="2" methodcoverage="0" />
+      <Class name="ShadowManConvo" coverage="5.4" coveredlines="3" coverablelines="55" totallines="137" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="8" methodcoverage="12.5" />
+      <Class name="StartGame" coverage="0" coveredlines="0" coverablelines="6" totallines="18" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="2" methodcoverage="0" />
+      <Class name="State" coverage="0" coveredlines="0" coverablelines="40" totallines="247" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="8" methodcoverage="0" />
+      <Class name="Stove" coverage="7.5" coveredlines="3" coverablelines="40" totallines="69" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="3" methodcoverage="33.3" />
+      <Class name="ThrowTrash" coverage="7.5" coveredlines="3" coverablelines="40" totallines="65" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="3" methodcoverage="33.3" />
+      <Class name="VisibilityChecker" coverage="0" coveredlines="0" coverablelines="22" totallines="36" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="2" methodcoverage="0" />
+    </Assembly>
+  </Coverage>
+</CoverageReport>
