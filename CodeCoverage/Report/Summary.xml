@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <CoverageReport scope="Summary">
   <Summary>
-    <Generatedon>2024-11-30 - 20:04:00</Generatedon>
+    <Generatedon>2024-12-01 - 14:26:41</Generatedon>
     <Parser>MultiReportParser (4x OpenCoverParser)</Parser>
     <Assemblies>1</Assemblies>
     <Classes>36</Classes>
     <Files>32</Files>
-    <Coveredlines>123</Coveredlines>
-    <Uncoveredlines>1383</Uncoveredlines>
-    <Coverablelines>1506</Coverablelines>
-    <Totallines>2939</Totallines>
-    <Linecoverage>8.1</Linecoverage>
+    <Coveredlines>168</Coveredlines>
+    <Uncoveredlines>1337</Uncoveredlines>
+    <Coverablelines>1505</Coverablelines>
+    <Totallines>2937</Totallines>
+    <Linecoverage>11.1</Linecoverage>
     <Coveredbranches>0</Coveredbranches>
     <Totalbranches>0</Totalbranches>
-    <Coveredmethods>32</Coveredmethods>
+    <Coveredmethods>40</Coveredmethods>
     <Totalmethods>162</Totalmethods>
-    <Methodcoverage>19.7</Methodcoverage>
+    <Methodcoverage>24.6</Methodcoverage>
   </Summary>
   <Coverage>
-    <Assembly name="ScriptAssembly" classes="36" coverage="8.1" coveredlines="123" coverablelines="1506" totallines="3927" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="32" totalmethods="162" methodcoverage="19.7">
-      <Class name="AI" coverage="8.1" coveredlines="5" coverablelines="61" totallines="99" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="7" methodcoverage="14.2" />
+    <Assembly name="ScriptAssembly" classes="36" coverage="11.1" coveredlines="168" coverablelines="1505" totallines="3925" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="40" totalmethods="162" methodcoverage="24.6">
+      <Class name="AI" coverage="52.4" coveredlines="32" coverablelines="61" totallines="99" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="5" totalmethods="7" methodcoverage="71.4" />
       <Class name="Attack" coverage="0" coveredlines="0" coverablelines="23" totallines="247" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="4" methodcoverage="0" />
       <Class name="Bucket" coverage="7.5" coveredlines="6" coverablelines="80" totallines="131" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="3" methodcoverage="33.3" />
-      <Class name="Clock" coverage="17.7" coveredlines="14" coverablelines="79" totallines="108" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="4" totalmethods="13" methodcoverage="30.7" />
+      <Class name="Clock" coverage="41" coveredlines="32" coverablelines="78" totallines="106" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="8" totalmethods="13" methodcoverage="61.5" />
       <Class name="DeathSequence" coverage="4" coveredlines="2" coverablelines="50" totallines="81" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="6" methodcoverage="16.6" />
       <Class name="Door" coverage="5.1" coveredlines="2" coverablelines="39" totallines="66" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="4" methodcoverage="25" />
       <Class name="FadeInTextOnStart" coverage="0" coveredlines="0" coverablelines="32" totallines="54" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="5" methodcoverage="0" />

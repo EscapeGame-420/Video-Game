@@ -1,28 +1,28 @@
 {
   "summary": {
-    "generatedon": "2024-12-01T01:04:00Z",
+    "generatedon": "2024-12-01T19:26:41Z",
     "parser": "MultiReportParser (4x OpenCoverParser)",
     "assemblies": 1,
     "classes": 36,
     "files": 32,
-    "coveredlines": 123,
-    "uncoveredlines": 1383,
-    "coverablelines": 1506,
-    "totallines": 2939,
-    "linecoverage": 8.1,
+    "coveredlines": 168,
+    "uncoveredlines": 1337,
+    "coverablelines": 1505,
+    "totallines": 2937,
+    "linecoverage": 11.1,
     "coveredbranches": 0,
     "totalbranches": 0,
-    "coveredmethods": 32,
+    "coveredmethods": 40,
     "totalmethods": 162,
-    "methodcoverage": 19.7
+    "methodcoverage": 24.6
  },
   "coverage": {
     "assemblies": [
-      { "name": "ScriptAssembly", "classes": 36, "coverage": 8.1, "coveredlines": 123, "coverablelines": 1506, "totallines": 3927, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 19.7, "coveredmethods": 32, "totalmethods": 162, "classesinassembly": [
-        { "name": "AI", "coverage": 8.1, "coveredlines": 5, "coverablelines": 61, "totallines": 99, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 14.2, "coveredmethods": 1, "totalmethods": 7 },
+      { "name": "ScriptAssembly", "classes": 36, "coverage": 11.1, "coveredlines": 168, "coverablelines": 1505, "totallines": 3925, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 24.6, "coveredmethods": 40, "totalmethods": 162, "classesinassembly": [
+        { "name": "AI", "coverage": 52.4, "coveredlines": 32, "coverablelines": 61, "totallines": 99, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 71.4, "coveredmethods": 5, "totalmethods": 7 },
         { "name": "Attack", "coverage": 0, "coveredlines": 0, "coverablelines": 23, "totallines": 247, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 4 },
         { "name": "Bucket", "coverage": 7.5, "coveredlines": 6, "coverablelines": 80, "totallines": 131, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 33.3, "coveredmethods": 1, "totalmethods": 3 },
-        { "name": "Clock", "coverage": 17.7, "coveredlines": 14, "coverablelines": 79, "totallines": 108, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 30.7, "coveredmethods": 4, "totalmethods": 13 },
+        { "name": "Clock", "coverage": 41, "coveredlines": 32, "coverablelines": 78, "totallines": 106, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 61.5, "coveredmethods": 8, "totalmethods": 13 },
         { "name": "DeathSequence", "coverage": 4, "coveredlines": 2, "coverablelines": 50, "totallines": 81, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 16.6, "coveredmethods": 1, "totalmethods": 6 },
         { "name": "Door", "coverage": 5.1, "coveredlines": 2, "coverablelines": 39, "totallines": 66, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 25, "coveredmethods": 1, "totalmethods": 4 },
         { "name": "FadeInTextOnStart", "coverage": 0, "coveredlines": 0, "coverablelines": 32, "totallines": 54, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 5 },

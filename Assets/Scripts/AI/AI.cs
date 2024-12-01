@@ -9,18 +9,18 @@ public class AI : MonoBehaviour {
     // Composants pour le mouvement, l'animation et l'audio
     NavMeshAgent agent;      // Navigation agent reference
     Animator anim;           // Animator reference for NPC animations
-    AudioSource audioSource; // AudioSource reference for NPC sounds
+    public AudioSource audioSource; // AudioSource reference for NPC sounds
     State currentState;      // Current state of the NPC
 
     public Transform player; // Reference to the player for interaction
     
-    [SerializeField] AudioClip sndFootstepLeft, sndFootstepRight, sndGrowl, sndAttack;
-    [SerializeField] float audibleDistance = 15f;  // distance a partir de laquelle on peut entendre les pas du monstre
+    public AudioClip sndFootstepLeft, sndFootstepRight, sndGrowl, sndAttack;
+    public float audibleDistance = 15f;  // distance a partir de laquelle on peut entendre les pas du monstre
 
-    private float stepCooldown = 0.6f;
-    private float nextStepTime = 0f;
-    private bool switchFoot = false;
-    private bool attackSoundPlayed = false;
+    public float stepCooldown = 0.6f;
+    public float nextStepTime = 0f;
+    public bool switchFoot = false;
+    public bool attackSoundPlayed = false;
  
     // Initialisation au démarrage de la scène
     void Start() {
@@ -60,7 +60,7 @@ public class AI : MonoBehaviour {
     
     }
 
-    private void PlayGrowlSound() {
+    public void PlayGrowlSound() {
         if (!audioSource.isPlaying) {
             audioSource.volume = 1.0f; // volume pour le grognement
             audioSource.pitch = 1f;
@@ -68,7 +68,7 @@ public class AI : MonoBehaviour {
         }
     }
 
-    private void PlayFootStep() {
+    public void PlayFootStep() {
         if (Time.time >= nextStepTime && !audioSource.isPlaying) {
             switchFoot = !switchFoot;
             
@@ -86,7 +86,7 @@ public class AI : MonoBehaviour {
         }
     }
 
-    private void StopFootStep() {
+    public void StopFootStep() {
         if (audioSource.isPlaying) {
             audioSource.Stop();
         }

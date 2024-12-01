@@ -1,29 +1,29 @@
 ﻿# Summary
 |||
 |:---|:---|
-| Generated on: | 2024-11-30 - 20:04:00 |
+| Generated on: | 2024-12-01 - 14:26:41 |
 | Parser: | MultiReportParser (4x OpenCoverParser) |
 | Assemblies: | 1 |
 | Classes: | 36 |
 | Files: | 32 |
-| Covered lines: | 123 |
-| Uncovered lines: | 1383 |
-| Coverable lines: | 1506 |
-| Total lines: | 2939 |
-| Line coverage: | 8.1% (123 of 1506) |
+| Covered lines: | 168 |
+| Uncovered lines: | 1337 |
+| Coverable lines: | 1505 |
+| Total lines: | 2937 |
+| Line coverage: | 11.1% (168 of 1505) |
 | Covered branches: | 0 |
 | Total branches: | 0 |
-| Covered methods: | 32 |
+| Covered methods: | 40 |
 | Total methods: | 162 |
-| Method coverage: | 19.7% (32 of 162) |
+| Method coverage: | 24.6% (40 of 162) |
 
 |**Name**|**Covered**|**Uncovered**|**Coverable**|**Total**|**Line coverage**|**Covered**|**Total**|**Branch coverage**|**Covered**|**Total**|**Method coverage**|
 |:---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-|**ScriptAssembly**|**123**|**1383**|**1506**|**3927**|**8.1%**|**0**|**0**|****|**32**|**162**|**19.7%**|
-|AI|5|56|61|99|8.1%|0|0||1|7|14.2%|
+|**ScriptAssembly**|**168**|**1337**|**1505**|**3925**|**11.1%**|**0**|**0**|****|**40**|**162**|**24.6%**|
+|AI|32|29|61|99|52.4%|0|0||5|7|71.4%|
 |Attack|0|23|23|247|0%|0|0||0|4|0%|
 |Bucket|6|74|80|131|7.5%|0|0||1|3|33.3%|
-|Clock|14|65|79|108|17.7%|0|0||4|13|30.7%|
+|Clock|32|46|78|106|41%|0|0||8|13|61.5%|
 |DeathSequence|2|48|50|81|4%|0|0||1|6|16.6%|
 |Door|2|37|39|66|5.1%|0|0||1|4|25%|
 |FadeInTextOnStart|0|32|32|54|0%|0|0||0|5|0%|

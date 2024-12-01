@@ -30,12 +30,10 @@ public class Clock : MonoBehaviour
         GameObject canvaToAdd = Resources.Load<GameObject>(prefabPath);
         GameObject newObject = Instantiate(canvaToAdd, transform.position, transform.rotation);
         newObject.transform.SetParent(transform);
-
         cle.SetActive(false);
         canvas = GetComponentInChildren<Canvas>();
         canvas.gameObject.AddComponent<LookAtCam>();
         canvas.transform.position = transform.position + canvasOffset;
-
         GetComponent<Animator>().enabled = false;
     }
 
