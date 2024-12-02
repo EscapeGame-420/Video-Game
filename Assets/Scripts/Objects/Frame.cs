@@ -52,7 +52,7 @@ public class Frame : MonoBehaviour
             }
         }
 
-        Debug.Log("Le joueur s'approche avec la photo. Activation du tableau");
+        //Debug.Log("Le joueur s'approche avec la photo. Activation du tableau");
 
         if (Input.GetKeyDown(KeyCode.E) && inventory.IsSelectingItem("photo"))
         {

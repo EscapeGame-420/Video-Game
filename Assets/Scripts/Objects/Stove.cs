@@ -29,7 +29,7 @@ public class Stove : MonoBehaviour
 
         float distance = Vector3.Distance(transform.position, player.position);
         Inventory inventory = FindFirstObjectByType<Inventory>();
-        if (!(distance <= activationDistance && inventory.IncludeItem("torch"))){
+        if (!(distance <= activationDistance && inventory.IncludeItemName("torch"))){
             fireparticleEffect.SetActive(false);
         return;
         }else{

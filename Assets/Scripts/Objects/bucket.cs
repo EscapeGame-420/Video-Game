@@ -56,7 +56,7 @@ public class Bucket : MonoBehaviour
             }
         }
 
-        if (!(distance <= activationDistance && (inventory.IncludeItem("bones")|| inventory.IncludeItem("eyeball")|| mixItems.Count == 3)))
+        if (!(distance <= activationDistance && (inventory.IncludeItemName("bones")|| inventory.IncludeItemName("eyeball")|| mixItems.Count == 3)))
         {
             canvasTransform.gameObject.SetActive(false);
             return;
@@ -113,12 +113,12 @@ public class Bucket : MonoBehaviour
             }
             else
             {
-                if (inventory.IncludeItem("bones") && inventory.IsSelectingItem("bones"))
+                if (inventory.IncludeItemName("bones") && inventory.IsSelectingItem("bones"))
                 {
                     inventory.UseItem("bones");
                     mixItems.Add("bones");
                 }
-                else if (inventory.IncludeItem("eyeball") && inventory.IsSelectingItem("eyeball"))
+                else if (inventory.IncludeItemName("eyeball") && inventory.IsSelectingItem("eyeball"))
                 {
                     inventory.UseItem("eyeball");
                     mixItems.Add("eyeball");

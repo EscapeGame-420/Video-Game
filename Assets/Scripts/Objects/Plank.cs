@@ -38,7 +38,7 @@ public class Plank : MonoBehaviour
         {
             canvasTransform.gameObject.SetActive(distance <= activationDistance);
         }
-        if (!(distance <= activationDistance && inventory.IncludeItem("crowbar"))) return;
+        if (!(distance <= activationDistance && inventory.IncludeItemName("crowbar"))) return;
 
         // Check if the canvas has already been created
         if (!canvasCreated)

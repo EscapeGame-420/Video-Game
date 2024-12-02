@@ -47,7 +47,7 @@ public class Door : MonoBehaviour
             }
         }
 
-            Debug.LogError("too far");
+            //Debug.LogError("too far");
 
         if (Input.GetKeyDown("e") && lockopened== 3)
         {
@@ -60,7 +60,7 @@ public class Door : MonoBehaviour
         public void OpenLock()
         {
             lockopened = lockopened + 1;
-            Debug.LogError("Lock opened: " + lockopened);
+            //Debug.LogError("Lock opened: " + lockopened);
         }
         }
     

@@ -47,7 +47,7 @@ public class GiveItems : MonoBehaviour
         }
         
         
-        if (!(distance <= activationDistance && !inventory.IncludeItem(itemName))){
+        if (!(distance <= activationDistance && !inventory.IncludeItemName(itemName))){
             canvasTransform.gameObject.SetActive(false);
             return;
         }
@@ -59,7 +59,7 @@ public class GiveItems : MonoBehaviour
         
         Debug.Log("Le joueur s'approche");
 
-        if (Input.GetKeyDown("e") &&  !inventory.IncludeItem(itemName))
+        if (Input.GetKeyDown("e") &&  !inventory.IncludeItemName(itemName))
         {
             Item item = new Item // Create NEW instance per slot
             {

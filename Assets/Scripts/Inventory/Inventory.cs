@@ -110,6 +110,10 @@ public class Inventory : MonoBehaviour
         }
         return false;
     }
+    public Boolean IncludeItem(string name)
+    {
+       return items.Any(item => item.itemName == name);
+    }
 
     // Method to swap items between two slots, even if one or both are empty
     public void SwapItems(int index1, int index2)
@@ -144,10 +148,6 @@ public class Inventory : MonoBehaviour
         items[index].sprite = emptySprite;
         currentItemCount--;
         inventoryManager.MapSprite(index); // Update the UI
-    }
-    public Boolean IncludeItem(string name)
-    {
-       return items.Any(item => item.itemName == name);
     }
     public Boolean IsSelectingItem(string name){
         return items[selecting].itemName == name;

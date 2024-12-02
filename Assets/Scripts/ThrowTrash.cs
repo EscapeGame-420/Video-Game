@@ -43,7 +43,7 @@ public class ThrowTrash : MonoBehaviour
                 canvasTransform.localPosition = new Vector3(0,0, 0); // Set the desired position
             }
         }
-        if (!(distance <= activationDistance && inventory.IncludeItem(itemName))){
+        if (!(distance <= activationDistance && inventory.IncludeItemName(itemName))){
             canvasTransform.gameObject.SetActive(false);
         return;
         }else{

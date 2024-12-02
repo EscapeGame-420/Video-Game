@@ -11,6 +11,7 @@ public class FadeOutEffect : MonoBehaviour
     public GameObject toolbar;
     public JulieMovement julieMovement;
     public JulieVisionFollow julieVisionFollow;
+    public GameObject objective;
 
     public float fadeDuration = 2.0f;
     public float delayBeforeFade = 2.0f;
@@ -33,6 +34,10 @@ public class FadeOutEffect : MonoBehaviour
         if (toolbar != null)
         {
             toolbar.SetActive(false);
+        }
+        if (objective != null)
+        {
+            objective.SetActive(false);
         }
 
         if (julieMovement != null)
@@ -72,6 +77,11 @@ public class FadeOutEffect : MonoBehaviour
         {
             toolbar.SetActive(true);
         }
+        if (objective != null)
+        {
+            objective.SetActive(true);
+        }
+
 
         if (julieMovement != null)
         {

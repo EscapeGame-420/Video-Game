@@ -33,7 +33,7 @@ public class Painting : MonoBehaviour
 
         float distance = Vector3.Distance(transform.position, player.position);
         Inventory inventory = FindFirstObjectByType <Inventory>();
-        if (!(distance <= activationDistance && inventory.IncludeItem("greenFlameCandle") && !GetComponent<Animator>().enabled) ) return;
+        if (!(distance <= activationDistance && inventory.IncludeItemName("greenFlameCandle") && !GetComponent<Animator>().enabled) ) return;
 
         //if(!transform.Find("PaintingCanvas")) Item.CreateCanvas(this.gameObject);
         //GetComponent<Animator>().enabled = true;

@@ -21,8 +21,7 @@ public class ShadowManConvo : MonoBehaviour
 
     public static bool isConvoFinished = false;
     public static bool isConvoStarted = false;
-
-
+    public GameObject ui;
     void Start()
     {
         messagesJulie = new List<string>
@@ -118,11 +117,13 @@ public class ShadowManConvo : MonoBehaviour
         player.GetComponent<Animator>().enabled = false;
         player.transform.position = PlaceToStay.transform.position;
         player.transform.LookAt(transform);
+        ui.SetActive(false);
     }
 
     void enablePlayerMovement(){
         //player.GetComponent<JulieMovement>().enabled = true;
         player.GetComponent<Animator>().enabled = true;
+        ui.SetActive(true);
     }
 }
 
