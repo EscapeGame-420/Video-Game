@@ -78,9 +78,4 @@ public class NoteDeMusique : MonoBehaviour
   public void DS1_Note_Play(){
      FS_Note.Play();
    }
-
-
-
-   
-
 }
