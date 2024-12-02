@@ -24,18 +24,31 @@ public class Frame : MonoBehaviour
 
         float distance = Vector3.Distance(transform.position, player.position);
         Inventory inventory = FindFirstObjectByType<Inventory>();
-        if (!(distance <= activationDistance && inventory.IncludeItem("photo"))) return;
-
-        if (!canvasCreated)
+        if (distance <= activationDistance && inventory.IncludeItemName("photo"))
         {
-            Item.CreateCanvas(this.gameObject);
-            canvasCreated = true;
-
-            Transform canvasTransform = transform.Find("frameCanvas");
-            if (canvasTransform != null)
+            if (!canvasCreated)
             {
-                canvasTransform.localPosition = new Vector3(0.01f,0.12f,0.07f); 
-                canvasTransform.gameObject.SetActive(true);
+                Item.CreateCanvas(this.gameObject);
+                canvasCreated = true;
+
+                Transform canvasTransform = transform.Find("frameCanvas");
+                if (canvasTransform != null)
+                {
+                    canvasTransform.localPosition = new Vector3(0.01f, 0.12f, 0.07f); 
+                    canvasTransform.gameObject.SetActive(true);
+                }
+            }
+        }
+        else
+        {
+            if (canvasCreated)
+            {
+                Transform canvasTransform = transform.Find("frameCanvas");
+                if (canvasTransform != null)
+                {
+                    Destroy(canvasTransform.gameObject);
+                }
+                canvasCreated = false;
             }
         }
 

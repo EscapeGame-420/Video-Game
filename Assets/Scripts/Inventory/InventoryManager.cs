@@ -18,6 +18,7 @@ public class InventoryManager : MonoBehaviour
 
     void Start()
     {
+        inventory = GameObject.Find("Julie").GetComponent<Inventory>();
         StartCoroutine(WaitForToolbar());
     }
 
@@ -121,7 +122,7 @@ public class InventoryManager : MonoBehaviour
         //dragNDrop.SetCanvasGroup(canvasGroup);
 
         RectTransform rectTransform = newItemImage.GetComponent<RectTransform>();
-        rectTransform.sizeDelta = new Vector2(70, 70);
+        rectTransform.sizeDelta = new Vector2(50, 50);
         rectTransform.anchoredPosition = Vector2.zero;
 
         Debug.Log($"Created item image for {currentItem.itemName} in toolbar slot {toolbarSlot.GetSiblingIndex()}");
