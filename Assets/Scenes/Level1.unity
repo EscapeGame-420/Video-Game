@@ -114513,7 +114513,7 @@ Transform:
   m_GameObject: {fileID: 1760504863}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -298.41, y: 12, z: 29.8}
+  m_LocalPosition: {x: -335, y: 6.113, z: 72.89}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -124977,7 +124977,7 @@ MonoBehaviour:
   inventory: {fileID: 0}
   toolbar: {fileID: 1888196372}
   outline: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  outlineEmpty: {fileID: 0}
+  outlineEmpty: {fileID: 21300000, guid: cbbabe9e292f5604897926494bb38fef, type: 3}
   selecting: 0
 --- !u!64 &1888288130
 MeshCollider:
