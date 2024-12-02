@@ -1,24 +1,24 @@
 {
   "summary": {
-    "generatedon": "2024-12-01T19:26:41Z",
+    "generatedon": "2024-12-02T02:23:12Z",
     "parser": "MultiReportParser (4x OpenCoverParser)",
     "assemblies": 1,
     "classes": 36,
     "files": 32,
-    "coveredlines": 168,
-    "uncoveredlines": 1337,
-    "coverablelines": 1505,
-    "totallines": 2937,
-    "linecoverage": 11.1,
+    "coveredlines": 209,
+    "uncoveredlines": 1317,
+    "coverablelines": 1526,
+    "totallines": 2946,
+    "linecoverage": 13.6,
     "coveredbranches": 0,
     "totalbranches": 0,
-    "coveredmethods": 40,
-    "totalmethods": 162,
-    "methodcoverage": 24.6
+    "coveredmethods": 46,
+    "totalmethods": 171,
+    "methodcoverage": 26.9
  },
   "coverage": {
     "assemblies": [
-      { "name": "ScriptAssembly", "classes": 36, "coverage": 11.1, "coveredlines": 168, "coverablelines": 1505, "totallines": 3925, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 24.6, "coveredmethods": 40, "totalmethods": 162, "classesinassembly": [
+      { "name": "ScriptAssembly", "classes": 36, "coverage": 13.6, "coveredlines": 209, "coverablelines": 1526, "totallines": 3934, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 26.9, "coveredmethods": 46, "totalmethods": 171, "classesinassembly": [
         { "name": "AI", "coverage": 52.4, "coveredlines": 32, "coverablelines": 61, "totallines": 99, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 71.4, "coveredmethods": 5, "totalmethods": 7 },
         { "name": "Attack", "coverage": 0, "coveredlines": 0, "coverablelines": 23, "totallines": 247, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 4 },
         { "name": "Bucket", "coverage": 7.5, "coveredlines": 6, "coverablelines": 80, "totallines": 131, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 33.3, "coveredmethods": 1, "totalmethods": 3 },
@@ -33,7 +33,7 @@
         { "name": "Idle", "coverage": 0, "coveredlines": 0, "coverablelines": 20, "totallines": 247, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 4 },
         { "name": "Inventory", "coverage": 2.9, "coveredlines": 3, "coverablelines": 101, "totallines": 156, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 10, "coveredmethods": 1, "totalmethods": 10 },
         { "name": "InventoryManager", "coverage": 1.6, "coveredlines": 2, "coverablelines": 119, "totallines": 209, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 10, "coveredmethods": 1, "totalmethods": 10 },
-        { "name": "Item", "coverage": 5.4, "coveredlines": 4, "coverablelines": 74, "totallines": 126, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 20, "coveredmethods": 1, "totalmethods": 5 },
+        { "name": "Item", "coverage": 47.3, "coveredlines": 45, "coverablelines": 95, "totallines": 135, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 50, "coveredmethods": 7, "totalmethods": 14 },
         { "name": "ItemSlot", "coverage": 0, "coveredlines": 0, "coverablelines": 28, "totallines": 58, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 4 },
         { "name": "JulieMovement", "coverage": 10.3, "coveredlines": 8, "coverablelines": 77, "totallines": 129, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 14.2, "coveredmethods": 1, "totalmethods": 7 },
         { "name": "JulieVisionFollow", "coverage": 5.8, "coveredlines": 1, "coverablelines": 17, "totallines": 42, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 33.3, "coveredmethods": 1, "totalmethods": 3 },

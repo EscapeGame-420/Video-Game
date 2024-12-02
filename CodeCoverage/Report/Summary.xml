@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <CoverageReport scope="Summary">
   <Summary>
-    <Generatedon>2024-12-01 - 14:26:41</Generatedon>
+    <Generatedon>2024-12-01 - 21:23:12</Generatedon>
     <Parser>MultiReportParser (4x OpenCoverParser)</Parser>
     <Assemblies>1</Assemblies>
     <Classes>36</Classes>
     <Files>32</Files>
-    <Coveredlines>168</Coveredlines>
-    <Uncoveredlines>1337</Uncoveredlines>
-    <Coverablelines>1505</Coverablelines>
-    <Totallines>2937</Totallines>
-    <Linecoverage>11.1</Linecoverage>
+    <Coveredlines>209</Coveredlines>
+    <Uncoveredlines>1317</Uncoveredlines>
+    <Coverablelines>1526</Coverablelines>
+    <Totallines>2946</Totallines>
+    <Linecoverage>13.6</Linecoverage>
     <Coveredbranches>0</Coveredbranches>
     <Totalbranches>0</Totalbranches>
-    <Coveredmethods>40</Coveredmethods>
-    <Totalmethods>162</Totalmethods>
-    <Methodcoverage>24.6</Methodcoverage>
+    <Coveredmethods>46</Coveredmethods>
+    <Totalmethods>171</Totalmethods>
+    <Methodcoverage>26.9</Methodcoverage>
   </Summary>
   <Coverage>
-    <Assembly name="ScriptAssembly" classes="36" coverage="11.1" coveredlines="168" coverablelines="1505" totallines="3925" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="40" totalmethods="162" methodcoverage="24.6">
+    <Assembly name="ScriptAssembly" classes="36" coverage="13.6" coveredlines="209" coverablelines="1526" totallines="3934" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="46" totalmethods="171" methodcoverage="26.9">
       <Class name="AI" coverage="52.4" coveredlines="32" coverablelines="61" totallines="99" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="5" totalmethods="7" methodcoverage="71.4" />
       <Class name="Attack" coverage="0" coveredlines="0" coverablelines="23" totallines="247" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="4" methodcoverage="0" />
       <Class name="Bucket" coverage="7.5" coveredlines="6" coverablelines="80" totallines="131" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="3" methodcoverage="33.3" />
@@ -33,7 +33,7 @@
       <Class name="Idle" coverage="0" coveredlines="0" coverablelines="20" totallines="247" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="4" methodcoverage="0" />
       <Class name="Inventory" coverage="2.9" coveredlines="3" coverablelines="101" totallines="156" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="10" methodcoverage="10" />
       <Class name="InventoryManager" coverage="1.6" coveredlines="2" coverablelines="119" totallines="209" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="10" methodcoverage="10" />
-      <Class name="Item" coverage="5.4" coveredlines="4" coverablelines="74" totallines="126" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="5" methodcoverage="20" />
+      <Class name="Item" coverage="47.3" coveredlines="45" coverablelines="95" totallines="135" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="7" totalmethods="14" methodcoverage="50" />
       <Class name="ItemSlot" coverage="0" coveredlines="0" coverablelines="28" totallines="58" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="4" methodcoverage="0" />
       <Class name="JulieMovement" coverage="10.3" coveredlines="8" coverablelines="77" totallines="129" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="7" methodcoverage="14.2" />
       <Class name="JulieVisionFollow" coverage="5.8" coveredlines="1" coverablelines="17" totallines="42" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="3" methodcoverage="33.3" />

@@ -1,25 +1,25 @@
 ﻿# Summary
 |||
 |:---|:---|
-| Generated on: | 2024-12-01 - 14:26:41 |
+| Generated on: | 2024-12-01 - 21:23:12 |
 | Parser: | MultiReportParser (4x OpenCoverParser) |
 | Assemblies: | 1 |
 | Classes: | 36 |
 | Files: | 32 |
-| Covered lines: | 168 |
-| Uncovered lines: | 1337 |
-| Coverable lines: | 1505 |
-| Total lines: | 2937 |
-| Line coverage: | 11.1% (168 of 1505) |
+| Covered lines: | 209 |
+| Uncovered lines: | 1317 |
+| Coverable lines: | 1526 |
+| Total lines: | 2946 |
+| Line coverage: | 13.6% (209 of 1526) |
 | Covered branches: | 0 |
 | Total branches: | 0 |
-| Covered methods: | 40 |
-| Total methods: | 162 |
-| Method coverage: | 24.6% (40 of 162) |
+| Covered methods: | 46 |
+| Total methods: | 171 |
+| Method coverage: | 26.9% (46 of 171) |
 
 |**Name**|**Covered**|**Uncovered**|**Coverable**|**Total**|**Line coverage**|**Covered**|**Total**|**Branch coverage**|**Covered**|**Total**|**Method coverage**|
 |:---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-|**ScriptAssembly**|**168**|**1337**|**1505**|**3925**|**11.1%**|**0**|**0**|****|**40**|**162**|**24.6%**|
+|**ScriptAssembly**|**209**|**1317**|**1526**|**3934**|**13.6%**|**0**|**0**|****|**46**|**171**|**26.9%**|
 |AI|32|29|61|99|52.4%|0|0||5|7|71.4%|
 |Attack|0|23|23|247|0%|0|0||0|4|0%|
 |Bucket|6|74|80|131|7.5%|0|0||1|3|33.3%|
@@ -34,7 +34,7 @@
 |Idle|0|20|20|247|0%|0|0||0|4|0%|
 |Inventory|3|98|101|156|2.9%|0|0||1|10|10%|
 |InventoryManager|2|117|119|209|1.6%|0|0||1|10|10%|
-|Item|4|70|74|126|5.4%|0|0||1|5|20%|
+|Item|45|50|95|135|47.3%|0|0||7|14|50%|
 |ItemSlot|0|28|28|58|0%|0|0||0|4|0%|
 |JulieMovement|8|69|77|129|10.3%|0|0||1|7|14.2%|
 |JulieVisionFollow|1|16|17|42|5.8%|0|0||1|3|33.3%|
