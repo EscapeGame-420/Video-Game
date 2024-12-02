@@ -62,11 +62,24 @@ public class State {
  
     // Méthode pour vérifier si le NPC peut voir le joueur
     public bool CanSeePlayer() {
-        Vector3 direction = player.position - npc.transform.position;
-        float angle = Vector3.Angle(direction, npc.transform.forward);
-        if (direction.magnitude < visDist && angle < visAngle) {
+        // Vector3 direction = player.position - npc.transform.position;
+        // float angle = Vector3.Angle(direction, npc.transform.forward);
+        // if (direction.magnitude < visDist && angle < visAngle) {
+        //     return true;
+        // }
+        // return false;
+        return SensorForDetection(npc.transform.Find("L_sensor")) || SensorForDetection(npc.transform.Find("R_sensor")) ;
+    }
+
+    private bool SensorForDetection(Transform sensor){
+        Ray rayon = new Ray(sensor.position, npc.transform.TransformDirection(Vector3.forward));
+        RaycastHit hit;
+        if (Physics.Raycast(rayon, out hit, Mathf.Infinity) && hit.collider.CompareTag("Player"))
+        {
+            Debug.Log("Sensor Objet:" + hit.collider.name + " Distance:" + hit.distance);
             return true;
         }
+        Debug.DrawRay(sensor.position, sensor.TransformDirection(Vector3.forward) * 10f, Color.yellow);
         return false;
     }
  
@@ -123,7 +136,7 @@ public class Patrol : State {
     public Patrol(GameObject _npc, NavMeshAgent _agent, Animator _anim, Transform _player)
         : base(_npc, _agent, _anim, _player) {
         name = STATE.PATROL;
-        agent.speed = 10.0f;
+        agent.speed = 5.0f;
         agent.isStopped = false;
     }
  
@@ -169,7 +182,7 @@ public class Pursue : State {
     public Pursue(GameObject _npc, NavMeshAgent _agent, Animator _anim, Transform _player)
         : base(_npc, _agent, _anim, _player) {
         name = STATE.PURSUE;
-        agent.speed = 5.0f;
+        agent.speed = 7.0f;
         agent.isStopped = false;
     }
  
