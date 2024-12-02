@@ -36,26 +36,13 @@ public class ShadowManConvo : MonoBehaviour
             "Avez-vous remarqué quelque chose d'inhabituel dans cette pièce ?",
             "Cette peinture sur le mur... Elle me semble étrange.",
             "Pensez-vous qu'il pourrait y avoir quelque chose de caché derrière ?",
-            "Nous devons unir nos forces pour trouver une solution et nous enfuir d'ici."
+            "Nous devons unir nos forces pour trouver une solution et nous enfuir d'ici.",
+            "Savez-vous au moins ce qui m'attend en haut ?",
+            "C'est tout ce que vous savez ?",
+            "D'accord, je vais essayer de les trouver",
+            "Je ferai attention, merci pour l'information"
         };
 
-
-        // messagesHomme = new List<string>
-        // {
-        //     "Vous êtes dans le sous-sol d'un kidnappeur. Moi aussi, je me suis fait kidnapper.",
-        //     "Je ne sais pas exactement comment nous sommes arrivés ici. Tout est flou.",
-        //     "J'ai perdu espoir de sortir après 4 jours.",
-        //     "J'ai cherché partout, mais je n'ai trouvé aucune issue.",
-        //     "Il y a quelque chose d'étrange à propos de cet endroit...",
-        //     "Oui, plusieurs fois, mais en vain.",
-        //     "La seule chose étrange que j'ai remarquée, c'est cette peinture sur le mur.",
-        //     "Exactement, cette peinture semble trop récente, trop propre.",
-        //     "Peut-être qu'il y a quelque chose derrière.",
-        //     "Je préfère rester ici et attendre que quelqu'un vienne nous chercher. Mais rien ne vous empêche de chercher une issue."
-        //     // or something like "ma place est ici dans ce sous-sol, il est trop tard pour moi" to make the player feel like they have to escape alone
-        //     // et peut etre rajouter plus de temps a la sentence du mec pour faire genre qu<il a arret/ de compter
-        //     // je suis ici depuis tellement longtemps que j<ai arrete de compter
-        // };
         messagesHomme = new List<string>
         {
             "Nous sommes enfermés dans le sous-sol d'un kidnappeur. Moi aussi, j'ai été enlevé.",
@@ -67,7 +54,11 @@ public class ShadowManConvo : MonoBehaviour
             "La seule chose qui me semble vraiment étrange est cette peinture sur le mur.",
             "Elle semble trop récente, trop propre, comme si elle cachait quelque chose.",
             "Peut-être y a-t-il quelque chose dissimulé derrière cette peinture.",
-            "Je suis piégé ici pour l'éternité... même si je le voulais, je ne pourrais pas partir. Mon âme est liée à cet endroit."
+            "Je suis piégé ici pour l'éternité... même si je le voulais, je ne pourrais pas partir. Mon âme est liée à cet endroit.",
+            "Une fois que vous serez sorti du sous-sol, il faudra que vous sortiez par la porte principale",
+            "La porte est fermée à clé, les trois clés sont cachées dans la maison, il faudra les trouver pour ouvrir la porte.",
+            "Mais attention, le kidnappeur est très vigilant, il ne faudra pas qu'il vous attrape. Il rode dans la maison",
+            "Bonne chance, et faites attention à vous"
         };
 
     }
