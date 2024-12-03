@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<coverage version="1.0" date="2024-12-02_20-20-23" tag="">
+  <assembly name="Tests">
+    <class name="InventoryTest" coveredlines="39" coverablelines="49" totallines="84" coveredbranches="0" totalbranches="0" />
+    <class name="ItemTest" coveredlines="15" coverablelines="15" totallines="37" coveredbranches="0" totalbranches="0" />
+  </assembly>
+</coverage>

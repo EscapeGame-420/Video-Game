@@ -7,13 +7,13 @@ public class Lock : MonoBehaviour
     public Transform player;
     public float activationDistance = 7.0f;
     public bool isCandleNear = false;
-    private bool canvasCreated = false; // Flag to track if the canvas has been created
+    public bool canvasCreated = false; // Flag to track if the canvas has been created
     public string itemName;
     public GameObject lockObject;
     public float x =0.7f;
     public float y =1.2f;
     public float z =-0.2f;
-    private Transform canvasTransform; // Reference to the created canvas
+    public Transform canvasTransform; // Reference to the created canvas
 
     void Start()
     {
@@ -35,19 +35,10 @@ public class Lock : MonoBehaviour
 
         float distance = Vector3.Distance(transform.position, player.position);
         Inventory inventory = FindFirstObjectByType<Inventory>();
-        if (!(distance <= activationDistance && inventory.IncludeItemName(itemName))) return;
-
-
-        // Check if the canvas has already been created
-        if (!canvasCreated)
+        UpdateCanvasVisibility(distance);
+        if (CanActivateCanvas(distance, inventory))
         {
-            Item.CreateCanvas(this.gameObject);
-            canvasCreated = true; 
-            canvasTransform = transform.Find(this.gameObject.name + "Canvas");
-            if (canvasTransform != null)
-            {
-                canvasTransform.localPosition = new Vector3(x,y,z); // Set the desired position
-            }
+            HandleCanvasCreation();
         }
 
         Debug.Log("Le joueur s'approche avec la bougie. Activation du tableau");
@@ -64,4 +55,31 @@ public class Lock : MonoBehaviour
 
         }
     }
+    public void UpdateCanvasVisibility(float distance)
+    {
+        if (canvasCreated && canvasTransform != null)
+        {
+            canvasTransform.gameObject.SetActive(distance <= activationDistance);
+        }
+    }
+
+    public bool CanActivateCanvas(float distance, Inventory inventory)
+    {
+        return distance <= activationDistance && inventory != null && inventory.IncludeItemName(itemName);
+    }
+    public void HandleCanvasCreation()
+    {
+        if (!canvasCreated)
+        {
+            Item.CreateCanvas(this.gameObject);
+            canvasCreated = true;
+
+            canvasTransform = transform.Find("lockCanvas");
+            if (canvasTransform != null)
+            {
+                canvasTransform.localPosition = new Vector3(1.67f, 2.37f, -0.5f);
+            }
+        }
+    }
+
 }

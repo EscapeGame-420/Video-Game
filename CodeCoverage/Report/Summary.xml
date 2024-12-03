@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CoverageReport scope="Summary">
+  <Summary>
+    <Generatedon>2024-12-03 - 12:29:53 AM</Generatedon>
+    <Parser>MultiReportParser (4x OpenCoverParser)</Parser>
+    <Assemblies>2</Assemblies>
+    <Classes>17</Classes>
+    <Files>17</Files>
+    <Coveredlines>342</Coveredlines>
+    <Uncoveredlines>643</Uncoveredlines>
+    <Coverablelines>985</Coverablelines>
+    <Totallines>1937</Totallines>
+    <Linecoverage>34.7</Linecoverage>
+    <Coveredbranches>0</Coveredbranches>
+    <Totalbranches>0</Totalbranches>
+    <Coveredmethods>39</Coveredmethods>
+    <Totalmethods>81</Totalmethods>
+    <Methodcoverage>48.1</Methodcoverage>
+  </Summary>
+  <Coverage>
+    <Assembly name="InvenReff" classes="5" coverage="69.4" coveredlines="255" coverablelines="367" totallines="613" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="25" totalmethods="32" methodcoverage="78.1">
+      <Class name="Inventory" coverage="63.4" coveredlines="78" coverablelines="123" totallines="182" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="8" totalmethods="11" methodcoverage="72.7" />
+      <Class name="InventoryManager" coverage="77.8" coveredlines="102" coverablelines="131" totallines="221" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="10" totalmethods="10" methodcoverage="100" />
+      <Class name="Item" coverage="72.9" coveredlines="54" coverablelines="74" totallines="126" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="4" totalmethods="5" methodcoverage="80" />
+      <Class name="ItemSlot" coverage="35.7" coveredlines="10" coverablelines="28" totallines="58" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="4" methodcoverage="25" />
+      <Class name="LookAtCam" coverage="100" coveredlines="11" coverablelines="11" totallines="26" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="2" totalmethods="2" methodcoverage="100" />
+    </Assembly>
+    <Assembly name="ObjectRef" classes="12" coverage="14" coveredlines="87" coverablelines="618" totallines="1324" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="14" totalmethods="49" methodcoverage="28.5">
+      <Class name="Bucket" coverage="0" coveredlines="0" coverablelines="80" totallines="131" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="3" methodcoverage="0" />
+      <Class name="Clock" coverage="0" coveredlines="0" coverablelines="41" totallines="65" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="3" methodcoverage="0" />
+      <Class name="Door" coverage="0" coveredlines="0" coverablelines="37" totallines="66" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="4" methodcoverage="0" />
+      <Class name="Frame" coverage="0" coveredlines="0" coverablelines="49" totallines="70" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="3" methodcoverage="0" />
+      <Class name="GiveItems" coverage="83.3" coveredlines="40" coverablelines="48" totallines="84" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="6" totalmethods="6" methodcoverage="100" />
+      <Class name="Lock" coverage="42.1" coveredlines="24" coverablelines="57" totallines="85" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="4" totalmethods="6" methodcoverage="66.6" />
+      <Class name="MathisEnigme" coverage="0" coveredlines="0" coverablelines="78" totallines="122" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="4" methodcoverage="0" />
+      <Class name="Obstacle" coverage="0" coveredlines="0" coverablelines="64" totallines="104" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="4" methodcoverage="0" />
+      <Class name="Painting" coverage="0" coveredlines="0" coverablelines="27" totallines="374" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="3" methodcoverage="0" />
+      <Class name="Plank" coverage="40.3" coveredlines="23" coverablelines="57" totallines="89" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="4" totalmethods="7" methodcoverage="57.1" />
+      <Class name="Stove" coverage="0" coveredlines="0" coverablelines="40" totallines="69" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="3" methodcoverage="0" />
+      <Class name="ThrowTrash" coverage="0" coveredlines="0" coverablelines="40" totallines="65" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="3" methodcoverage="0" />
+    </Assembly>
+  </Coverage>
+</CoverageReport>

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: ba1feb36713db1448b73768e6023f20e
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - emptySprite: {fileID: 21300000, guid: 9b530529fca8558449c2af2b412dbcb9, type: 3}
+  - itemObject: {fileID: 1217277421368482119, guid: bd72486aa780d7c488fce4c5de88266f, type: 3}
+  - toolbarPrefab: {fileID: 8410452635523460267, guid: eb50e3d6a17da0b439024272c6d7de2a, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

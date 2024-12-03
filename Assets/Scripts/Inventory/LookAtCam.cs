@@ -13,7 +13,14 @@ public class LookAtCam : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.forward = Camera.main.transform.forward;
+        try
+        {
+            transform.LookAt(Camera.main.transform);
+        }
+        catch
+        {
+            Debug.Log("Camera not found");
+        }
 
     }
 }

@@ -67,7 +67,8 @@ public class InventoryManager : MonoBehaviour
         {
             Item currentItem = inventory.items[x];
             Transform toolbarSlot = toolbar.GetChild(x);
-
+            
+            Debug.Log("mapping sprites for: "+ currentItem.itemName);
             // Log item mapping
             if (currentItem.itemName != "Empty Slot")
             {
@@ -172,18 +173,28 @@ public class InventoryManager : MonoBehaviour
     }
 
     // Method to highlight the selected toolbar slot
-    void IsSelected(int index)
+    public void IsSelected(int index)
     {
         for (int i = 0; i < toolbar.childCount; i++)
         {
-            Image currSlotImage = toolbar.GetChild(i).GetComponent<Image>();
-            currSlotImage.sprite = outlineEmpty;
+            try{
+                Image currSlotImage = toolbar.GetChild(i).GetComponent<Image>();
+                currSlotImage.sprite = outlineEmpty;
+            }
+            catch{
+                Debug.Log("No image found");
+            }
         }
 
         if (index >= 0 && index < toolbar.childCount)
         {
-            Image selectedSlotImage = toolbar.GetChild(index).GetComponent<Image>();
-            selectedSlotImage.sprite = outline;
+            try{
+                Image currSlotImage = toolbar.GetChild(index).GetComponent<Image>();
+                currSlotImage.sprite = outline;
+            }
+            catch{
+                Debug.Log("No image found");
+            }
         }
     }
 

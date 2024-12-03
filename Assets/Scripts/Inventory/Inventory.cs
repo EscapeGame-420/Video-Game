@@ -15,27 +15,37 @@ public class Inventory : MonoBehaviour
     [SerializeField]
     private AudioClip selectionSound;
     private AudioSource audioSource;
-    void Start()
+     void Start()
+    {
+        Init();
+    }
+    public void Init()
     {
         items = new Item[maxInventorySize];
-        inventoryManager = FindObjectOfType<InventoryManager>(); // Initialize the InventoryManager reference
-        for (int i = 0; i < maxInventorySize; i++)
-        {
-            items[i] = new Item // Create NEW instance per slot
+            inventoryManager = FindObjectOfType<InventoryManager>(); // Initialize the InventoryManager reference
+            for (int i = 0; i < maxInventorySize; i++)
             {
-                itemName = "Empty Slot",
-                sprite = emptySprite
-            };
-            Debug.Log($"Slot {i} initialized with unique instance");
-        }
-        audioSource = gameObject.AddComponent<AudioSource>();
-        //selectionSound = "Retro Ambience Acute 01";
-        audioSource.playOnAwake = false;
+                items[i] = new Item // Create NEW instance per slot
+                {
+                    itemName = "Empty Slot",
+                    sprite = emptySprite
+                };
+                Debug.Log($"Slot {i} initialized with unique instance");
+            }
+            audioSource = gameObject.AddComponent<AudioSource>();
+            //selectionSound = "Retro Ambience Acute 01";
+            audioSource.playOnAwake = false;
     }
-
     void Update()
     {
-        selecting = inventoryManager.selecting;
+        try
+        {
+            selecting = inventoryManager.selecting;
+        }
+        catch (Exception e)
+        {
+            Debug.Log("Error: " + e);
+        }
 
         if (Input.GetKeyDown(KeyCode.L))
         {
@@ -65,7 +75,14 @@ public class Inventory : MonoBehaviour
                 items[i] = item; // Replace the empty slot with the new item
                 currentItemCount++;
                 Debug.Log(item.itemName + " added to inventory at slot " + i);
-                inventoryManager.MapSprite(i); // Update the UI
+                try
+                {
+                    inventoryManager.MapSprite(i); // Update the UI
+                }
+                catch (Exception e)
+                {
+                    Debug.Log("Error: " + e);
+                }
                 
                 if (selectionSound != null)
                 {
@@ -91,7 +108,15 @@ public class Inventory : MonoBehaviour
                 items[i].itemName = "Empty Slot";
                 items[i].sprite = emptySprite;
                 currentItemCount--;
-                inventoryManager.MapSprite(i); // Update the UI
+                
+                try
+                {
+                    inventoryManager.MapSprite(i); // Update the UI
+                }
+                catch (Exception e)
+                {
+                    Debug.Log("Error: " + e);
+                }
                 Debug.Log("Item used from inventory at slot " + i + ". " + "Now it is " + items[i].itemName);
                 return;
             }
@@ -101,6 +126,7 @@ public class Inventory : MonoBehaviour
 
     public bool IncludeItemName(string name)
     {
+        Debug.Log(items);
         for (int i = 0; i < maxInventorySize - 1; i++)
         {
             if (items[i].itemName == name)

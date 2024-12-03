@@ -7,55 +7,67 @@ public class Plank : MonoBehaviour
     public Transform player;
     public float activationDistance;
     public bool isCandleNear = false;
-    private bool canvasCreated = false; // Flag to track if the canvas has been created
+    public bool canvasCreated = false; // Flag to track if the canvas has been created
     public GameObject obstacle;
-    private Transform canvasTransform;
+    public Transform canvasTransform;
 
     [SerializeField]
-    private AudioClip selectionSound;
+    public AudioClip selectionSound;
     private AudioSource audioSource;
 
     void Start()
     {
-        // If the player is not assigned manually in the inspector, find it automatically
-        if (player == null)
-        {
-            player = GameObject.FindGameObjectWithTag("Player").transform;
-            obstacle = GameObject.Find("obstacle");
-            obstacle.SetActive(false);
-        }
         audioSource = gameObject.AddComponent<AudioSource>();
         audioSource.playOnAwake = false;
+        audioSource.clip = selectionSound;
     }
 
-    void FixedUpdate()
+    void Update()
     {
         if (player == null) return;
 
         float distance = Vector3.Distance(transform.position, player.position);
         Inventory inventory = FindFirstObjectByType<Inventory>();
-        if(canvasCreated)
+
+        UpdateCanvasVisibility(distance);
+        if (CanActivateCanvas(distance, inventory))
+        {
+            HandleCanvasCreation();
+        }
+
+        HandleInteraction(inventory);
+    }
+
+    public void UpdateCanvasVisibility(float distance)
+    {
+        if (canvasCreated && canvasTransform != null)
         {
             canvasTransform.gameObject.SetActive(distance <= activationDistance);
         }
-        if (!(distance <= activationDistance && inventory.IncludeItemName("crowbar"))) return;
+    }
 
-        // Check if the canvas has already been created
+    public bool CanActivateCanvas(float distance, Inventory inventory)
+    {
+        return distance <= activationDistance && inventory != null && inventory.IncludeItemName("crowbar");
+    }
+
+    public void HandleCanvasCreation()
+    {
         if (!canvasCreated)
         {
             Item.CreateCanvas(this.gameObject);
-            canvasCreated = true; // Set the flag to true after creating the canvas
+            canvasCreated = true;
 
-            // Find the created canvas and set its position
-            canvasTransform = transform.Find("woodPlankCanvas");
+            canvasTransform = transform.Find(this.gameObject.name+"Canvas");
             if (canvasTransform != null)
             {
-                canvasTransform.localPosition = new Vector3(1.67f, 2.37f, -0.5f); // Set the desired position
+                canvasTransform.localPosition = new Vector3(1.67f, 2.37f, -0.5f);
             }
         }
+    }
 
-        Debug.Log("Le joueur s'approche avec la bougie. Activation du tableau");
-
+    public void HandleInteraction(Inventory inventory)
+    {
         if (Input.GetKeyDown("e") && inventory.IsSelectingItem("crowbar") && gameObject.transform.childCount > 1)
         {
             if (selectionSound != null)
@@ -65,8 +77,8 @@ public class Plank : MonoBehaviour
             }
             Destroy(gameObject.transform.GetChild(0).gameObject);
             obstacle.SetActive(true);
-    
-            if(gameObject.transform.childCount <= 3)
+
+            if (gameObject.transform.childCount <= 3)
             {
                 Destroy(gameObject);
                 Destroy(canvasTransform.gameObject);

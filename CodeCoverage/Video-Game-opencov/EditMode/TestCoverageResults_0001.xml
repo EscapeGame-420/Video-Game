@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CoverageSession xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Version="0.0.0.0">
+  <Summary numSequencePoints="42" visitedSequencePoints="42" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100.0" branchCoverage="0.0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" maxCrapScore="0" minCrapScore="0" visitedClasses="1" numClasses="1" visitedMethods="6" numMethods="6" />
+  <Modules>
+    <Module>
+      <Summary numSequencePoints="42" visitedSequencePoints="42" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100.0" branchCoverage="0.0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" maxCrapScore="0" minCrapScore="0" visitedClasses="1" numClasses="1" visitedMethods="6" numMethods="6" />
+      <ModuleTime>0001-01-01T00:00:00</ModuleTime>
+      <ModuleName>Tests</ModuleName>
+      <Files>
+        <File uid="1" fullPath="C:/Users/teppi/OneDrive/Documents/Nouveau dossier/Nouveau dossier/Nouveau dossier/Video-Game/Assets/Tests/InventoryTest.cs" />
+        <File uid="2" fullPath="C:/Users/teppi/OneDrive/Documents/Nouveau dossier/Nouveau dossier/Nouveau dossier/Video-Game/Assets/Tests/ItemTest.cs" />
+      </Files>
+      <Classes>
+        <Class>
+          <Summary numSequencePoints="42" visitedSequencePoints="42" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100.0" branchCoverage="0.0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" maxCrapScore="0" minCrapScore="0" visitedClasses="1" numClasses="1" visitedMethods="6" numMethods="6" />
+          <FullName>InventoryTest</FullName>
+          <Methods>
+            <Method visited="true" cyclomaticComplexity="0" nPathComplexity="0" sequenceCoverage="100.0" branchCoverage="0" crapScore="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="8" visitedSequencePoints="8" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100.0" branchCoverage="0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" maxCrapScore="0" minCrapScore="0" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663297</MetadataToken>
+              <Name>System.Void InventoryTest::SetUp()</Name>
+              <FileRef uid="1" />
+              <SequencePoints>
+                <SequencePoint vc="4" uspid="68" ordinal="0" offset="0" sl="17" sc="5" el="17" ec="5" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="4" uspid="69" ordinal="0" offset="1" sl="18" sc="9" el="18" ec="9" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="4" uspid="70" ordinal="0" offset="17" sl="19" sc="9" el="19" ec="9" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="4" uspid="71" ordinal="0" offset="33" sl="20" sc="9" el="20" ec="9" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="4" uspid="72" ordinal="0" offset="45" sl="21" sc="9" el="21" ec="9" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="4" uspid="73" ordinal="0" offset="62" sl="23" sc="9" el="23" ec="9" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="4" uspid="74" ordinal="0" offset="74" sl="24" sc="9" el="24" ec="9" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="4" uspid="75" ordinal="0" offset="91" sl="25" sc="5" el="25" ec="5" bec="0" bev="0" fileid="1" />
+              </SequencePoints>
+              <BranchPoints />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="0" nPathComplexity="0" sequenceCoverage="100.0" branchCoverage="0" crapScore="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="4" visitedSequencePoints="4" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100.0" branchCoverage="0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" maxCrapScore="0" minCrapScore="0" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663298</MetadataToken>
+              <Name>System.Void InventoryTest::TearDown()</Name>
+              <FileRef uid="1" />
+              <SequencePoints>
+                <SequencePoint vc="4" uspid="76" ordinal="0" offset="0" sl="29" sc="5" el="29" ec="5" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="4" uspid="77" ordinal="0" offset="1" sl="30" sc="9" el="30" ec="9" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="4" uspid="78" ordinal="0" offset="13" sl="31" sc="9" el="31" ec="9" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="4" uspid="79" ordinal="0" offset="25" sl="32" sc="5" el="32" ec="5" bec="0" bev="0" fileid="1" />
+              </SequencePoints>
+              <BranchPoints />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="0" nPathComplexity="0" sequenceCoverage="100.0" branchCoverage="0" crapScore="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="7" visitedSequencePoints="7" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100.0" branchCoverage="0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" maxCrapScore="0" minCrapScore="0" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663300</MetadataToken>
+              <Name>System.Void InventoryTest::InventoryTestAddItem()</Name>
+              <FileRef uid="1" />
+              <SequencePoints>
+                <SequencePoint vc="1" uspid="90" ordinal="0" offset="0" sl="47" sc="5" el="47" ec="5" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="91" ordinal="0" offset="1" sl="48" sc="9" el="48" ec="9" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="92" ordinal="0" offset="17" sl="49" sc="9" el="49" ec="9" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="93" ordinal="0" offset="34" sl="50" sc="9" el="50" ec="9" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="94" ordinal="0" offset="46" sl="51" sc="9" el="51" ec="9" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="95" ordinal="0" offset="64" sl="52" sc="9" el="52" ec="9" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="96" ordinal="0" offset="93" sl="53" sc="5" el="53" ec="5" bec="0" bev="0" fileid="1" />
+              </SequencePoints>
+              <BranchPoints />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="0" nPathComplexity="0" sequenceCoverage="100.0" branchCoverage="0" crapScore="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="8" visitedSequencePoints="8" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100.0" branchCoverage="0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" maxCrapScore="0" minCrapScore="0" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663301</MetadataToken>
+              <Name>System.Void InventoryTest::InventoryTestUseItem()</Name>
+              <FileRef uid="1" />
+              <SequencePoints>
+                <SequencePoint vc="1" uspid="97" ordinal="0" offset="0" sl="57" sc="5" el="57" ec="5" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="98" ordinal="0" offset="1" sl="58" sc="9" el="58" ec="9" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="99" ordinal="0" offset="17" sl="59" sc="9" el="59" ec="9" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="100" ordinal="0" offset="34" sl="60" sc="9" el="60" ec="9" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="101" ordinal="0" offset="46" sl="61" sc="9" el="61" ec="9" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="102" ordinal="0" offset="64" sl="62" sc="9" el="62" ec="9" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="103" ordinal="0" offset="87" sl="63" sc="9" el="63" ec="9" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="104" ordinal="0" offset="116" sl="64" sc="5" el="64" ec="5" bec="0" bev="0" fileid="1" />
+              </SequencePoints>
+              <BranchPoints />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="0" nPathComplexity="0" sequenceCoverage="100.0" branchCoverage="0" crapScore="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="7" visitedSequencePoints="7" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100.0" branchCoverage="0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" maxCrapScore="0" minCrapScore="0" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663302</MetadataToken>
+              <Name>System.Void InventoryTest::InventoryTestIncludeItem()</Name>
+              <FileRef uid="1" />
+              <SequencePoints>
+                <SequencePoint vc="1" uspid="105" ordinal="0" offset="0" sl="68" sc="5" el="68" ec="5" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="106" ordinal="0" offset="1" sl="69" sc="9" el="69" ec="9" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="107" ordinal="0" offset="17" sl="70" sc="9" el="70" ec="9" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="108" ordinal="0" offset="34" sl="71" sc="9" el="71" ec="9" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="109" ordinal="0" offset="46" sl="72" sc="9" el="72" ec="9" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="110" ordinal="0" offset="64" sl="73" sc="9" el="73" ec="9" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="111" ordinal="0" offset="103" sl="74" sc="5" el="74" ec="5" bec="0" bev="0" fileid="1" />
+              </SequencePoints>
+              <BranchPoints />
+            </Method>
+            <Method visited="true" cyclomaticComplexity="0" nPathComplexity="0" sequenceCoverage="100.0" branchCoverage="0" crapScore="0" isConstructor="false" isStatic="false" isGetter="false" isSetter="false">
+              <Summary numSequencePoints="8" visitedSequencePoints="8" numBranchPoints="0" visitedBranchPoints="0" sequenceCoverage="100.0" branchCoverage="0" maxCyclomaticComplexity="0" minCyclomaticComplexity="0" maxCrapScore="0" minCrapScore="0" visitedClasses="0" numClasses="0" visitedMethods="1" numMethods="1" />
+              <MetadataToken>100663303</MetadataToken>
+              <Name>System.Void InventoryTest::InventoryTestSelectingItem()</Name>
+              <FileRef uid="1" />
+              <SequencePoints>
+                <SequencePoint vc="1" uspid="112" ordinal="0" offset="0" sl="77" sc="5" el="77" ec="5" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="113" ordinal="0" offset="1" sl="78" sc="9" el="78" ec="9" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="114" ordinal="0" offset="17" sl="79" sc="9" el="79" ec="9" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="115" ordinal="0" offset="34" sl="80" sc="9" el="80" ec="9" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="116" ordinal="0" offset="46" sl="81" sc="9" el="81" ec="9" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="117" ordinal="0" offset="64" sl="82" sc="9" el="82" ec="9" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="118" ordinal="0" offset="76" sl="83" sc="9" el="83" ec="9" bec="0" bev="0" fileid="1" />
+                <SequencePoint vc="1" uspid="119" ordinal="0" offset="115" sl="84" sc="5" el="84" ec="5" bec="0" bev="0" fileid="1" />
+              </SequencePoints>
+              <BranchPoints />
+            </Method>
+          </Methods>
+        </Class>
+      </Classes>
+    </Module>
+  </Modules>
+</CoverageSession>
