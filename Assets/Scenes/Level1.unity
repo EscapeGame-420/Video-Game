@@ -81540,6 +81540,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3039145744203556271, guid: 449dd6bbbf688d04d8b197b22bcfe0e1, type: 3}
+      propertyPath: activationDistance
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 3114503783186781123, guid: 449dd6bbbf688d04d8b197b22bcfe0e1, type: 3}
       propertyPath: m_Name
       value: GameObject (1)
