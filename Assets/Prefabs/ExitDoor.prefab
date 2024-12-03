@@ -5588,11 +5588,13 @@ MonoBehaviour:
   player: {fileID: 0}
   activationDistance: 2
   isCandleNear: 0
+  canvasCreated: 0
   itemName: blue
   lockObject: {fileID: 0}
   x: 0
   y: 1.2
   z: -0.2
+  canvasTransform: {fileID: 0}
 --- !u!1 &3203270641941158568
 GameObject:
   m_ObjectHideFlags: 0
@@ -10846,8 +10848,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4912521843158794731}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.007338684, z: -0, w: 0.9999731}
-  m_LocalPosition: {x: 0.8384529, y: -2.006, z: 0}
+  m_LocalRotation: {x: -0, y: 0.0073387325, z: -0, w: 0.9999731}
+  m_LocalPosition: {x: -0.83804566, y: -2.006, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10858,7 +10860,7 @@ Transform:
   - {fileID: 7357984032845979254}
   - {fileID: 325322134219206628}
   - {fileID: 6630405110609212340}
-  m_Father: {fileID: 1384855013817568287}
+  m_Father: {fileID: 1384855013817568281}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3037992020307037586
 MonoBehaviour:
@@ -10875,11 +10877,13 @@ MonoBehaviour:
   player: {fileID: 0}
   activationDistance: 2
   isCandleNear: 0
+  canvasCreated: 0
   itemName: gold
   lockObject: {fileID: 0}
   x: 0
   y: 1.2
   z: -0.2
+  canvasTransform: {fileID: 0}
 --- !u!1 &5468489383104508944
 GameObject:
   m_ObjectHideFlags: 0
@@ -11437,11 +11441,13 @@ MonoBehaviour:
   player: {fileID: 0}
   activationDistance: 2
   isCandleNear: 0
+  canvasCreated: 0
   itemName: red
   lockObject: {fileID: 0}
   x: 0
   y: 1.2
   z: -0.2
+  canvasTransform: {fileID: 0}
 --- !u!1 &7447814430735151742
 GameObject:
   m_ObjectHideFlags: 0
@@ -16877,6 +16883,7 @@ MonoBehaviour:
   activationDistance: 2.5
   canvas: {fileID: 0}
   selectionSound: {fileID: 8300000, guid: 198eda04417854d0ab1a36bfc3bc7a04, type: 3}
+  audioSource: {fileID: 0}
   canvasHeightOffset: 0
   canvasxOffset: 0
   canvaszOffset: -0.1
@@ -16984,6 +16991,7 @@ MonoBehaviour:
   activationDistance: 2.5
   canvas: {fileID: 0}
   selectionSound: {fileID: 8300000, guid: 198eda04417854d0ab1a36bfc3bc7a04, type: 3}
+  audioSource: {fileID: 0}
   canvasHeightOffset: 0
   canvasxOffset: 0
   canvaszOffset: -0.1
@@ -17061,10 +17069,10 @@ PrefabInstance:
       addedObject: {fileID: 1513717753755910254}
     - targetCorrespondingSourceObject: {fileID: 400002, guid: 0679e7662e39f4c88a029a5a019f1019, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 4477807333138963527}
-    - targetCorrespondingSourceObject: {fileID: 400002, guid: 0679e7662e39f4c88a029a5a019f1019, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 5694028131264987016}
+    - targetCorrespondingSourceObject: {fileID: 400004, guid: 0679e7662e39f4c88a029a5a019f1019, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4477807333138963527}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 0679e7662e39f4c88a029a5a019f1019, type: 3}
       insertIndex: -1
@@ -17073,6 +17081,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 5734682369124675501}
   m_SourcePrefab: {fileID: 100100000, guid: 0679e7662e39f4c88a029a5a019f1019, type: 3}
+--- !u!4 &1384855013817568281 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400004, guid: 0679e7662e39f4c88a029a5a019f1019, type: 3}
+  m_PrefabInstance: {fileID: 1384855013817702045}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1384855013817568285 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 0679e7662e39f4c88a029a5a019f1019, type: 3}
@@ -17123,7 +17136,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   activationDistance: 7
-  isCandleNear: 0
 --- !u!1001 &3708742565238755444
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17221,6 +17233,7 @@ MonoBehaviour:
   activationDistance: 2.5
   canvas: {fileID: 0}
   selectionSound: {fileID: 8300000, guid: 198eda04417854d0ab1a36bfc3bc7a04, type: 3}
+  audioSource: {fileID: 0}
   canvasHeightOffset: 0
   canvasxOffset: 0
   canvaszOffset: -0.1

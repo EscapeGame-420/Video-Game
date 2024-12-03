@@ -5,7 +5,7 @@ using TMPro;
 public class CollisionTextEffect : MonoBehaviour
 {
     public TextMeshProUGUI textMeshPro;
-    public float textDisplayDuration = 2.0f;
+    public float textDisplayDuration = 5.0f;
 
     private void Start()
     {
@@ -20,6 +20,8 @@ public class CollisionTextEffect : MonoBehaviour
             // Enable the TextMeshPro component when the player collides
             EnableTextMeshPro();
             StartCoroutine(DisableTextAfterDelay());
+
+            // Call FadeIn() from FadeOutEffect
         }
     }
 
