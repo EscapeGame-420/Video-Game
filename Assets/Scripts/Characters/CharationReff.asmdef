@@ -1,0 +1,16 @@
+{
+    "name": "CharationReff",
+    "rootNamespace": "",
+    "references": [
+        "GUID:8f9820848b05f0a4c8e170104d4c780c"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,40 +1,40 @@
 {
   "summary": {
-    "generatedon": "2024-12-03T06:13:31Z",
-    "parser": "MultiReportParser (4x OpenCoverParser)",
+    "generatedon": "2024-12-03T17:24:47Z",
+    "parser": "MultiReportParser (3x OpenCoverParser)",
     "assemblies": 2,
     "classes": 17,
     "files": 17,
-    "coveredlines": 411,
-    "uncoveredlines": 586,
+    "coveredlines": 0,
+    "uncoveredlines": 997,
     "coverablelines": 997,
     "totallines": 1952,
-    "linecoverage": 41.2,
+    "linecoverage": 0,
     "coveredbranches": 0,
     "totalbranches": 0,
-    "coveredmethods": 46,
+    "coveredmethods": 0,
     "totalmethods": 85,
-    "methodcoverage": 54.1
+    "methodcoverage": 0
  },
   "coverage": {
     "assemblies": [
-      { "name": "InvenReff", "classes": 5, "coverage": 69.7, "coveredlines": 256, "coverablelines": 367, "totallines": 613, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 78.1, "coveredmethods": 25, "totalmethods": 32, "classesinassembly": [
-        { "name": "Inventory", "coverage": 64.2, "coveredlines": 79, "coverablelines": 123, "totallines": 182, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 72.7, "coveredmethods": 8, "totalmethods": 11 },
-        { "name": "InventoryManager", "coverage": 77.8, "coveredlines": 102, "coverablelines": 131, "totallines": 221, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 100, "coveredmethods": 10, "totalmethods": 10 },
-        { "name": "Item", "coverage": 72.9, "coveredlines": 54, "coverablelines": 74, "totallines": 126, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 80, "coveredmethods": 4, "totalmethods": 5 },
-        { "name": "ItemSlot", "coverage": 35.7, "coveredlines": 10, "coverablelines": 28, "totallines": 58, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 25, "coveredmethods": 1, "totalmethods": 4 },
-        { "name": "LookAtCam", "coverage": 100, "coveredlines": 11, "coverablelines": 11, "totallines": 26, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 100, "coveredmethods": 2, "totalmethods": 2 } ] },
-      { "name": "ObjectRef", "classes": 12, "coverage": 24.6, "coveredlines": 155, "coverablelines": 630, "totallines": 1339, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 39.6, "coveredmethods": 21, "totalmethods": 53, "classesinassembly": [
-        { "name": "Bucket", "coverage": 73.9, "coveredlines": 68, "coverablelines": 92, "totallines": 146, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 100, "coveredmethods": 7, "totalmethods": 7 },
+      { "name": "InvenReff", "classes": 5, "coverage": 0, "coveredlines": 0, "coverablelines": 367, "totallines": 613, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 32, "classesinassembly": [
+        { "name": "Inventory", "coverage": 0, "coveredlines": 0, "coverablelines": 123, "totallines": 182, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 11 },
+        { "name": "InventoryManager", "coverage": 0, "coveredlines": 0, "coverablelines": 131, "totallines": 221, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 10 },
+        { "name": "Item", "coverage": 0, "coveredlines": 0, "coverablelines": 74, "totallines": 126, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 5 },
+        { "name": "ItemSlot", "coverage": 0, "coveredlines": 0, "coverablelines": 28, "totallines": 58, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 4 },
+        { "name": "LookAtCam", "coverage": 0, "coveredlines": 0, "coverablelines": 11, "totallines": 26, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 2 } ] },
+      { "name": "ObjectRef", "classes": 12, "coverage": 0, "coveredlines": 0, "coverablelines": 630, "totallines": 1339, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 53, "classesinassembly": [
+        { "name": "Bucket", "coverage": 0, "coveredlines": 0, "coverablelines": 92, "totallines": 146, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 7 },
         { "name": "Clock", "coverage": 0, "coveredlines": 0, "coverablelines": 41, "totallines": 65, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 3 },
         { "name": "Door", "coverage": 0, "coveredlines": 0, "coverablelines": 37, "totallines": 66, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 4 },
         { "name": "Frame", "coverage": 0, "coveredlines": 0, "coverablelines": 49, "totallines": 70, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 3 },
-        { "name": "GiveItems", "coverage": 83.3, "coveredlines": 40, "coverablelines": 48, "totallines": 84, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 100, "coveredmethods": 6, "totalmethods": 6 },
-        { "name": "Lock", "coverage": 42.1, "coveredlines": 24, "coverablelines": 57, "totallines": 85, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 66.6, "coveredmethods": 4, "totalmethods": 6 },
+        { "name": "GiveItems", "coverage": 0, "coveredlines": 0, "coverablelines": 48, "totallines": 84, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 6 },
+        { "name": "Lock", "coverage": 0, "coveredlines": 0, "coverablelines": 57, "totallines": 85, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 6 },
         { "name": "MathisEnigme", "coverage": 0, "coveredlines": 0, "coverablelines": 78, "totallines": 122, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 4 },
         { "name": "Obstacle", "coverage": 0, "coveredlines": 0, "coverablelines": 64, "totallines": 104, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 4 },
         { "name": "Painting", "coverage": 0, "coveredlines": 0, "coverablelines": 27, "totallines": 374, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 3 },
-        { "name": "Plank", "coverage": 40.3, "coveredlines": 23, "coverablelines": 57, "totallines": 89, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 57.1, "coveredmethods": 4, "totalmethods": 7 },
+        { "name": "Plank", "coverage": 0, "coveredlines": 0, "coverablelines": 57, "totallines": 89, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 7 },
         { "name": "Stove", "coverage": 0, "coveredlines": 0, "coverablelines": 40, "totallines": 69, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 3 },
         { "name": "ThrowTrash", "coverage": 0, "coveredlines": 0, "coverablelines": 40, "totallines": 65, "branchcoverage": null, "coveredbranches": 0, "totalbranches": 0, "methodcoverage": 0, "coveredmethods": 0, "totalmethods": 3 } ] } ]
   }

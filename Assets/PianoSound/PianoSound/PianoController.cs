@@ -15,9 +15,9 @@ public class PianoController : MonoBehaviour
 
     
     public Button[] pianoButtons;  
-    private int currentButtonIndex = 0;  
+    public int currentButtonIndex = 0;  
 
-    private bool isCanvasActive = false;  
+    public bool isCanvasActive = false;  
 
     void Start()
     {
@@ -52,7 +52,7 @@ public class PianoController : MonoBehaviour
         }
     }
 
-    void ToggleCanvas()
+    public void ToggleCanvas()
     {
         if (!isCanvasActive)
         {
@@ -61,15 +61,25 @@ public class PianoController : MonoBehaviour
 
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
-            cameraController.enabled = false; 
+            try{
+                cameraController.enabled = false;  
+            }
+            catch{
+                Debug.Log("No camera controller found");
+            }
         }
         else
         {
             canvasToOpen.SetActive(false); 
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
-            cameraController.enabled = true; 
-        }
+            try{
+                cameraController.enabled = true;  
+            }
+            catch{
+                Debug.Log("No camera controller found");
+                }
+            }
 
       
         isCanvasActive = !isCanvasActive;
@@ -99,12 +109,17 @@ public class PianoController : MonoBehaviour
         }
     }
 
-    void CloseCanvas()
+    public void CloseCanvas()
     {
         canvasToOpen.SetActive(false);  
         isCanvasActive = false; 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-        cameraController.enabled = true;  
+        try{
+            cameraController.enabled = true;  
+        }
+        catch{
+            Debug.Log("No camera controller found");
+        }
     }
 }
