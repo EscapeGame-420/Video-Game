@@ -3,7 +3,9 @@ guid: 3e84c876bb18c85478dafed87016413a
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - emptySprite: {fileID: 21300000, guid: 859728a5c85c98749863775d68e659f5, type: 3}
+  - selectionSound: {fileID: 8300000, guid: 56d747f23e6e05e4dbb20c10cbb67faa, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

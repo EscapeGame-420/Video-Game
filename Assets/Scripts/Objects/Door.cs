@@ -49,7 +49,7 @@ public class Door : MonoBehaviour
 
             //Debug.LogError("too far");
 
-        if (Input.GetKeyDown("e") && lockopened== 3)
+        if (Input.GetKeyDown("e") && lockopened== 4)
         {
             GetComponent<Animator>().enabled = true;
             Destroy(canvasTransform.gameObject);

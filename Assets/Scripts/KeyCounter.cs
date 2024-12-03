@@ -29,6 +29,6 @@ public class KeyCounter : MonoBehaviour
     int lockLeft = (int) Door.lockopened;
     
     TextMeshProUGUI textMeshPro = GameObject.Find("Objective").GetComponent<TMPro.TextMeshProUGUI>();
-    textMeshPro.text = lockOpened + "/" + (3- lockLeft);
+    textMeshPro.text = lockOpened + "/" + (4- lockLeft);
     }
 }

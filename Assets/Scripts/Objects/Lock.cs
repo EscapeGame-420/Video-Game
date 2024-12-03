@@ -43,15 +43,15 @@ public class Lock : MonoBehaviour
 
         Debug.Log("Le joueur s'approche avec la bougie. Activation du tableau");
 
-        if (Input.GetKeyDown("e") && inventory.IsSelectingItem(itemName))
+        if (Input.GetKeyDown("e") && inventory.IsSelectingItem(itemName) && activationDistance >= distance) 
         {
             Destroy(lockObject);
-            Destroy(canvasTransform.gameObject);
 
             inventory.UseItem(itemName);
             
-            Door door = GameObject.Find("DoorDouble").GetComponent<Door>();
+            Door door = FindFirstObjectByType<Door>();
             door.OpenLock();
+            Destroy(GameObject.Find(this.gameObject.name+"Canvas"));
 
         }
     }
@@ -77,7 +77,7 @@ public class Lock : MonoBehaviour
             canvasTransform = transform.Find("lockCanvas");
             if (canvasTransform != null)
             {
-                canvasTransform.localPosition = new Vector3(1.67f, 2.37f, -0.5f);
+                canvasTransform.localPosition = new Vector3(x,y, z);
             }
         }
     }
