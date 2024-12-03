@@ -81160,6 +81160,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1280771968}
     - target: {fileID: 4495440068938622727, guid: 6ffcb973189e15740b1810b4b7eff2ae, type: 3}
+      propertyPath: textMeshPro2
+      value: 
+      objectReference: {fileID: 1854329253}
+    - target: {fileID: 4495440068938622727, guid: 6ffcb973189e15740b1810b4b7eff2ae, type: 3}
       propertyPath: julieMovement
       value: 
       objectReference: {fileID: 1963577584}
@@ -117005,7 +117009,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3411292363053227875, guid: 870f4b33ef79be141bfa8effa00bf269, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3411292363055219107, guid: 870f4b33ef79be141bfa8effa00bf269, type: 3}
       propertyPath: m_Enabled
@@ -117025,7 +117029,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3572882535618746672, guid: 870f4b33ef79be141bfa8effa00bf269, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3572882535620937712, guid: 870f4b33ef79be141bfa8effa00bf269, type: 3}
       propertyPath: m_Enabled

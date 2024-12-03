@@ -11,6 +11,7 @@ public class FadeOutEffect : MonoBehaviour
     public JulieMovement julieMovement;
     public JulieVisionFollow julieVisionFollow;
     public TextMeshProUGUI textMeshPro;
+    public TextMeshProUGUI textMeshPro2;
     public float fadeDuration = 2.0f;
     public float delayBeforeFade = 1.0f;
 
@@ -28,6 +29,8 @@ public class FadeOutEffect : MonoBehaviour
         HideToolbar();
         DisableMovementAndVision();
         DisableTextMeshPro();
+        DisableTextMeshPro2();
+
         StartCoroutine(FadeOut());
     }
 
@@ -123,9 +126,9 @@ public IEnumerator FadeOut2()
     ShowToolbar();
     EnableMovementAndVision();
 
-    EnableTextMeshPro();
+    EnableTextMeshPro2();
     yield return new WaitForSeconds(2.0f);
-    DisableTextMeshPro();
+    DisableTextMeshPro2();
 }
     public void EnableMovementAndVision()
     {
@@ -153,6 +156,21 @@ public IEnumerator FadeOut2()
         if (textMeshPro != null)
         {
             textMeshPro.enabled = true;
+        }
+    }
+     public void DisableTextMeshPro2()
+    {
+        if (textMeshPro2 != null)
+        {
+            textMeshPro2.enabled = false;
+        }
+    }
+
+    public void EnableTextMeshPro2()
+    {
+        if (textMeshPro2 != null)
+        {
+            textMeshPro2.enabled = true;
         }
     }
 }
