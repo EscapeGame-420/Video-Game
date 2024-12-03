@@ -27117,7 +27117,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textMeshPro: {fileID: 1854329253}
+  fadeImage: {fileID: 0}
+  fadeOutEffectObject: {fileID: 1467865275}
   textDisplayDuration: 2
+  hasFaded: 0
 --- !u!65 &429724831
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -98959,6 +98962,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 415016, guid: 4743926f06b7fdc4c93033724c776cdc, type: 3}
   m_PrefabInstance: {fileID: 1467783968}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1467865275 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4495440068938622724, guid: 6ffcb973189e15740b1810b4b7eff2ae, type: 3}
+  m_PrefabInstance: {fileID: 1285127534}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1469423649
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -119639,7 +119647,7 @@ Transform:
   m_GameObject: {fileID: 1760504863}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -295.22, y: 0.21, z: 72.89}
+  m_LocalPosition: {x: -313.2, y: 6.472, z: 72.89}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
