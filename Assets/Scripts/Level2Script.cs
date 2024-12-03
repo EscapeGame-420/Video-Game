@@ -33,12 +33,15 @@ public class CollisionTextEffect : MonoBehaviour
             if(!hasFaded)
             {
                 hasFaded=true;
+                if (!hasFaded)
+                {
+                Debug.LogError("Player collided with the object");
+                }
                 fadeOutEffect.fadeDuration=2.0f;
                 fadeOutEffect.delayBeforeFade=1.0f;
                 fadeOutEffect.InitializeFadeImage();
 
-                StartCoroutine(fadeOutEffect.FadeOut());
-
+                StartCoroutine(fadeOutEffect.FadeOut2());
                 
             }
             // Enable the TextMeshPro component when the player collides
