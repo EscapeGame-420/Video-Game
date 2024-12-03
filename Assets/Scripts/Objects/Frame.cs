@@ -6,11 +6,11 @@ public class Frame : MonoBehaviour
 {
     public Transform player;
     public float activationDistance = 1.5f;
-    private bool canvasCreated = false;
+    public bool canvasCreated = false;
     public GameObject inFrame; 
     public GameObject key;
 
-    void Start()
+    public void Start()
     {
         if (player == null)
         {
@@ -18,25 +18,27 @@ public class Frame : MonoBehaviour
         }
     }
 
-    void FixedUpdate()
+    public void FixedUpdate()
     {
         if (player == null) return;
 
-        float distance = Vector3.Distance(transform.position, player.position);
         Inventory inventory = FindFirstObjectByType<Inventory>();
+        float distance = Vector3.Distance(transform.position, player.position);
+
         if (distance <= activationDistance && inventory.IncludeItemName("photo"))
         {
             if (!canvasCreated)
             {
                 Item.CreateCanvas(this.gameObject);
-                canvasCreated = true;
 
                 Transform canvasTransform = transform.Find("frameCanvas");
                 if (canvasTransform != null)
                 {
-                    canvasTransform.localPosition = new Vector3(0.01f, 0.12f, 0.07f); 
+                    canvasTransform.localPosition = new Vector3(0.01f, 0.12f, 0.07f);
                     canvasTransform.gameObject.SetActive(true);
                 }
+
+                canvasCreated = true;
             }
         }
         else
@@ -48,11 +50,10 @@ public class Frame : MonoBehaviour
                 {
                     Destroy(canvasTransform.gameObject);
                 }
+
                 canvasCreated = false;
             }
         }
-
-        //Debug.Log("Le joueur s'approche avec la photo. Activation du tableau");
 
         if (Input.GetKeyDown(KeyCode.E) && inventory.IsSelectingItem("photo"))
         {
@@ -60,11 +61,13 @@ public class Frame : MonoBehaviour
             inventory.UseItem("photo"); 
             key.SetActive(true); 
 
-            Transform canvasTransform = transform.Find("frameCanvas");
-            if (canvasTransform != null)
+            Transform canvas = transform.Find("frameCanvas");
+            if (canvas != null)
             {
-                Destroy(canvasTransform.gameObject);
+                Destroy(canvas.gameObject);
             }
+
+            canvasCreated = false;
         }
     }
 }
