@@ -123,7 +123,7 @@ public class Patrol : State {
     public Patrol(GameObject _npc, NavMeshAgent _agent, Animator _anim, Transform _player)
         : base(_npc, _agent, _anim, _player) {
         name = STATE.PATROL;
-        agent.speed = 2.0f;
+        agent.speed = 10.0f;
         agent.isStopped = false;
     }
  

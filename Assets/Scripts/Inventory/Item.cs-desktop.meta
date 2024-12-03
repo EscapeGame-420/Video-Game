@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: d10b3403a0430be48b713d775895a226
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - inventory: {instanceID: 0}
+  - player: {instanceID: 0}
+  - canvas: {instanceID: 0}
+  - selectionSound: {fileID: 8300000, guid: 198eda04417854d0ab1a36bfc3bc7a04, type: 3}
+  - sprite: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

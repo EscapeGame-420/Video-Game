@@ -11,6 +11,10 @@ public class Inventory : MonoBehaviour
     public Item[] itemInArray;
     private InventoryManager inventoryManager;
     public int selecting = 0;
+
+    [SerializeField]
+    private AudioClip selectionSound;
+    private AudioSource audioSource;
     void Start()
     {
         items = new Item[maxInventorySize];
@@ -24,6 +28,9 @@ public class Inventory : MonoBehaviour
             };
             Debug.Log($"Slot {i} initialized with unique instance");
         }
+        audioSource = gameObject.AddComponent<AudioSource>();
+        //selectionSound = "Retro Ambience Acute 01";
+        audioSource.playOnAwake = false;
     }
 
     void Update()
@@ -42,6 +49,7 @@ public class Inventory : MonoBehaviour
 
     public void AddItem(Item item)
     {
+
         // Ensure the items array is initialized and has the correct size
         if (items == null || items.Length != maxInventorySize)
         {
@@ -58,6 +66,13 @@ public class Inventory : MonoBehaviour
                 currentItemCount++;
                 Debug.Log(item.itemName + " added to inventory at slot " + i);
                 inventoryManager.MapSprite(i); // Update the UI
+                
+                if (selectionSound != null)
+                {
+                    audioSource.clip = selectionSound;
+                    audioSource.volume = 0.04f;
+                    audioSource.Play();
+                }
                 return; // Exit once we've added the item
             }
         }

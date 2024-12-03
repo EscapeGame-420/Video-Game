@@ -108,13 +108,13 @@ public class InventoryManager : MonoBehaviour
         itemImageComponent.sprite = currentItem.sprite;
         itemImageComponent.raycastTarget = true; // Ensure Raycast Target is enabled
 
-        DragNDrop dragNDrop = newItemImage.AddComponent<DragNDrop>();
+        //DragNDrop dragNDrop = newItemImage.AddComponent<DragNDrop>();
         CanvasGroup canvasGroup = newItemImage.AddComponent<CanvasGroup>();
         canvasGroup.interactable = true; // Ensure CanvasGroup is interactable
         canvasGroup.blocksRaycasts = true; // Ensure CanvasGroup blocks raycasts
 
         // Set the dragNDrop's canvasGroup reference
-        dragNDrop.SetCanvasGroup(canvasGroup);
+        //dragNDrop.SetCanvasGroup(canvasGroup);
 
         RectTransform rectTransform = newItemImage.GetComponent<RectTransform>();
         rectTransform.sizeDelta = new Vector2(70, 70);

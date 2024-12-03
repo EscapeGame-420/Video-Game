@@ -5,9 +5,15 @@ using UnityEngine;
 public class Plank : MonoBehaviour
 {
     public Transform player;
-    public float activationDistance = 7.0f;
+    public float activationDistance;
     public bool isCandleNear = false;
     private bool canvasCreated = false; // Flag to track if the canvas has been created
+    public GameObject obstacle;
+    private Transform canvasTransform;
+
+    [SerializeField]
+    private AudioClip selectionSound;
+    private AudioSource audioSource;
 
     void Start()
     {
@@ -15,7 +21,11 @@ public class Plank : MonoBehaviour
         if (player == null)
         {
             player = GameObject.FindGameObjectWithTag("Player").transform;
+            obstacle = GameObject.Find("obstacle");
+            obstacle.SetActive(false);
         }
+        audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource.playOnAwake = false;
     }
 
     void FixedUpdate()
@@ -24,6 +34,10 @@ public class Plank : MonoBehaviour
 
         float distance = Vector3.Distance(transform.position, player.position);
         Inventory inventory = FindFirstObjectByType<Inventory>();
+        if(canvasCreated)
+        {
+            canvasTransform.gameObject.SetActive(distance <= activationDistance);
+        }
         if (!(distance <= activationDistance && inventory.IncludeItem("crowbar"))) return;
 
         // Check if the canvas has already been created
@@ -33,7 +47,7 @@ public class Plank : MonoBehaviour
             canvasCreated = true; // Set the flag to true after creating the canvas
 
             // Find the created canvas and set its position
-            Transform canvasTransform = transform.Find("woodPlankCanvas");
+            canvasTransform = transform.Find("woodPlankCanvas");
             if (canvasTransform != null)
             {
                 canvasTransform.localPosition = new Vector3(1.67f, 2.37f, -0.5f); // Set the desired position
@@ -42,10 +56,22 @@ public class Plank : MonoBehaviour
 
         Debug.Log("Le joueur s'approche avec la bougie. Activation du tableau");
 
-        if (Input.GetKeyDown("e") && inventory.IsSelectingItem("crowbar"))
+        if (Input.GetKeyDown("e") && inventory.IsSelectingItem("crowbar") && gameObject.transform.childCount > 1)
         {
-            Destroy(gameObject);
-            inventory.UseItem("crowbar");
+            if (selectionSound != null)
+            {
+                audioSource.clip = selectionSound;
+                audioSource.Play();
+            }
+            Destroy(gameObject.transform.GetChild(0).gameObject);
+            obstacle.SetActive(true);
+    
+            if(gameObject.transform.childCount <= 3)
+            {
+                Destroy(gameObject);
+                Destroy(canvasTransform.gameObject);
+                inventory.UseItem("crowbar");
+            }
         }
     }
 }

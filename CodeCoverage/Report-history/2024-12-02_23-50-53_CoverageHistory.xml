@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<coverage version="1.0" date="2024-12-02_23-50-53" tag="">
+  <assembly name="AssemblyTest">
+    <class name="AI" coveredlines="0" coverablelines="61" totallines="99" coveredbranches="0" totalbranches="0" />
+    <class name="Attack" coveredlines="0" coverablelines="23" totallines="247" coveredbranches="0" totalbranches="0" />
+    <class name="Bucket" coveredlines="0" coverablelines="80" totallines="131" coveredbranches="0" totalbranches="0" />
+    <class name="Clock" coveredlines="0" coverablelines="35" totallines="59" coveredbranches="0" totalbranches="0" />
+    <class name="DeathSequence" coveredlines="0" coverablelines="50" totallines="81" coveredbranches="0" totalbranches="0" />
+    <class name="Door" coveredlines="0" coverablelines="35" totallines="60" coveredbranches="0" totalbranches="0" />
+    <class name="FadeInTextOnStart" coveredlines="0" coverablelines="32" totallines="54" coveredbranches="0" totalbranches="0" />
+    <class name="FadeOutEffect" coveredlines="0" coverablelines="56" totallines="86" coveredbranches="0" totalbranches="0" />
+    <class name="Frame" coveredlines="0" coverablelines="37" totallines="57" coveredbranches="0" totalbranches="0" />
+    <class name="GameEnvironment" coveredlines="0" coverablelines="10" totallines="39" coveredbranches="0" totalbranches="0" />
+    <class name="GiveItems" coveredlines="0" coverablelines="39" totallines="74" coveredbranches="0" totalbranches="0" />
+    <class name="Idle" coveredlines="0" coverablelines="20" totallines="247" coveredbranches="0" totalbranches="0" />
+    <class name="Inventory" coveredlines="0" coverablelines="101" totallines="156" coveredbranches="0" totalbranches="0" />
+    <class name="InventoryManager" coveredlines="0" coverablelines="123" totallines="199" coveredbranches="0" totalbranches="0" />
+    <class name="Item" coveredlines="0" coverablelines="74" totallines="126" coveredbranches="0" totalbranches="0" />
+    <class name="ItemSlot" coveredlines="0" coverablelines="28" totallines="58" coveredbranches="0" totalbranches="0" />
+    <class name="JulieMovement" coveredlines="0" coverablelines="77" totallines="129" coveredbranches="0" totalbranches="0" />
+    <class name="JulieVisionFollow" coveredlines="0" coverablelines="17" totallines="42" coveredbranches="0" totalbranches="0" />
+    <class name="LoadMenuScene" coveredlines="0" coverablelines="3" totallines="11" coveredbranches="0" totalbranches="0" />
+    <class name="Lock" coveredlines="0" coverablelines="42" totallines="67" coveredbranches="0" totalbranches="0" />
+    <class name="LookAtCam" coveredlines="0" coverablelines="5" totallines="19" coveredbranches="0" totalbranches="0" />
+    <class name="MathisEnigme" coveredlines="0" coverablelines="78" totallines="122" coveredbranches="0" totalbranches="0" />
+    <class name="Obstacle" coveredlines="0" coverablelines="64" totallines="104" coveredbranches="0" totalbranches="0" />
+    <class name="Painting" coveredlines="0" coverablelines="27" totallines="374" coveredbranches="0" totalbranches="0" />
+    <class name="Patrol" coveredlines="0" coverablelines="37" totallines="247" coveredbranches="0" totalbranches="0" />
+    <class name="Plank" coveredlines="0" coverablelines="49" totallines="77" coveredbranches="0" totalbranches="0" />
+    <class name="PlayerController" coveredlines="0" coverablelines="9" totallines="17" coveredbranches="0" totalbranches="0" />
+    <class name="Pursue" coveredlines="0" coverablelines="25" totallines="247" coveredbranches="0" totalbranches="0" />
+    <class name="QuitGame" coveredlines="0" coverablelines="3" totallines="16" coveredbranches="0" totalbranches="0" />
+    <class name="RestartGame" coveredlines="0" coverablelines="6" totallines="20" coveredbranches="0" totalbranches="0" />
+    <class name="ShadowManConvo" coveredlines="29" coverablelines="52" totallines="126" coveredbranches="0" totalbranches="0" />
+    <class name="StartGame" coveredlines="0" coverablelines="6" totallines="18" coveredbranches="0" totalbranches="0" />
+    <class name="State" coveredlines="0" coverablelines="40" totallines="247" coveredbranches="0" totalbranches="0" />
+    <class name="Stove" coveredlines="0" coverablelines="40" totallines="69" coveredbranches="0" totalbranches="0" />
+    <class name="ThrowTrash" coveredlines="0" coverablelines="40" totallines="65" coveredbranches="0" totalbranches="0" />
+    <class name="VisibilityChecker" coveredlines="25" coverablelines="25" totallines="41" coveredbranches="0" totalbranches="0" />
+  </assembly>
+</coverage>

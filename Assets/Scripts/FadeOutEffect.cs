@@ -4,11 +4,14 @@ using UnityEngine.UI;
 
 public class FadeOutEffect : MonoBehaviour
 {
+    [SerializeField] private AudioClip startSound;
+    private AudioSource audioSource;
     public Image fadeImage;
     public Image crosshair;
     public GameObject toolbar;
     public JulieMovement julieMovement;
     public JulieVisionFollow julieVisionFollow;
+
     public float fadeDuration = 2.0f;
     public float delayBeforeFade = 2.0f;
 
@@ -18,6 +21,7 @@ public class FadeOutEffect : MonoBehaviour
     {
         if (fadeImage != null)
         {
+            fadeImage.color = new Color(0f, 0f, 0f, 1f);
             StartCoroutine(FadeOut());
         }
 
@@ -40,6 +44,11 @@ public class FadeOutEffect : MonoBehaviour
         {
             julieVisionFollow.enabled = false;
         }
+
+        audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource.clip = startSound;
+        audioSource.volume = 0.06f;
+        audioSource.Play();
     }
 
     private IEnumerator FadeOut()
@@ -53,8 +62,6 @@ public class FadeOutEffect : MonoBehaviour
             fadeImage.color = new Color(0f, 0f, 0f, alphaValue);
             yield return null;
         }
-
-        fadeImage.color = new Color(0f, 0f, 0f, 0f);
 
         if (crosshair != null)
         {
