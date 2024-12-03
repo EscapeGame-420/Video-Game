@@ -4,14 +4,31 @@ using UnityEngine.UI;
 
 public class StartGame : MonoBehaviour
 {
-    [SerializeField] Button button;
+    public Button button;
 
     void Start()
     {
-        button.onClick.AddListener(ChangeScene);
+        InitializeButton();
     }
 
-    void ChangeScene()
+    public void InitializeButton()
+    {
+        if (button != null)
+        {
+            button.onClick.AddListener(ChangeScene);
+        }
+        else
+        {
+            Debug.LogError("Button not assigned in the inspector.");
+        }
+    }
+
+    public void ChangeScene()
+    {
+        LoadLevel1();
+    }
+
+    public void LoadLevel1()
     {
         SceneManager.LoadScene("Level1", LoadSceneMode.Single);
     }

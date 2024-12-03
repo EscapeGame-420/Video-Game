@@ -9,25 +9,33 @@ public class DeathSequence : MonoBehaviour
     public Image blackScreen;
     public JulieMovement julieMovement;
     public JulieVisionFollow julieVisionFollow;
-    AudioSource audioSource;
-    [SerializeField] float audibleDistance = 15f;
-    [SerializeField] AudioClip sndGrowl, sndAttack;
+    public AudioSource audioSource;
+    public float audibleDistance = 15f;
+    public AudioClip sndGrowl, sndAttack;
 
-    private bool attackSoundPlayed = false;
+    public bool attackSoundPlayed = false;
 
-    private void Start()
+    public void Start()
+    {
+        InitializeAudioSource();
+        SetInitialCanvasState();
+        SetImageAlpha(blackScreen, 0);
+    }
+
+    public void InitializeAudioSource()
     {
         audioSource = GetComponent<AudioSource>();
         audioSource.spatialBlend = 1.0f;
         audioSource.maxDistance = audibleDistance;
         audioSource.rolloffMode = AudioRolloffMode.Linear;
-
-        if (deathCanvas != null) deathCanvas.SetActive(false);
-
-        SetImageAlpha(blackScreen, 0);
     }
 
-    private void SetImageAlpha(Image image, float alpha)
+    public void SetInitialCanvasState()
+    {
+        if (deathCanvas != null) deathCanvas.SetActive(false);
+    }
+
+    public void SetImageAlpha(Image image, float alpha)
     {
         if (image != null)
         {
@@ -40,22 +48,35 @@ public class DeathSequence : MonoBehaviour
     public void TriggerDeathSequence()
     {
         PlayAttackSound();
+        ActivateDeathCanvas();
+        DisablePlayerMovementAndVision();
+        EnableCursor();
+        StartCoroutine(DeathEffectCoroutine());
+    }
+
+    public void ActivateDeathCanvas()
+    {
         if (deathCanvas != null)
         {
             deathCanvas.SetActive(true);
-            StartCoroutine(DeathEffectCoroutine());
         }
+    }
 
+    public void DisablePlayerMovementAndVision()
+    {
         if (julieMovement != null) julieMovement.enabled = false;
         if (julieVisionFollow != null) julieVisionFollow.enabled = false;
+    }
 
+    public void EnableCursor()
+    {
         Cursor.lockState = CursorLockMode.None; 
         Cursor.visible = true;
     }
 
     public void PlayAttackSound()
     {
-        if (!audioSource.isPlaying)
+        if (!audioSource.isPlaying && !attackSoundPlayed)
         {
             audioSource.volume = 0.8f;
             audioSource.pitch = 1.5f;
@@ -64,7 +85,7 @@ public class DeathSequence : MonoBehaviour
         }
     }
 
-    private IEnumerator DeathEffectCoroutine()
+    public IEnumerator DeathEffectCoroutine()
     {
         float fadeDuration = 2.0f;
         float elapsedTime = 0f;
@@ -76,6 +97,11 @@ public class DeathSequence : MonoBehaviour
             yield return null;
         }
 
+        LoadDeathScene();
+    }
+
+    public void LoadDeathScene()
+    {
         SceneManager.LoadScene("DeathScene");
     }
 }

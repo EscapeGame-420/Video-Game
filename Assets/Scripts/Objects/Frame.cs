@@ -54,7 +54,7 @@ public class Frame : MonoBehaviour
 
         //Debug.Log("Le joueur s'approche avec la photo. Activation du tableau");
 
-        if (Input.GetKeyDown(KeyCode.E) && inventory.IsSelectingItem("photo"))
+        if (Input.GetKeyDown(KeyCode.E) && inventory.IsSelectingItem("photo") && distance <= activationDistance)
         {
             inFrame.SetActive(true); 
             inventory.UseItem("photo"); 

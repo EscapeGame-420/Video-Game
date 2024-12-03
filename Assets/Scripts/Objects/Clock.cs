@@ -6,19 +6,27 @@ public class Clock : MonoBehaviour
 {
     public Transform player;
     public float activationDistance = 2.0f;
-    private string prefabPath = "UI/Canvas";
-    private Canvas canvas;
+    public string prefabPath = "UI/Canvas";
+    public Canvas canvas;
     [SerializeField]
-    private Vector3 canvasOffset = new Vector3(0.2f, -0.5f, 0f);
+    public Vector3 canvasOffset = new Vector3(0.2f, -0.5f, 0f);
     public GameObject aiguille;
     public GameObject cle;
-    private bool hasRun = false;
-    private bool canPick = false;
-    
-    // Start is called before the first frame update
+    public bool hasRun = false;
+    public bool canPick = false;
+
     void Start()
     {
-        // Si le joueur n'est pas assign� manuellement dans l'inspecteur, trouvez-le automatiquement
+        InitializeClock();
+    }
+
+    void Update()
+    {
+        HandlePlayerInteraction();
+    }
+
+    public void InitializeClock()
+    {
         GameObject canvaToAdd = Resources.Load<GameObject>(prefabPath);
         GameObject newObject = Instantiate(canvaToAdd, transform.position, transform.rotation);
         newObject.transform.SetParent(transform);
@@ -27,39 +35,72 @@ public class Clock : MonoBehaviour
         canvas.gameObject.AddComponent<LookAtCam>();
         canvas.transform.position = transform.position + canvasOffset;
         GetComponent<Animator>().enabled = false;
-        
     }
 
-    // Update is called once per frame
-    void Update()
+    public void HandlePlayerInteraction()
     {
-        float distance = Vector3.Distance(transform.position, player.position);
-        Inventory inventory = FindFirstObjectByType <Inventory>();
-        if(!hasRun){
-            if(distance <= activationDistance){
-                canvas.enabled = true;
-                if (Input.GetKeyDown("e") && inventory.IsSelectingItem("aiguille")){
-                    GetComponent<Animator>().enabled = true;
-                    inventory.UseItem("aiguille");
-                    aiguille.SetActive(true);
-                    hasRun = true;
-                    canPick = true;
+        float distance = CalculateDistanceToPlayer();
+        Inventory inventory = FindFirstObjectByType<Inventory>();
+
+        if (!hasRun)
+        {
+            if (distance <= activationDistance)
+            {
+                EnableCanvas();
+
+                if (IsInteractionTriggered(inventory))
+                {
+                    ActivateClock(inventory);
                 }
             }
-            else{
-                canvas.enabled = false;
-            }
-        }else{
-            canvas.enabled = false;
-            if (canPick)
+            else
             {
-                cle.SetActive(true);
-                canPick = false;
+                DisableCanvas();
             }
         }
-        
+        else
+        {
+            FinalizeClockInteraction();
+        }
+    }
 
-        
-        
+    public float CalculateDistanceToPlayer()
+    {
+        return Vector3.Distance(transform.position, player.position);
+    }
+
+    public void EnableCanvas()
+    {
+        canvas.enabled = true;
+    }
+
+    public void DisableCanvas()
+    {
+        canvas.enabled = false;
+    }
+
+    public bool IsInteractionTriggered(Inventory inventory)
+    {
+        return Input.GetKeyDown("e") && inventory.IsSelectingItem("aiguille");
+    }
+
+    public void ActivateClock(Inventory inventory)
+    {
+        GetComponent<Animator>().enabled = true;
+        inventory.UseItem("aiguille");
+        aiguille.SetActive(true);
+        hasRun = true;
+        canPick = true;
+    }
+
+    public void FinalizeClockInteraction()
+    {
+        DisableCanvas();
+
+        if (canPick)
+        {
+            cle.SetActive(true);
+            canPick = false;
+        }
     }
 }

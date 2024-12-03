@@ -7,73 +7,76 @@ using TMPro;
 public class Item : MonoBehaviour
 {
     [SerializeField]
-    private Inventory inventory;
+    public Inventory inventory;
     [SerializeField]
-    private Transform player;
+    public Transform player;
     [SerializeField]
-    private float activationDistance = 1.5f;
+    public float activationDistance = 1.5f;
     [SerializeField]
-    private Canvas canvas;
+    public Canvas canvas;
     [SerializeField]
-    private AudioClip selectionSound;
-    private AudioSource audioSource;
+    public AudioClip selectionSound;
+    public AudioSource audioSource;
 
     [SerializeField]
-    private float canvasHeightOffset = 0f; // Offset for the canvas height
+    public float canvasHeightOffset = 0f;
     [SerializeField]
-    private float canvasxOffset = 0f; // Offset for the canvas X position
+    public float canvasxOffset = 0f;
     [SerializeField]
-    private float canvaszOffset = -0.1f; // Offset for the canvas Z position
+    public float canvaszOffset = -0.1f;
 
     public string itemName;
     public Sprite sprite;
 
     void Start()
     {
+        InitializeItem();
+    }
+
+    void Update()
+    {
+        HandleCanvasVisibility();
+        HandleItemPickup();
+        UpdateCanvasPosition();
+    }
+
+    public void InitializeItem()
+    {
         canvas = CreateCanvas(this.gameObject);
         audioSource = gameObject.AddComponent<AudioSource>();
-        //selectionSound = "Retro Ambience Acute 01";
         audioSource.playOnAwake = false;
         player = GameObject.FindGameObjectWithTag("Player").transform;
         inventory = player.GetComponent<Inventory>();
     }
-    
 
-    void Update()
+    public void HandleCanvasVisibility()
     {
         float distance = Vector3.Distance(transform.position, player.position);
+        canvas.enabled = distance <= activationDistance;
+    }
 
-        if (distance <= activationDistance)
-        {
-            canvas.enabled = true;
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                //PlaySelectionSound();
-                if (selectionSound != null)
-                {
-                    audioSource.clip = selectionSound;
-                    audioSource.Play();
-                }
-                inventory.AddItem(this);
-                Debug.Log("Item picked up");
-                Destroy(gameObject);
-            }
-        }
-        else
-        {
-            canvas.enabled = false;
-        }
+    public void HandleItemPickup()
+    {
+        if (!canvas.enabled || !Input.GetKeyDown(KeyCode.E))
+            return;
 
-        if (canvas != null)
-        {
-            RectTransform canvasRectTransform = canvas.GetComponent<RectTransform>();
-            canvasRectTransform.position = transform.position + new Vector3(canvasxOffset, canvasHeightOffset, canvaszOffset);
-        }
+        PlaySelectionSound();
+        inventory.AddItem(this);
+        Debug.Log("Item picked up");
+        Destroy(gameObject);
+    }
+
+    public void UpdateCanvasPosition()
+    {
+        if (canvas == null) 
+            return;
+
+        RectTransform canvasRectTransform = canvas.GetComponent<RectTransform>();
+        canvasRectTransform.position = transform.position + new Vector3(canvasxOffset, canvasHeightOffset, canvaszOffset);
     }
 
     public static Canvas CreateCanvas(GameObject itemObject)
     {
-        // Create a new canvas object
         GameObject canvasObject = new GameObject(itemObject.name + "Canvas");
         Canvas canvas = canvasObject.AddComponent<Canvas>();
         canvas.renderMode = RenderMode.WorldSpace;
@@ -82,24 +85,32 @@ public class Item : MonoBehaviour
         canvasScaler.dynamicPixelsPerUnit = 10f;
 
         RectTransform canvasRectTransform = canvasObject.GetComponent<RectTransform>();
-        canvasRectTransform.sizeDelta = new Vector2(1, 1); // Square canvas
+        canvasRectTransform.sizeDelta = new Vector2(1, 1);
         canvasRectTransform.localScale = new Vector3(0.01f, 0.01f, 0.01f);
-        canvasRectTransform.position = itemObject.transform.position + new Vector3(0, 0.7f, 0); // Default offset above the item
+        canvasRectTransform.position = itemObject.transform.position + new Vector3(0, 0.7f, 0);
         canvasObject.AddComponent<LookAtCam>();
 
-        // Attach to the item
         canvasObject.transform.SetParent(itemObject.transform, true);
 
-        // Create a background image
+        AddCanvasBackground(canvasObject);
+        AddCanvasText(canvasObject);
+
+        return canvas;
+    }
+
+    public static void AddCanvasBackground(GameObject canvasObject)
+    {
         GameObject imageObject = new GameObject("GrabBackground");
         Image image = imageObject.AddComponent<Image>();
-        image.color = new Color(0.2f, 0.2f, 0.2f, 0.8f); // Semi-transparent background
+        image.color = new Color(0.2f, 0.2f, 0.2f, 0.8f);
 
         RectTransform imageRectTransform = imageObject.GetComponent<RectTransform>();
-        imageRectTransform.sizeDelta = new Vector2(50, 50); // Background size
+        imageRectTransform.sizeDelta = new Vector2(50, 50);
         imageObject.transform.SetParent(canvasObject.transform, false);
+    }
 
-        // Create a text object for the interaction prompt
+    public static void AddCanvasText(GameObject canvasObject)
+    {
         GameObject textObject = new GameObject("GrabText");
         TextMeshProUGUI grabText = textObject.AddComponent<TextMeshProUGUI>();
         grabText.text = "E";
@@ -109,18 +120,16 @@ public class Item : MonoBehaviour
         grabText.alignment = TextAlignmentOptions.Center;
 
         RectTransform textRectTransform = textObject.GetComponent<RectTransform>();
-        textRectTransform.sizeDelta = new Vector2(150, 150); // Text size
+        textRectTransform.sizeDelta = new Vector2(150, 150);
         textObject.transform.SetParent(canvasObject.transform, false);
-
-        return canvas;
     }
 
-    private void PlaySelectionSound()
+    public void PlaySelectionSound()
     {
-        if (selectionSound != null)
-        {
-            audioSource.clip = selectionSound;
-            audioSource.Play();
-        }
+        if (selectionSound == null)
+            return;
+
+        audioSource.clip = selectionSound;
+        audioSource.Play();
     }
 }
