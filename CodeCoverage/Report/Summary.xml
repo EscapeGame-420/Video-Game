@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <CoverageReport scope="Summary">
   <Summary>
-    <Generatedon>2024-12-03 - 12:29:53 AM</Generatedon>
+    <Generatedon>2024-12-03 - 1:13:31 AM</Generatedon>
     <Parser>MultiReportParser (4x OpenCoverParser)</Parser>
     <Assemblies>2</Assemblies>
     <Classes>17</Classes>
     <Files>17</Files>
-    <Coveredlines>342</Coveredlines>
-    <Uncoveredlines>643</Uncoveredlines>
-    <Coverablelines>985</Coverablelines>
-    <Totallines>1937</Totallines>
-    <Linecoverage>34.7</Linecoverage>
+    <Coveredlines>411</Coveredlines>
+    <Uncoveredlines>586</Uncoveredlines>
+    <Coverablelines>997</Coverablelines>
+    <Totallines>1952</Totallines>
+    <Linecoverage>41.2</Linecoverage>
     <Coveredbranches>0</Coveredbranches>
     <Totalbranches>0</Totalbranches>
-    <Coveredmethods>39</Coveredmethods>
-    <Totalmethods>81</Totalmethods>
-    <Methodcoverage>48.1</Methodcoverage>
+    <Coveredmethods>46</Coveredmethods>
+    <Totalmethods>85</Totalmethods>
+    <Methodcoverage>54.1</Methodcoverage>
   </Summary>
   <Coverage>
-    <Assembly name="InvenReff" classes="5" coverage="69.4" coveredlines="255" coverablelines="367" totallines="613" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="25" totalmethods="32" methodcoverage="78.1">
-      <Class name="Inventory" coverage="63.4" coveredlines="78" coverablelines="123" totallines="182" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="8" totalmethods="11" methodcoverage="72.7" />
+    <Assembly name="InvenReff" classes="5" coverage="69.7" coveredlines="256" coverablelines="367" totallines="613" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="25" totalmethods="32" methodcoverage="78.1">
+      <Class name="Inventory" coverage="64.2" coveredlines="79" coverablelines="123" totallines="182" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="8" totalmethods="11" methodcoverage="72.7" />
       <Class name="InventoryManager" coverage="77.8" coveredlines="102" coverablelines="131" totallines="221" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="10" totalmethods="10" methodcoverage="100" />
       <Class name="Item" coverage="72.9" coveredlines="54" coverablelines="74" totallines="126" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="4" totalmethods="5" methodcoverage="80" />
       <Class name="ItemSlot" coverage="35.7" coveredlines="10" coverablelines="28" totallines="58" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="1" totalmethods="4" methodcoverage="25" />
       <Class name="LookAtCam" coverage="100" coveredlines="11" coverablelines="11" totallines="26" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="2" totalmethods="2" methodcoverage="100" />
     </Assembly>
-    <Assembly name="ObjectRef" classes="12" coverage="14" coveredlines="87" coverablelines="618" totallines="1324" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="14" totalmethods="49" methodcoverage="28.5">
-      <Class name="Bucket" coverage="0" coveredlines="0" coverablelines="80" totallines="131" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="3" methodcoverage="0" />
+    <Assembly name="ObjectRef" classes="12" coverage="24.6" coveredlines="155" coverablelines="630" totallines="1339" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="21" totalmethods="53" methodcoverage="39.6">
+      <Class name="Bucket" coverage="73.9" coveredlines="68" coverablelines="92" totallines="146" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="7" totalmethods="7" methodcoverage="100" />
       <Class name="Clock" coverage="0" coveredlines="0" coverablelines="41" totallines="65" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="3" methodcoverage="0" />
       <Class name="Door" coverage="0" coveredlines="0" coverablelines="37" totallines="66" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="4" methodcoverage="0" />
       <Class name="Frame" coverage="0" coveredlines="0" coverablelines="49" totallines="70" branchcoverage="" coveredbranches="0" totalbranches="0" coveredmethods="0" totalmethods="3" methodcoverage="0" />
