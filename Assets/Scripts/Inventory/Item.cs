@@ -28,9 +28,10 @@ public class Item : MonoBehaviour
     public string itemName;
     public Sprite sprite;
 
-    void Start()
+    void Awake()
     {
         InitializeItem();
+        Debug.Log("Item initialized: " + itemName);
     }
 
     void LateUpdate()
@@ -45,14 +46,27 @@ public class Item : MonoBehaviour
         canvas = CreateCanvas(this.gameObject);
         audioSource = gameObject.AddComponent<AudioSource>();
         audioSource.playOnAwake = false;
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+        player = GameObject.Find("Julie").transform;
+        if (player == null){
+                Debug.LogError("Player not found"); 
+            }else{
+                Debug.Log("Player found");
+            }
         inventory = player.GetComponent<Inventory>();
     }
 
     public void HandleCanvasVisibility()
     {
         float distance = Vector3.Distance(transform.position, player.position);
+    if (canvas == null|| player == null){
+            Debug.LogError("Canvas not found");
+    }
+    if ((activationDistance <= distance) && itemName=="greenFlameCandle"){
+        Debug.Log("Player is too far");
+
+    }
         canvas.enabled = distance <= activationDistance;
+        
     }
 
     public void HandleItemPickup()

@@ -126,7 +126,6 @@ public class Inventory : MonoBehaviour
 
     public bool IncludeItemName(string name)
     {
-        Debug.Log(items);
         for (int i = 0; i < maxInventorySize - 1; i++)
         {
             if (items[i].itemName == name)

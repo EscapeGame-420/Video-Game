@@ -12,12 +12,17 @@ public class Painting : MonoBehaviour
     public bool isCandleNear = false;
     private AudioSource audioSource;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         // Si le joueur n'est pas assign� manuellement dans l'inspecteur, trouvez-le automatiquement
         if (player == null)
         {
-            player = GameObject.FindGameObjectWithTag("Player").transform;
+            player = GameObject.Find("Julie").transform;
+            if (player == null){
+                Debug.LogError("Player not found"); 
+            }else{
+                Debug.Log("Player found");
+            }
             crowbar = GameObject.Find("crowbar (1)");
             crowbar.SetActive(false);
             audioSource = gameObject.AddComponent<AudioSource>();
