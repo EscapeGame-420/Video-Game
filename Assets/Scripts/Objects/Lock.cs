@@ -74,7 +74,7 @@ public class Lock : MonoBehaviour
             Item.CreateCanvas(this.gameObject);
             canvasCreated = true;
 
-            canvasTransform = transform.Find("lockCanvas");
+            canvasTransform = transform.Find(this.gameObject.name+"Canvas");
             if (canvasTransform != null)
             {
                 canvasTransform.localPosition = new Vector3(x,y, z);

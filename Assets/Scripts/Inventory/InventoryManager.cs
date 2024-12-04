@@ -162,6 +162,7 @@ public class InventoryManager : MonoBehaviour
         //     Cursor.lockState = openingInvent ? CursorLockMode.None : CursorLockMode.Locked;
         //     openingInvent = !openingInvent;
         // }
+        try{
 
         float scroll = Input.GetAxis("Mouse ScrollWheel");
         if (scroll != 0f)
@@ -169,6 +170,9 @@ public class InventoryManager : MonoBehaviour
             selecting = (selecting + (scroll > 0f ? -1 : 1) + totalSlots) % totalSlots;
             IsSelected(selecting);
             Debug.Log($"Slot {selecting + 1} selected via scroll.");
+        }
+        }catch{
+            
         }
     }
 
