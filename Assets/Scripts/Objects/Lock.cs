@@ -29,7 +29,7 @@ public class Lock : MonoBehaviour
         }
     }
 
-    void Update()
+    void LateUpdate()
     {
         if (player == null) return;
 
@@ -41,7 +41,6 @@ public class Lock : MonoBehaviour
             HandleCanvasCreation();
         }
 
-        Debug.Log("Le joueur s'approche avec la bougie. Activation du tableau");
 
         if (Input.GetKeyDown("e") && inventory.IsSelectingItem(itemName) && activationDistance >= distance) 
         {

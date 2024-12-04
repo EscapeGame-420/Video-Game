@@ -33,7 +33,7 @@ public class Item : MonoBehaviour
         InitializeItem();
     }
 
-    void Update()
+    void LateUpdate()
     {
         HandleCanvasVisibility();
         HandleItemPickup();

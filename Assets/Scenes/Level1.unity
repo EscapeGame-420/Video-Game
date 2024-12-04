@@ -337,7 +337,6 @@ GameObject:
   - component: {fileID: 3387760}
   - component: {fileID: 3387763}
   - component: {fileID: 3387762}
-  - component: {fileID: 3387761}
   m_Layer: 0
   m_Name: red_flame_0 (6)
   m_TagString: Untagged
@@ -360,18 +359,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 119597369}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3387761
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3387759}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &3387762
 Animator:
   serializedVersion: 5
@@ -478,7 +465,6 @@ GameObject:
   - component: {fileID: 4603521}
   - component: {fileID: 4603524}
   - component: {fileID: 4603523}
-  - component: {fileID: 4603522}
   m_Layer: 0
   m_Name: red_flame_0 (8)
   m_TagString: Untagged
@@ -501,18 +487,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1620304539}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4603522
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4603520}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &4603523
 Animator:
   serializedVersion: 5
@@ -597,7 +571,6 @@ GameObject:
   - component: {fileID: 11297000}
   - component: {fileID: 11297003}
   - component: {fileID: 11297002}
-  - component: {fileID: 11297001}
   m_Layer: 0
   m_Name: red_flame_0 (5)
   m_TagString: Untagged
@@ -620,18 +593,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 328899393}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &11297001
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 11296999}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &11297002
 Animator:
   serializedVersion: 5
@@ -1643,7 +1604,6 @@ GameObject:
   - component: {fileID: 27432506}
   - component: {fileID: 27432509}
   - component: {fileID: 27432508}
-  - component: {fileID: 27432507}
   m_Layer: 0
   m_Name: red_flame_0 (6)
   m_TagString: Untagged
@@ -1666,18 +1626,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1281374243}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &27432507
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 27432505}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &27432508
 Animator:
   serializedVersion: 5
@@ -2045,7 +1993,6 @@ GameObject:
   - component: {fileID: 34556286}
   - component: {fileID: 34556289}
   - component: {fileID: 34556288}
-  - component: {fileID: 34556287}
   m_Layer: 0
   m_Name: red_flame_0 (5)
   m_TagString: Untagged
@@ -2068,18 +2015,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1941589701}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &34556287
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 34556285}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &34556288
 Animator:
   serializedVersion: 5
@@ -2438,7 +2373,6 @@ GameObject:
   - component: {fileID: 39610974}
   - component: {fileID: 39610977}
   - component: {fileID: 39610976}
-  - component: {fileID: 39610975}
   m_Layer: 0
   m_Name: red_flame_0 (8)
   m_TagString: Untagged
@@ -2461,18 +2395,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1281374243}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &39610975
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 39610973}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &39610976
 Animator:
   serializedVersion: 5
@@ -3607,7 +3529,6 @@ GameObject:
   - component: {fileID: 65549034}
   - component: {fileID: 65549037}
   - component: {fileID: 65549036}
-  - component: {fileID: 65549035}
   m_Layer: 0
   m_Name: red_flame_0 (8)
   m_TagString: Untagged
@@ -3630,18 +3551,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 698792318}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &65549035
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 65549033}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &65549036
 Animator:
   serializedVersion: 5
@@ -8696,7 +8605,6 @@ GameObject:
   - component: {fileID: 141124551}
   - component: {fileID: 141124554}
   - component: {fileID: 141124553}
-  - component: {fileID: 141124552}
   m_Layer: 0
   m_Name: red_flame_0 (6)
   m_TagString: Untagged
@@ -8719,18 +8627,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1629526757}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &141124552
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 141124550}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &141124553
 Animator:
   serializedVersion: 5
@@ -10147,7 +10043,6 @@ GameObject:
   - component: {fileID: 166670125}
   - component: {fileID: 166670128}
   - component: {fileID: 166670127}
-  - component: {fileID: 166670126}
   m_Layer: 0
   m_Name: red_flame_0 (8)
   m_TagString: Untagged
@@ -10170,18 +10065,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 88295207}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &166670126
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 166670124}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &166670127
 Animator:
   serializedVersion: 5
@@ -11056,7 +10939,6 @@ GameObject:
   - component: {fileID: 187239870}
   - component: {fileID: 187239873}
   - component: {fileID: 187239872}
-  - component: {fileID: 187239871}
   m_Layer: 0
   m_Name: red_flame_0 (8)
   m_TagString: Untagged
@@ -11079,18 +10961,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 119597369}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &187239871
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 187239869}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &187239872
 Animator:
   serializedVersion: 5
@@ -16550,7 +16420,6 @@ GameObject:
   - component: {fileID: 277337313}
   - component: {fileID: 277337316}
   - component: {fileID: 277337315}
-  - component: {fileID: 277337314}
   m_Layer: 0
   m_Name: red_flame_0 (4)
   m_TagString: Untagged
@@ -16573,18 +16442,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1479210077}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &277337314
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 277337312}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &277337315
 Animator:
   serializedVersion: 5
@@ -20298,7 +20155,6 @@ GameObject:
   - component: {fileID: 334346201}
   - component: {fileID: 334346204}
   - component: {fileID: 334346203}
-  - component: {fileID: 334346202}
   m_Layer: 0
   m_Name: red_flame_0 (5)
   m_TagString: Untagged
@@ -20321,18 +20177,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1414101636}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &334346202
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 334346200}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &334346203
 Animator:
   serializedVersion: 5
@@ -21118,7 +20962,6 @@ GameObject:
   - component: {fileID: 341188931}
   - component: {fileID: 341188934}
   - component: {fileID: 341188933}
-  - component: {fileID: 341188932}
   m_Layer: 0
   m_Name: red_flame_0 (5)
   m_TagString: Untagged
@@ -21141,18 +20984,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 523052163}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &341188932
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 341188930}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &341188933
 Animator:
   serializedVersion: 5
@@ -21358,7 +21189,6 @@ GameObject:
   - component: {fileID: 342021729}
   - component: {fileID: 342021732}
   - component: {fileID: 342021731}
-  - component: {fileID: 342021730}
   m_Layer: 0
   m_Name: red_flame_0 (7)
   m_TagString: Untagged
@@ -21381,18 +21211,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1629526757}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &342021730
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 342021728}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &342021731
 Animator:
   serializedVersion: 5
@@ -25553,7 +25371,6 @@ GameObject:
   - component: {fileID: 407313198}
   - component: {fileID: 407313201}
   - component: {fileID: 407313200}
-  - component: {fileID: 407313199}
   m_Layer: 0
   m_Name: red_flame_0 (8)
   m_TagString: Untagged
@@ -25576,18 +25393,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1941589701}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &407313199
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 407313197}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &407313200
 Animator:
   serializedVersion: 5
@@ -26175,7 +25980,6 @@ GameObject:
   - component: {fileID: 418633064}
   - component: {fileID: 418633067}
   - component: {fileID: 418633066}
-  - component: {fileID: 418633065}
   m_Layer: 0
   m_Name: red_flame_0 (7)
   m_TagString: Untagged
@@ -26198,18 +26002,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 328899393}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &418633065
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 418633063}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &418633066
 Animator:
   serializedVersion: 5
@@ -26568,7 +26360,6 @@ GameObject:
   - component: {fileID: 424296080}
   - component: {fileID: 424296083}
   - component: {fileID: 424296082}
-  - component: {fileID: 424296081}
   m_Layer: 0
   m_Name: red_flame_0 (6)
   m_TagString: Untagged
@@ -26591,18 +26382,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1480834886}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &424296081
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 424296079}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &424296082
 Animator:
   serializedVersion: 5
@@ -27932,7 +27711,6 @@ GameObject:
   - component: {fileID: 448141220}
   - component: {fileID: 448141223}
   - component: {fileID: 448141222}
-  - component: {fileID: 448141221}
   m_Layer: 0
   m_Name: red_flame_0 (7)
   m_TagString: Untagged
@@ -27955,18 +27733,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 523052163}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &448141221
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 448141219}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &448141222
 Animator:
   serializedVersion: 5
@@ -28051,7 +27817,6 @@ GameObject:
   - component: {fileID: 448311493}
   - component: {fileID: 448311496}
   - component: {fileID: 448311495}
-  - component: {fileID: 448311494}
   m_Layer: 0
   m_Name: red_flame_0 (4)
   m_TagString: Untagged
@@ -28074,18 +27839,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1235935747}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &448311494
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 448311492}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &448311495
 Animator:
   serializedVersion: 5
@@ -30664,7 +30417,6 @@ GameObject:
   - component: {fileID: 485084819}
   - component: {fileID: 485084822}
   - component: {fileID: 485084821}
-  - component: {fileID: 485084820}
   m_Layer: 0
   m_Name: red_flame_0 (8)
   m_TagString: Untagged
@@ -30687,18 +30439,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 952653983}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &485084820
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 485084818}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &485084821
 Animator:
   serializedVersion: 5
@@ -31637,7 +31377,6 @@ GameObject:
   - component: {fileID: 504918691}
   - component: {fileID: 504918694}
   - component: {fileID: 504918693}
-  - component: {fileID: 504918692}
   m_Layer: 0
   m_Name: red_flame_0 (4)
   m_TagString: Untagged
@@ -31660,18 +31399,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1784140831}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &504918692
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 504918690}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &504918693
 Animator:
   serializedVersion: 5
@@ -32056,7 +31783,6 @@ GameObject:
   - component: {fileID: 512036172}
   - component: {fileID: 512036175}
   - component: {fileID: 512036174}
-  - component: {fileID: 512036173}
   m_Layer: 0
   m_Name: red_flame_0 (8)
   m_TagString: Untagged
@@ -32079,18 +31805,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1414101636}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &512036173
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 512036171}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &512036174
 Animator:
   serializedVersion: 5
@@ -35194,7 +34908,6 @@ GameObject:
   - component: {fileID: 564369554}
   - component: {fileID: 564369557}
   - component: {fileID: 564369556}
-  - component: {fileID: 564369555}
   m_Layer: 0
   m_Name: red_flame_0 (6)
   m_TagString: Untagged
@@ -35217,18 +34930,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1235935747}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &564369555
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 564369553}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &564369556
 Animator:
   serializedVersion: 5
@@ -36419,7 +36120,6 @@ GameObject:
   - component: {fileID: 582071395}
   - component: {fileID: 582071398}
   - component: {fileID: 582071397}
-  - component: {fileID: 582071396}
   m_Layer: 0
   m_Name: red_flame_0 (4)
   m_TagString: Untagged
@@ -36442,18 +36142,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1941589701}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &582071396
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 582071394}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &582071397
 Animator:
   serializedVersion: 5
@@ -38528,7 +38216,6 @@ GameObject:
   - component: {fileID: 622916225}
   - component: {fileID: 622916228}
   - component: {fileID: 622916227}
-  - component: {fileID: 622916226}
   m_Layer: 0
   m_Name: red_flame_0 (7)
   m_TagString: Untagged
@@ -38551,18 +38238,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 874844369}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &622916226
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 622916224}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &622916227
 Animator:
   serializedVersion: 5
@@ -38647,7 +38322,6 @@ GameObject:
   - component: {fileID: 623596466}
   - component: {fileID: 623596469}
   - component: {fileID: 623596468}
-  - component: {fileID: 623596467}
   m_Layer: 0
   m_Name: red_flame_0 (5)
   m_TagString: Untagged
@@ -38670,18 +38344,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1281374243}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &623596467
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 623596465}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &623596468
 Animator:
   serializedVersion: 5
@@ -38873,7 +38535,6 @@ GameObject:
   - component: {fileID: 624558525}
   - component: {fileID: 624558528}
   - component: {fileID: 624558527}
-  - component: {fileID: 624558526}
   m_Layer: 0
   m_Name: red_flame_0 (8)
   m_TagString: Untagged
@@ -38896,18 +38557,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1479210077}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &624558526
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 624558524}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &624558527
 Animator:
   serializedVersion: 5
@@ -39466,7 +39115,6 @@ GameObject:
   - component: {fileID: 632557500}
   - component: {fileID: 632557503}
   - component: {fileID: 632557502}
-  - component: {fileID: 632557501}
   m_Layer: 0
   m_Name: red_flame_0 (4)
   m_TagString: Untagged
@@ -39489,18 +39137,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1414101636}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &632557501
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 632557499}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &632557502
 Animator:
   serializedVersion: 5
@@ -41270,7 +40906,6 @@ GameObject:
   - component: {fileID: 655847435}
   - component: {fileID: 655847438}
   - component: {fileID: 655847437}
-  - component: {fileID: 655847436}
   m_Layer: 0
   m_Name: red_flame_0 (4)
   m_TagString: Untagged
@@ -41293,18 +40928,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2014373323}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &655847436
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 655847434}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &655847437
 Animator:
   serializedVersion: 5
@@ -42564,7 +42187,6 @@ GameObject:
   - component: {fileID: 682207936}
   - component: {fileID: 682207939}
   - component: {fileID: 682207938}
-  - component: {fileID: 682207937}
   m_Layer: 0
   m_Name: red_flame_0 (7)
   m_TagString: Untagged
@@ -42587,18 +42209,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1235935747}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &682207937
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 682207935}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &682207938
 Animator:
   serializedVersion: 5
@@ -48846,7 +48456,6 @@ GameObject:
   - component: {fileID: 778901476}
   - component: {fileID: 778901479}
   - component: {fileID: 778901478}
-  - component: {fileID: 778901477}
   m_Layer: 0
   m_Name: red_flame_0 (5)
   m_TagString: Untagged
@@ -48869,18 +48478,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 430303489}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &778901477
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 778901475}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &778901478
 Animator:
   serializedVersion: 5
@@ -51125,7 +50722,6 @@ GameObject:
   - component: {fileID: 818522610}
   - component: {fileID: 818522613}
   - component: {fileID: 818522612}
-  - component: {fileID: 818522611}
   m_Layer: 0
   m_Name: red_flame_0 (7)
   m_TagString: Untagged
@@ -51148,18 +50744,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1784140831}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &818522611
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 818522609}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &818522612
 Animator:
   serializedVersion: 5
@@ -52297,7 +51881,6 @@ GameObject:
   - component: {fileID: 848593632}
   - component: {fileID: 848593635}
   - component: {fileID: 848593634}
-  - component: {fileID: 848593633}
   m_Layer: 0
   m_Name: red_flame_0 (4)
   m_TagString: Untagged
@@ -52320,18 +51903,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 698792318}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &848593633
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 848593631}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &848593634
 Animator:
   serializedVersion: 5
@@ -52962,7 +52533,6 @@ GameObject:
   - component: {fileID: 857955766}
   - component: {fileID: 857955769}
   - component: {fileID: 857955768}
-  - component: {fileID: 857955767}
   m_Layer: 0
   m_Name: red_flame_0 (6)
   m_TagString: Untagged
@@ -52985,18 +52555,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1414101636}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &857955767
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 857955765}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &857955768
 Animator:
   serializedVersion: 5
@@ -53081,7 +52639,6 @@ GameObject:
   - component: {fileID: 862411936}
   - component: {fileID: 862411939}
   - component: {fileID: 862411938}
-  - component: {fileID: 862411937}
   m_Layer: 0
   m_Name: red_flame_0 (4)
   m_TagString: Untagged
@@ -53104,18 +52661,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 328899393}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &862411937
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 862411935}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &862411938
 Animator:
   serializedVersion: 5
@@ -53200,7 +52745,6 @@ GameObject:
   - component: {fileID: 863989552}
   - component: {fileID: 863989555}
   - component: {fileID: 863989554}
-  - component: {fileID: 863989553}
   m_Layer: 0
   m_Name: red_flame_0 (6)
   m_TagString: Untagged
@@ -53223,18 +52767,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 698792318}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &863989553
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 863989551}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &863989554
 Animator:
   serializedVersion: 5
@@ -54018,7 +53550,6 @@ GameObject:
   - component: {fileID: 873288487}
   - component: {fileID: 873288490}
   - component: {fileID: 873288489}
-  - component: {fileID: 873288488}
   m_Layer: 0
   m_Name: red_flame_0 (4)
   m_TagString: Untagged
@@ -54041,18 +53572,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 952653983}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &873288488
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 873288486}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &873288489
 Animator:
   serializedVersion: 5
@@ -54397,7 +53916,6 @@ GameObject:
   - component: {fileID: 876146882}
   - component: {fileID: 876146885}
   - component: {fileID: 876146884}
-  - component: {fileID: 876146883}
   m_Layer: 0
   m_Name: red_flame_0 (6)
   m_TagString: Untagged
@@ -54420,18 +53938,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 523052163}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &876146883
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 876146881}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &876146884
 Animator:
   serializedVersion: 5
@@ -55578,7 +55084,6 @@ GameObject:
   - component: {fileID: 902795370}
   - component: {fileID: 902795373}
   - component: {fileID: 902795372}
-  - component: {fileID: 902795371}
   m_Layer: 0
   m_Name: red_flame_0 (7)
   m_TagString: Untagged
@@ -55601,18 +55106,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1281374243}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &902795371
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 902795369}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &902795372
 Animator:
   serializedVersion: 5
@@ -57674,7 +57167,6 @@ GameObject:
   - component: {fileID: 922054805}
   - component: {fileID: 922054808}
   - component: {fileID: 922054807}
-  - component: {fileID: 922054806}
   m_Layer: 0
   m_Name: red_flame_0 (4)
   m_TagString: Untagged
@@ -57697,18 +57189,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 119597369}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &922054806
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 922054804}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &922054807
 Animator:
   serializedVersion: 5
@@ -58640,7 +58120,6 @@ GameObject:
   - component: {fileID: 936172792}
   - component: {fileID: 936172795}
   - component: {fileID: 936172794}
-  - component: {fileID: 936172793}
   m_Layer: 0
   m_Name: red_flame_0 (4)
   m_TagString: Untagged
@@ -58663,18 +58142,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 523052163}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &936172793
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 936172791}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &936172794
 Animator:
   serializedVersion: 5
@@ -59638,7 +59105,6 @@ GameObject:
   - component: {fileID: 966889246}
   - component: {fileID: 966889249}
   - component: {fileID: 966889248}
-  - component: {fileID: 966889247}
   m_Layer: 0
   m_Name: red_flame_0 (6)
   m_TagString: Untagged
@@ -59661,18 +59127,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1827198551}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &966889247
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 966889245}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &966889248
 Animator:
   serializedVersion: 5
@@ -61875,7 +61329,6 @@ GameObject:
   - component: {fileID: 997031581}
   - component: {fileID: 997031584}
   - component: {fileID: 997031583}
-  - component: {fileID: 997031582}
   m_Layer: 0
   m_Name: red_flame_0 (7)
   m_TagString: Untagged
@@ -61898,18 +61351,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 119597369}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &997031582
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 997031580}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &997031583
 Animator:
   serializedVersion: 5
@@ -62586,7 +62027,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114890819800577684, guid: b02c5020824fa574d88a101f9b790908, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 4610022890688728, guid: b02c5020824fa574d88a101f9b790908, type: 3}
@@ -64786,7 +64228,6 @@ GameObject:
   - component: {fileID: 1069617999}
   - component: {fileID: 1069618002}
   - component: {fileID: 1069618001}
-  - component: {fileID: 1069618000}
   m_Layer: 0
   m_Name: red_flame_0 (6)
   m_TagString: Untagged
@@ -64809,18 +64250,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2014373323}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1069618000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1069617998}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &1069618001
 Animator:
   serializedVersion: 5
@@ -65193,7 +64622,6 @@ GameObject:
   - component: {fileID: 1082167330}
   - component: {fileID: 1082167333}
   - component: {fileID: 1082167332}
-  - component: {fileID: 1082167331}
   m_Layer: 0
   m_Name: red_flame_0 (7)
   m_TagString: Untagged
@@ -65216,18 +64644,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2014373323}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1082167331
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1082167329}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &1082167332
 Animator:
   serializedVersion: 5
@@ -66666,7 +66082,6 @@ GameObject:
   - component: {fileID: 1123775756}
   - component: {fileID: 1123775759}
   - component: {fileID: 1123775758}
-  - component: {fileID: 1123775757}
   m_Layer: 0
   m_Name: red_flame_0 (8)
   m_TagString: Untagged
@@ -66689,18 +66104,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1480834886}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1123775757
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1123775755}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &1123775758
 Animator:
   serializedVersion: 5
@@ -67999,7 +67402,6 @@ GameObject:
   - component: {fileID: 1145363404}
   - component: {fileID: 1145363407}
   - component: {fileID: 1145363406}
-  - component: {fileID: 1145363405}
   m_Layer: 0
   m_Name: red_flame_0 (4)
   m_TagString: Untagged
@@ -68022,18 +67424,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1281374243}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1145363405
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1145363403}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &1145363406
 Animator:
   serializedVersion: 5
@@ -68348,7 +67738,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114890819800577684, guid: b02c5020824fa574d88a101f9b790908, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 4610022890688728, guid: b02c5020824fa574d88a101f9b790908, type: 3}
@@ -70052,7 +69443,6 @@ GameObject:
   - component: {fileID: 1185646607}
   - component: {fileID: 1185646610}
   - component: {fileID: 1185646609}
-  - component: {fileID: 1185646608}
   m_Layer: 0
   m_Name: red_flame_0 (7)
   m_TagString: Untagged
@@ -70075,18 +69465,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1480834886}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1185646608
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1185646606}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &1185646609
 Animator:
   serializedVersion: 5
@@ -73970,7 +73348,6 @@ GameObject:
   - component: {fileID: 1264664685}
   - component: {fileID: 1264664688}
   - component: {fileID: 1264664687}
-  - component: {fileID: 1264664686}
   m_Layer: 0
   m_Name: red_flame_0 (8)
   m_TagString: Untagged
@@ -73993,18 +73370,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1235935747}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1264664686
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1264664684}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &1264664687
 Animator:
   serializedVersion: 5
@@ -76819,7 +76184,6 @@ GameObject:
   - component: {fileID: 1302547268}
   - component: {fileID: 1302547271}
   - component: {fileID: 1302547270}
-  - component: {fileID: 1302547269}
   m_Layer: 0
   m_Name: red_flame_0 (8)
   m_TagString: Untagged
@@ -76842,18 +76206,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 874844369}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1302547269
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1302547267}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &1302547270
 Animator:
   serializedVersion: 5
@@ -87120,7 +86472,6 @@ GameObject:
   - component: {fileID: 1392169183}
   - component: {fileID: 1392169186}
   - component: {fileID: 1392169185}
-  - component: {fileID: 1392169184}
   m_Layer: 0
   m_Name: red_flame_0 (5)
   m_TagString: Untagged
@@ -87143,18 +86494,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 874844369}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1392169184
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1392169182}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &1392169185
 Animator:
   serializedVersion: 5
@@ -87925,7 +87264,6 @@ GameObject:
   - component: {fileID: 1413404951}
   - component: {fileID: 1413404954}
   - component: {fileID: 1413404953}
-  - component: {fileID: 1413404952}
   m_Layer: 0
   m_Name: red_flame_0 (8)
   m_TagString: Untagged
@@ -87948,18 +87286,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1629526757}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1413404952
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1413404950}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &1413404953
 Animator:
   serializedVersion: 5
@@ -90191,7 +89517,6 @@ GameObject:
   - component: {fileID: 1415101172}
   - component: {fileID: 1415101175}
   - component: {fileID: 1415101174}
-  - component: {fileID: 1415101173}
   m_Layer: 0
   m_Name: red_flame_0 (7)
   m_TagString: Untagged
@@ -90214,18 +89539,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 88295207}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1415101173
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1415101171}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &1415101174
 Animator:
   serializedVersion: 5
@@ -90600,7 +89913,6 @@ GameObject:
   - component: {fileID: 1421859452}
   - component: {fileID: 1421859455}
   - component: {fileID: 1421859454}
-  - component: {fileID: 1421859453}
   m_Layer: 0
   m_Name: red_flame_0 (6)
   m_TagString: Untagged
@@ -90623,18 +89935,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 88295207}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1421859453
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1421859451}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &1421859454
 Animator:
   serializedVersion: 5
@@ -94089,7 +93389,6 @@ GameObject:
   - component: {fileID: 1472688782}
   - component: {fileID: 1472688785}
   - component: {fileID: 1472688784}
-  - component: {fileID: 1472688783}
   m_Layer: 0
   m_Name: red_flame_0 (6)
   m_TagString: Untagged
@@ -94112,18 +93411,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1620304539}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1472688783
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1472688781}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &1472688784
 Animator:
   serializedVersion: 5
@@ -94208,7 +93495,6 @@ GameObject:
   - component: {fileID: 1473158890}
   - component: {fileID: 1473158893}
   - component: {fileID: 1473158892}
-  - component: {fileID: 1473158891}
   m_Layer: 0
   m_Name: red_flame_0 (8)
   m_TagString: Untagged
@@ -94231,18 +93517,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 523052163}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1473158891
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1473158889}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &1473158892
 Animator:
   serializedVersion: 5
@@ -96375,7 +95649,6 @@ GameObject:
   - component: {fileID: 1503957940}
   - component: {fileID: 1503957943}
   - component: {fileID: 1503957942}
-  - component: {fileID: 1503957941}
   m_Layer: 0
   m_Name: red_flame_0 (8)
   m_TagString: Untagged
@@ -96398,18 +95671,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2014373323}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1503957941
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1503957939}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &1503957942
 Animator:
   serializedVersion: 5
@@ -96494,7 +95755,6 @@ GameObject:
   - component: {fileID: 1504156352}
   - component: {fileID: 1504156355}
   - component: {fileID: 1504156354}
-  - component: {fileID: 1504156353}
   m_Layer: 0
   m_Name: red_flame_0 (8)
   m_TagString: Untagged
@@ -96517,18 +95777,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1784140831}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1504156353
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1504156351}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &1504156354
 Animator:
   serializedVersion: 5
@@ -97497,7 +96745,6 @@ GameObject:
   - component: {fileID: 1523800553}
   - component: {fileID: 1523800556}
   - component: {fileID: 1523800555}
-  - component: {fileID: 1523800554}
   m_Layer: 0
   m_Name: red_flame_0 (5)
   m_TagString: Untagged
@@ -97520,18 +96767,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2014373323}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1523800554
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1523800552}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &1523800555
 Animator:
   serializedVersion: 5
@@ -97770,7 +97005,6 @@ GameObject:
   - component: {fileID: 1526534372}
   - component: {fileID: 1526534375}
   - component: {fileID: 1526534374}
-  - component: {fileID: 1526534373}
   m_Layer: 0
   m_Name: red_flame_0 (7)
   m_TagString: Untagged
@@ -97793,18 +97027,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 952653983}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1526534373
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1526534371}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &1526534374
 Animator:
   serializedVersion: 5
@@ -98314,7 +97536,6 @@ GameObject:
   - component: {fileID: 1528556012}
   - component: {fileID: 1528556015}
   - component: {fileID: 1528556014}
-  - component: {fileID: 1528556013}
   m_Layer: 0
   m_Name: red_flame_0 (5)
   m_TagString: Untagged
@@ -98337,18 +97558,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1235935747}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1528556013
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1528556011}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &1528556014
 Animator:
   serializedVersion: 5
@@ -99093,7 +98302,6 @@ GameObject:
   - component: {fileID: 1544574481}
   - component: {fileID: 1544574484}
   - component: {fileID: 1544574483}
-  - component: {fileID: 1544574482}
   m_Layer: 0
   m_Name: red_flame_0 (6)
   m_TagString: Untagged
@@ -99116,18 +98324,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 952653983}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1544574482
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1544574480}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &1544574483
 Animator:
   serializedVersion: 5
@@ -99485,7 +98681,6 @@ GameObject:
   - component: {fileID: 1546918451}
   - component: {fileID: 1546918454}
   - component: {fileID: 1546918453}
-  - component: {fileID: 1546918452}
   m_Layer: 0
   m_Name: red_flame_0 (4)
   m_TagString: Untagged
@@ -99508,18 +98703,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1620304539}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1546918452
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1546918450}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &1546918453
 Animator:
   serializedVersion: 5
@@ -101671,7 +100854,6 @@ GameObject:
   - component: {fileID: 1592901397}
   - component: {fileID: 1592901400}
   - component: {fileID: 1592901399}
-  - component: {fileID: 1592901398}
   m_Layer: 0
   m_Name: red_flame_0 (4)
   m_TagString: Untagged
@@ -101694,18 +100876,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1629526757}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1592901398
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1592901396}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &1592901399
 Animator:
   serializedVersion: 5
@@ -101894,7 +101064,6 @@ GameObject:
   - component: {fileID: 1594906715}
   - component: {fileID: 1594906718}
   - component: {fileID: 1594906717}
-  - component: {fileID: 1594906716}
   m_Layer: 0
   m_Name: red_flame_0 (5)
   m_TagString: Untagged
@@ -101917,18 +101086,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 698792318}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1594906716
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1594906714}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &1594906717
 Animator:
   serializedVersion: 5
@@ -108004,7 +107161,6 @@ GameObject:
   - component: {fileID: 1684700371}
   - component: {fileID: 1684700374}
   - component: {fileID: 1684700373}
-  - component: {fileID: 1684700372}
   m_Layer: 0
   m_Name: red_flame_0 (6)
   m_TagString: Untagged
@@ -108027,18 +107183,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1784140831}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1684700372
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1684700370}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &1684700373
 Animator:
   serializedVersion: 5
@@ -108963,7 +108107,6 @@ GameObject:
   - component: {fileID: 1699024406}
   - component: {fileID: 1699024409}
   - component: {fileID: 1699024408}
-  - component: {fileID: 1699024407}
   m_Layer: 0
   m_Name: red_flame_0 (5)
   m_TagString: Untagged
@@ -108986,18 +108129,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1479210077}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1699024407
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1699024405}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &1699024408
 Animator:
   serializedVersion: 5
@@ -109604,7 +108735,6 @@ GameObject:
   - component: {fileID: 1708819896}
   - component: {fileID: 1708819899}
   - component: {fileID: 1708819898}
-  - component: {fileID: 1708819897}
   m_Layer: 0
   m_Name: red_flame_0 (4)
   m_TagString: Untagged
@@ -109627,18 +108757,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 88295207}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1708819897
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1708819895}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &1708819898
 Animator:
   serializedVersion: 5
@@ -110957,7 +110075,6 @@ GameObject:
   - component: {fileID: 1724025907}
   - component: {fileID: 1724025910}
   - component: {fileID: 1724025909}
-  - component: {fileID: 1724025908}
   m_Layer: 0
   m_Name: red_flame_0 (5)
   m_TagString: Untagged
@@ -110980,18 +110097,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 952653983}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1724025908
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1724025906}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &1724025909
 Animator:
   serializedVersion: 5
@@ -112469,7 +111574,6 @@ GameObject:
   - component: {fileID: 1737389392}
   - component: {fileID: 1737389395}
   - component: {fileID: 1737389394}
-  - component: {fileID: 1737389393}
   m_Layer: 0
   m_Name: red_flame_0 (7)
   m_TagString: Untagged
@@ -112492,18 +111596,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1941589701}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1737389393
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1737389391}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &1737389394
 Animator:
   serializedVersion: 5
@@ -114857,7 +113949,6 @@ GameObject:
   - component: {fileID: 1766431924}
   - component: {fileID: 1766431927}
   - component: {fileID: 1766431926}
-  - component: {fileID: 1766431925}
   m_Layer: 0
   m_Name: red_flame_0 (6)
   m_TagString: Untagged
@@ -114880,18 +113971,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 430303489}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1766431925
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1766431923}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &1766431926
 Animator:
   serializedVersion: 5
@@ -118987,7 +118066,6 @@ GameObject:
   - component: {fileID: 1820696400}
   - component: {fileID: 1820696403}
   - component: {fileID: 1820696402}
-  - component: {fileID: 1820696401}
   m_Layer: 0
   m_Name: red_flame_0 (7)
   m_TagString: Untagged
@@ -119010,18 +118088,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 430303489}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1820696401
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1820696399}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &1820696402
 Animator:
   serializedVersion: 5
@@ -120487,7 +119553,6 @@ GameObject:
   - component: {fileID: 1840749371}
   - component: {fileID: 1840749374}
   - component: {fileID: 1840749373}
-  - component: {fileID: 1840749372}
   m_Layer: 0
   m_Name: red_flame_0 (5)
   m_TagString: Untagged
@@ -120510,18 +119575,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1620304539}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1840749372
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1840749370}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &1840749373
 Animator:
   serializedVersion: 5
@@ -121328,7 +120381,6 @@ GameObject:
   - component: {fileID: 1850308050}
   - component: {fileID: 1850308053}
   - component: {fileID: 1850308052}
-  - component: {fileID: 1850308051}
   m_Layer: 0
   m_Name: red_flame_0 (6)
   m_TagString: Untagged
@@ -121351,18 +120403,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 874844369}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1850308051
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1850308049}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &1850308052
 Animator:
   serializedVersion: 5
@@ -122373,7 +121413,6 @@ GameObject:
   - component: {fileID: 1861720630}
   - component: {fileID: 1861720633}
   - component: {fileID: 1861720632}
-  - component: {fileID: 1861720631}
   m_Layer: 0
   m_Name: red_flame_0 (5)
   m_TagString: Untagged
@@ -122396,18 +121435,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1480834886}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1861720631
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1861720629}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &1861720632
 Animator:
   serializedVersion: 5
@@ -122808,7 +121835,6 @@ GameObject:
   - component: {fileID: 1864760746}
   - component: {fileID: 1864760749}
   - component: {fileID: 1864760748}
-  - component: {fileID: 1864760747}
   m_Layer: 0
   m_Name: red_flame_0 (6)
   m_TagString: Untagged
@@ -122831,18 +121857,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1479210077}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1864760747
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1864760745}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &1864760748
 Animator:
   serializedVersion: 5
@@ -124378,7 +123392,6 @@ GameObject:
   - component: {fileID: 1886166260}
   - component: {fileID: 1886166263}
   - component: {fileID: 1886166262}
-  - component: {fileID: 1886166261}
   m_Layer: 0
   m_Name: red_flame_0 (4)
   m_TagString: Untagged
@@ -124401,18 +123414,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 874844369}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1886166261
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1886166259}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &1886166262
 Animator:
   serializedVersion: 5
@@ -132619,7 +131620,6 @@ GameObject:
   - component: {fileID: 1925746115}
   - component: {fileID: 1925746118}
   - component: {fileID: 1925746117}
-  - component: {fileID: 1925746116}
   m_Layer: 0
   m_Name: red_flame_0 (4)
   m_TagString: Untagged
@@ -132642,18 +131642,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1827198551}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1925746116
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1925746114}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &1925746117
 Animator:
   serializedVersion: 5
@@ -134262,7 +133250,6 @@ GameObject:
   - component: {fileID: 1943611148}
   - component: {fileID: 1943611151}
   - component: {fileID: 1943611150}
-  - component: {fileID: 1943611149}
   m_Layer: 0
   m_Name: red_flame_0 (7)
   m_TagString: Untagged
@@ -134285,18 +133272,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 698792318}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1943611149
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1943611147}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &1943611150
 Animator:
   serializedVersion: 5
@@ -134822,7 +133797,6 @@ GameObject:
   - component: {fileID: 1959012095}
   - component: {fileID: 1959012098}
   - component: {fileID: 1959012097}
-  - component: {fileID: 1959012096}
   m_Layer: 0
   m_Name: red_flame_0 (5)
   m_TagString: Untagged
@@ -134845,18 +133819,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 88295207}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1959012096
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1959012094}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &1959012097
 Animator:
   serializedVersion: 5
@@ -137093,7 +136055,6 @@ GameObject:
   - component: {fileID: 1978847091}
   - component: {fileID: 1978847094}
   - component: {fileID: 1978847093}
-  - component: {fileID: 1978847092}
   m_Layer: 0
   m_Name: red_flame_0 (5)
   m_TagString: Untagged
@@ -137116,18 +136077,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 119597369}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1978847092
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1978847090}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &1978847093
 Animator:
   serializedVersion: 5
@@ -138610,7 +137559,6 @@ GameObject:
   - component: {fileID: 2001604893}
   - component: {fileID: 2001604896}
   - component: {fileID: 2001604895}
-  - component: {fileID: 2001604894}
   m_Layer: 0
   m_Name: red_flame_0 (7)
   m_TagString: Untagged
@@ -138633,18 +137581,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1479210077}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2001604894
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2001604892}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &2001604895
 Animator:
   serializedVersion: 5
@@ -138729,7 +137665,6 @@ GameObject:
   - component: {fileID: 2002491281}
   - component: {fileID: 2002491284}
   - component: {fileID: 2002491283}
-  - component: {fileID: 2002491282}
   m_Layer: 0
   m_Name: red_flame_0 (7)
   m_TagString: Untagged
@@ -138752,18 +137687,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1827198551}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2002491282
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2002491280}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &2002491283
 Animator:
   serializedVersion: 5
@@ -139057,7 +137980,6 @@ GameObject:
   - component: {fileID: 2008938958}
   - component: {fileID: 2008938961}
   - component: {fileID: 2008938960}
-  - component: {fileID: 2008938959}
   m_Layer: 0
   m_Name: red_flame_0 (4)
   m_TagString: Untagged
@@ -139080,18 +138002,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1480834886}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2008938959
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2008938957}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &2008938960
 Animator:
   serializedVersion: 5
@@ -139704,7 +138614,6 @@ GameObject:
   - component: {fileID: 2020970590}
   - component: {fileID: 2020970593}
   - component: {fileID: 2020970592}
-  - component: {fileID: 2020970591}
   m_Layer: 0
   m_Name: red_flame_0 (5)
   m_TagString: Untagged
@@ -139727,18 +138636,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1827198551}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2020970591
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2020970589}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &2020970592
 Animator:
   serializedVersion: 5
@@ -140289,7 +139186,6 @@ GameObject:
   - component: {fileID: 2029706069}
   - component: {fileID: 2029706072}
   - component: {fileID: 2029706071}
-  - component: {fileID: 2029706070}
   m_Layer: 0
   m_Name: red_flame_0 (7)
   m_TagString: Untagged
@@ -140312,18 +139208,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1620304539}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2029706070
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2029706068}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &2029706071
 Animator:
   serializedVersion: 5
@@ -141393,7 +140277,6 @@ GameObject:
   - component: {fileID: 2036328091}
   - component: {fileID: 2036328094}
   - component: {fileID: 2036328093}
-  - component: {fileID: 2036328092}
   m_Layer: 0
   m_Name: red_flame_0 (4)
   m_TagString: Untagged
@@ -141416,18 +140299,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 430303489}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2036328092
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2036328090}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &2036328093
 Animator:
   serializedVersion: 5
@@ -148062,7 +146933,6 @@ GameObject:
   - component: {fileID: 2065239082}
   - component: {fileID: 2065239085}
   - component: {fileID: 2065239084}
-  - component: {fileID: 2065239083}
   m_Layer: 0
   m_Name: red_flame_0 (8)
   m_TagString: Untagged
@@ -148085,18 +146955,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 328899393}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2065239083
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2065239081}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &2065239084
 Animator:
   serializedVersion: 5
@@ -148203,7 +147061,6 @@ GameObject:
   - component: {fileID: 2073001231}
   - component: {fileID: 2073001234}
   - component: {fileID: 2073001233}
-  - component: {fileID: 2073001232}
   m_Layer: 0
   m_Name: red_flame_0 (5)
   m_TagString: Untagged
@@ -148226,18 +147083,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1784140831}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2073001232
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2073001230}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &2073001233
 Animator:
   serializedVersion: 5
@@ -149228,7 +148073,6 @@ GameObject:
   - component: {fileID: 2091200512}
   - component: {fileID: 2091200515}
   - component: {fileID: 2091200514}
-  - component: {fileID: 2091200513}
   m_Layer: 0
   m_Name: red_flame_0 (5)
   m_TagString: Untagged
@@ -149251,18 +148095,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1629526757}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2091200513
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2091200511}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &2091200514
 Animator:
   serializedVersion: 5
@@ -150381,7 +149213,6 @@ GameObject:
   - component: {fileID: 2115933477}
   - component: {fileID: 2115933480}
   - component: {fileID: 2115933479}
-  - component: {fileID: 2115933478}
   m_Layer: 0
   m_Name: red_flame_0 (8)
   m_TagString: Untagged
@@ -150404,18 +149235,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1827198551}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2115933478
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2115933476}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03d835f862f58074b859165457db4dde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &2115933479
 Animator:
   serializedVersion: 5
