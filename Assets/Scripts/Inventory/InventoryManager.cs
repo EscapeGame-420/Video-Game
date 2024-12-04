@@ -131,7 +131,7 @@ public class InventoryManager : MonoBehaviour
 
     // Other methods in InventoryManager...
 
-    void Update()
+    void LateUpdate()
     {
           if (inventory == null)
         {
@@ -166,9 +166,14 @@ public class InventoryManager : MonoBehaviour
         float scroll = Input.GetAxis("Mouse ScrollWheel");
         if (scroll != 0f)
         {
+            try{
+
             selecting = (selecting + (scroll > 0f ? -1 : 1) + totalSlots) % totalSlots;
             IsSelected(selecting);
             Debug.Log($"Slot {selecting + 1} selected via scroll.");
+            }catch{
+                Debug.Log("No slot selected");
+            }
         }
     }
 
