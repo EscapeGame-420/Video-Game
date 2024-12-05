@@ -19,7 +19,11 @@ public class ThrowTrash : MonoBehaviour
         // If the player is not assigned manually in the inspector, find it automatically
         if (player == null)
         {
-            player = GameObject.FindGameObjectWithTag("Player").transform;
+            player = GameObject.Find("Julie").transform;
+            if (player == null)
+            {
+                GameObject playerObject = GameObject.FindWithTag("Player");
+            }
             bucket = GameObject.Find("bucket");
             bucketScript = GameObject.Find("bucketScript").GetComponent<Bucket>();
         }

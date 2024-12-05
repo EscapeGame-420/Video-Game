@@ -26,7 +26,23 @@ public class GameEnvironment {
                 instance = new GameEnvironment();
  
                 // Récupère tous les objets avec le tag "Checkpoint" et les ajoute à la liste checkpoints
-                instance.Checkpoints.AddRange(GameObject.FindGameObjectsWithTag("Checkpoint"));
+                GameObject parent = GameObject.Find("AI");
+                if (parent != null)
+                {
+                    instance.checkpoints = new List<GameObject>();
+                    foreach (Transform child in parent.GetComponentsInChildren<Transform>())
+                    {
+                        if (child.CompareTag("Checkpoint"))
+                        {
+                            instance.checkpoints.Add(child.gameObject);
+                        }
+                    }
+                }
+                else
+                {
+                    instance.checkpoints = new List<GameObject>();
+                    Debug.LogWarning("No parent GameObject named 'CheckpointsParent' found.");
+                }
  
                 // Trie la liste des checkpoints par nom pour garantir un ordre constant
                 instance.checkpoints = instance.checkpoints.OrderBy(waypoint => waypoint.name).ToList();

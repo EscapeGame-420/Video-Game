@@ -22,12 +22,12 @@ public class Plank : MonoBehaviour
         audioSource.clip = selectionSound;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (player == null) return;
 
         float distance = Vector3.Distance(transform.position, player.position);
-        Inventory inventory = FindFirstObjectByType<Inventory>();
+        Inventory inventory = player.gameObject.GetComponent<Inventory>();
 
         UpdateCanvasVisibility(distance);
         if (CanActivateCanvas(distance, inventory))
@@ -59,6 +59,18 @@ public class Plank : MonoBehaviour
             canvasCreated = true;
 
             canvasTransform = transform.Find(this.gameObject.name+"Canvas");
+             if (canvasTransform == null)
+            {
+                // Find the canvas dynamically if it hasn't been assigned
+                foreach (Transform child in transform)
+                {
+                    if (child.name.Contains("Canvas"))
+                    {
+                        canvasTransform = child;
+                        break;
+                    }
+                }
+            }
             if (canvasTransform != null)
             {
                 canvasTransform.localPosition = new Vector3(1.67f, 2.37f, -0.5f);
@@ -81,7 +93,6 @@ public class Plank : MonoBehaviour
             if (gameObject.transform.childCount <= 3)
             {
                 Destroy(gameObject);
-                Destroy(canvasTransform.gameObject);
                 inventory.UseItem("crowbar");
             }
         }

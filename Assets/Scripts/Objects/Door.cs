@@ -7,9 +7,10 @@ public class Door : MonoBehaviour
     public Transform player;
     public float activationDistance = 7.0f;
     private bool canvasCreated = false; // Flag to track if the canvas has been created
-    Animator animator;
     public static float lockopened = 0;
     private Transform canvasTransform; // Reference to the created canvas
+    public Animator animatorDoor;
+    public BoxCollider box;
     void Start()
     {
         // If the player is not assigned manually in the inspector, find it automatically
@@ -23,15 +24,12 @@ public class Door : MonoBehaviour
     void FixedUpdate()
     {
         if (player == null) return;
-        animator = GetComponent<Animator>();
+        
         float distance = Vector3.Distance(transform.position, player.position);
         Inventory inventory = FindFirstObjectByType<Inventory>();
-        if (!(distance <= activationDistance && lockopened==3)) {
+        if (!(distance <= activationDistance && lockopened == 4)){ 
             return;
-        }else{
-
         }
-        
 
         // Check if the canvas has already been created
         if (!canvasCreated)
@@ -49,12 +47,27 @@ public class Door : MonoBehaviour
 
             //Debug.LogError("too far");
 
-        if (Input.GetKeyDown("e") && lockopened== 4)
+        if (Input.GetKeyDown("e"))
         {
-            GetComponent<Animator>().enabled = true;
-            Destroy(canvasTransform.gameObject);
-            GetComponent<BoxCollider>().enabled = false;
-    
+            if (canvasTransform == null){
+                // Find the canvas dynamically if it hasn't been assigned
+                try{
+
+                foreach (Transform child in transform)
+                {
+                    if (child.name.Contains("Canvas"))
+                    {
+                        canvasTransform = child;
+                        break;
+                    }
+                }
+                }catch{
+                    Debug.LogError("Canvas not found");
+                }
+                Destroy(canvasTransform.gameObject);
+            }
+            animatorDoor.SetBool("IsIdle", true);
+            box.enabled = false;  
         }
         }
         public void OpenLock()

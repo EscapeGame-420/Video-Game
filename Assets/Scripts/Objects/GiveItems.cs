@@ -13,16 +13,25 @@ public class GiveItems : MonoBehaviour
     public float z =0;
     public Sprite spritetorch;
     public string itemName;
+    public Inventory inventory;
     public Transform canvasTransform; // Reference to the created canvas
 
 
-    void Start()
+    void Awake()
     {
         // If the player is not assigned manually in the inspector, find it automatically
-        if (player == null)
+       if (player == null)
         {
             player = GameObject.FindGameObjectWithTag("Player").transform;
-
+            if (player == null)
+            {
+                player = GameObject.Find("Julie").transform;
+            }
+            inventory = GameObject.Find("Julie").GetComponent<Inventory>();
+            if (inventory == null)
+            {
+                Debug.LogError("No inventory found");
+            }
         }
     }
 
@@ -31,13 +40,18 @@ public class GiveItems : MonoBehaviour
         if (player == null) return;
 
         float distance = Vector3.Distance(transform.position, player.position);
-        Inventory inventory = FindFirstObjectByType<Inventory>();
+        
         // Check if the canvas has already been created
         HandleCanvasCreation();
         
         
         if (!CanActivateCanvas(distance, inventory)){
             canvasTransform.gameObject.SetActive(false);
+            Debug.Log("Can't activate canvas, too far away. Distance: " + distance);
+            if(inventory.IncludeItemName(itemName)){
+                Debug.Log("Had torch in inventory");
+                return;
+            }
             return;
         }
         else
@@ -46,7 +60,6 @@ public class GiveItems : MonoBehaviour
         }
 
         
-        Debug.Log("Le joueur s'approche");
         if (Input.GetKeyDown("e") &&  CanActivateCanvas(distance, inventory))
         {
             HandleInteraction(inventory);
@@ -54,7 +67,7 @@ public class GiveItems : MonoBehaviour
     }
     public bool CanActivateCanvas(float distance, Inventory inventory)
     {
-        return distance <= activationDistance && inventory != null && !inventory.IncludeItemName(itemName);
+        return distance <= activationDistance ;
     }
     public void HandleCanvasCreation()
     {

@@ -21,6 +21,10 @@ public class Lock : MonoBehaviour
         if (player == null)
         {
             player = GameObject.FindGameObjectWithTag("Player").transform;
+            if (player == null)
+            {
+                player = GameObject.Find("Julie").transform;
+            }
         }
         foreach (Transform child in transform){
             if (child.name == "Padlock"){

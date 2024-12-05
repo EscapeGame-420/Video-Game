@@ -15,6 +15,10 @@ public class Frame : MonoBehaviour
         if (player == null)
         {
             player = GameObject.FindGameObjectWithTag("Player").transform;
+            if (player == null)
+            {
+                player = GameObject.Find("Julie").transform;
+            }
         }
     }
 

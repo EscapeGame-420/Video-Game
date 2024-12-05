@@ -19,7 +19,7 @@ public class Painting : MonoBehaviour
         {
             player = GameObject.Find("Julie").transform;
             if (player == null){
-                Debug.LogError("Player not found"); 
+                player=GameObject.FindGameObjectWithTag("Player").transform;
             }else{
                 Debug.Log("Player found");
             }
@@ -37,7 +37,7 @@ public class Painting : MonoBehaviour
         if(player == null) return;
 
         float distance = Vector3.Distance(transform.position, player.position);
-        Inventory inventory = FindFirstObjectByType <Inventory>();
+        Inventory inventory = FindFirstObjectByType<Inventory>();
         if (!(distance <= activationDistance && inventory.IncludeItemName("greenFlameCandle") && !GetComponent<Animator>().enabled) ) return;
 
         //if(!transform.Find("PaintingCanvas")) Item.CreateCanvas(this.gameObject);

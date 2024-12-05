@@ -34,7 +34,7 @@ public class Item : MonoBehaviour
         Debug.Log("Item initialized: " + itemName);
     }
 
-    void LateUpdate()
+    void Update()
     {
         HandleCanvasVisibility();
         HandleItemPickup();
@@ -48,10 +48,10 @@ public class Item : MonoBehaviour
         audioSource.playOnAwake = false;
         player = GameObject.Find("Julie").transform;
         if (player == null){
-                Debug.LogError("Player not found"); 
-            }else{
-                Debug.Log("Player found");
-            }
+            player = GameObject.FindGameObjectWithTag("Player").transform;
+        }else{
+            Debug.Log("Player found");
+        }
         inventory = player.GetComponent<Inventory>();
     }
 

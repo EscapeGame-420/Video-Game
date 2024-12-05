@@ -17,20 +17,24 @@ public class Obstacle : MonoBehaviour
     bool isGassed = false;
     public GameObject shelf;
     public GameObject shelf1;
-
-    void Start()
+public Inventory inventory;
+    void Awake()
     {
         // If the player is not assigned manually in the inspector, find it automatically
         if (player == null)
+        
+
         {
             player = GameObject.FindGameObjectWithTag("Player").transform;
+            if (player == null)
+            {
+                player = GameObject.Find("Julie").transform;
+            }
             barrier = GameObject.Find("Barrier");
             flames = GameObject.Find("Flames");
             steaming = GameObject.Find("Gas");
             shelf = GameObject.Find("Shelves");
             shelf1 = GameObject.Find("Shelves (1)");
-            flames.SetActive(false);
-            steaming.SetActive(false);
         }
     }
 
@@ -39,7 +43,10 @@ public class Obstacle : MonoBehaviour
         if (player == null) return;
 
         float distance = Vector3.Distance(transform.position, player.position);
-        Inventory inventory = FindFirstObjectByType<Inventory>();
+        if (inventory == null)
+        {
+            inventory = FindFirstObjectByType<Inventory>();
+        }
         if (!canvasCreated)
         {
             Item.CreateCanvas(this.gameObject);
@@ -66,21 +73,22 @@ public class Obstacle : MonoBehaviour
 
         Debug.Log("Le joueur s'approche avec la bougie. Activation du tableau");
 
-        if (Input.GetKeyDown("e") && (inventory.IsSelectingItem(itemName) || inventory.IsSelectingItem(itemName1)))
+        if (Input.GetKeyDown("e") && (inventory.IsSelectingItem(itemName) || inventory.IsSelectingItem(itemName1))&& distance <= activationDistance)
         {
             switch (isGassed)
             {
                 case false:
                     inventory.UseItem(itemName);
                     isGassed = true;
-                    barrier.SetActive(false);
+                    Destroy(barrier);
                     steaming.SetActive(true);
-                    StartCoroutine(StartFlameTimer());
                     break;
                 case true:
                     inventory.UseItem(itemName1);
                     flames.SetActive(true);
                     steaming.SetActive(false);
+
+                    StartCoroutine(StartFlameTimer());
                     break;
             }
 
@@ -95,10 +103,10 @@ public class Obstacle : MonoBehaviour
         // Delete the shelf
         if (shelf != null)
         {
-            shelf.SetActive(false);
-            shelf1.SetActive(false);
-            flames.SetActive(false);
-            steaming.SetActive(false);
+            Destroy(shelf);
+            Destroy(shelf1);
+            Destroy(flames);
+            Destroy(steaming);
         }
     }
 }

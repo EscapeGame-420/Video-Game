@@ -20,7 +20,7 @@ public class KeyCounter : MonoBehaviour
     int lockOpened = 0;
     for (int i = 0; i < inventory.items.Length; i++)
     {
-        if (inventory.items[i].itemName == "gold" || inventory.items[i].itemName == "red" || inventory.items[i].itemName == "blue")
+        if (inventory.items[i].itemName == "gold" || inventory.items[i].itemName == "red" || inventory.items[i].itemName == "blue"|| inventory.items[i].itemName == "green")
         {
             lockOpened++;
         }

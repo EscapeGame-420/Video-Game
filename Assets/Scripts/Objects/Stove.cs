@@ -17,7 +17,11 @@ public class Stove : MonoBehaviour
         // If the player is not assigned manually in the inspector, find it automatically
         if (player == null)
         {
-            player = GameObject.FindGameObjectWithTag("Player").transform;
+            player = GameObject.Find("Julie").transform;
+            if (player == null)
+            {
+                player = GameObject.FindGameObjectWithTag("Player").transform;
+            }
             fireparticleEffect = GameObject.Find("stoveFire");
             fireparticleEffect.SetActive(false);
         }

@@ -22,14 +22,17 @@ public class Bucket : MonoBehaviour
 
     public List<string> mixItems;
     public GameObject bucketObject;
-
-
+    public Inventory inventory;
     void Start()
     {
         // If the player is not assigned manually in the inspector, find it automatically
         if (player == null)
         {
             player = GameObject.FindGameObjectWithTag("Player").transform;
+            if (player == null)
+            {
+                player = GameObject.Find("Julie").transform;
+            }
             goodeffect.SetActive(false);
             badeffect.SetActive(false);
 
@@ -41,7 +44,7 @@ public class Bucket : MonoBehaviour
         if (player == null) return;
 
         float distance = Vector3.Distance(transform.position, player.position);
-        Inventory inventory = FindFirstObjectByType<Inventory>();
+        inventory = FindFirstObjectByType<Inventory>();
         // Check if the canvas has already been created
         HandleCanvasCreation();
         if (CanNotActivateCanvas(distance, inventory))
