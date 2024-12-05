@@ -10,7 +10,16 @@ public class DoorControllerRoom1 : MonoBehaviour
     public float speed = 2f;  
     public float interactionDistance = 5.0f;  
     public bool opening = false;  
-    public Transform interactableObject;  
+    public Transform interactableObject; 
+
+     public AudioClip doorSound;
+
+    private AudioSource audioSource;
+
+    void Start()
+    {
+        audioSource = gameObject.AddComponent<AudioSource>();
+    } 
 
     void Update()
     {
@@ -49,5 +58,6 @@ public class DoorControllerRoom1 : MonoBehaviour
     public void ToggleDoor()
     {
         opening = !opening;  
+        audioSource.PlayOneShot(doorSound);
     }
 }

@@ -12,6 +12,14 @@ public class DoorControllerNassimRoom : MonoBehaviour
     public bool opening = false;  
     public Transform interactableObject;  
 
+    public AudioClip doorSound;
+
+     private AudioSource audioSource;
+
+    void Start()
+    {
+        audioSource = gameObject.AddComponent<AudioSource>();
+    }
     void Update()
     {
         if (interactableObject != null)
@@ -49,5 +57,8 @@ public class DoorControllerNassimRoom : MonoBehaviour
     public void ToggleDoor()
     {
         opening = !opening;  
+
+        audioSource.PlayOneShot(doorSound);
+        
     }
 }

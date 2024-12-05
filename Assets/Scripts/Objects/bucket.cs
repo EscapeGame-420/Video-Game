@@ -23,6 +23,11 @@ public class Bucket : MonoBehaviour
     public List<string> mixItems;
     public GameObject bucketObject;
     public Inventory inventory;
+
+    public AudioClip goodEffectSound;
+    public AudioClip badEffectSound;
+
+    private AudioSource audioSource;
     void Start()
     {
         // If the player is not assigned manually in the inspector, find it automatically
@@ -37,6 +42,7 @@ public class Bucket : MonoBehaviour
             badeffect.SetActive(false);
 
         }
+        audioSource = gameObject.AddComponent<AudioSource>();
     }
 
     void Update()
@@ -73,10 +79,12 @@ public class Bucket : MonoBehaviour
             if (string.Join(",", mixItems) == "bones,eyeball,eyeball")
             {
             goodeffect.SetActive(true);
+            audioSource.PlayOneShot(goodEffectSound);
             }
             else
             {
             badeffect.SetActive(true);
+            audioSource.PlayOneShot(badEffectSound);
             }
         }
         else

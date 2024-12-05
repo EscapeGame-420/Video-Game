@@ -15,9 +15,14 @@ public class Clock : MonoBehaviour
     public bool hasRun = false;
     public bool canPick = false;
 
+    public AudioClip clockSound;
+
+    private AudioSource audioSource;
+
     void Start()
     {
         InitializeClock();
+        audioSource = gameObject.AddComponent<AudioSource>();
     }
 
     void Update()
@@ -91,6 +96,8 @@ public class Clock : MonoBehaviour
         aiguille.SetActive(true);
         hasRun = true;
         canPick = true;
+
+        //audioSource.PlayOneShot(clockSound);
     }
 
     public void FinalizeClockInteraction()

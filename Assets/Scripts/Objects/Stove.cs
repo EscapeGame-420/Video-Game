@@ -12,6 +12,9 @@ public class Stove : MonoBehaviour
     private Transform canvasTransform; // Reference to the created canvas
     public GameObject fireparticleEffect;
     public string itemName;
+
+    public AudioClip fireSound;
+    private AudioSource audioSource;
     void Start()
     {
         // If the player is not assigned manually in the inspector, find it automatically
@@ -25,6 +28,8 @@ public class Stove : MonoBehaviour
             fireparticleEffect = GameObject.Find("stoveFire");
             fireparticleEffect.SetActive(false);
         }
+
+        audioSource = gameObject.AddComponent<AudioSource>();
     }
 
     void FixedUpdate()
@@ -38,6 +43,7 @@ public class Stove : MonoBehaviour
         return;
         }else{
             fireparticleEffect.SetActive(true);
+            audioSource.PlayOneShot(fireSound);
         }
 
         // Check if the canvas has already been created

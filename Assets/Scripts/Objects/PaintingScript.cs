@@ -6,12 +6,14 @@ public class Painting : MonoBehaviour
 {
     
     [SerializeField] public AudioClip PaintingMovingSound; // Sound for pulling the book
+    [SerializeField] public AudioClip whispers; // Sound to attract to painting
     public GameObject crowbar;
     public Transform player;
     public float activationDistance = 7.0f;
     public bool isCandleNear = false;
-    private AudioSource audioSource;
-    // Start is called before the first frame update
+    private AudioSource whispAudioSource; // for whispers
+    private AudioSource paintAudioSource; // for painting when moving
+    
     void Awake()
     {
         // Si le joueur n'est pas assign� manuellement dans l'inspecteur, trouvez-le automatiquement
@@ -25,9 +27,21 @@ public class Painting : MonoBehaviour
             }
             crowbar = GameObject.Find("crowbar (1)");
             crowbar.SetActive(false);
-            audioSource = gameObject.AddComponent<AudioSource>();
-            audioSource.playOnAwake = false;
         }
+        paintAudioSource = gameObject.AddComponent<AudioSource>();
+        paintAudioSource.playOnAwake = false;
+
+        whispAudioSource =GetComponent<AudioSource>();
+        whispAudioSource.playOnAwake = false;
+        whispAudioSource.clip = whispers;
+        //whispAudioSource.loop = true; // whisperSound on loop 
+    }
+
+    void Start()
+    {
+        // whisper sound
+        whispAudioSource.volume = 1.0f;
+        whispAudioSource.Play();
     }
 
     // Update is called once per frame
@@ -45,14 +59,49 @@ public class Painting : MonoBehaviour
         Debug.Log("Le joueur s'approche avec la bougie. Activation du tableau");
 
         if (inventory.IsSelectingItem("greenFlameCandle")){
-            audioSource.clip = PaintingMovingSound;
-            audioSource.Play();
+            // removing whispers sound with fade out effect + begining sound painting moving
+            StartCoroutine(playPaintingSounds());
+
+            //paintAudioSource.clip = PaintingMovingSound;
+            //paintAudioSource.Play();
+
+            //whispAudioSource.Stop();
+
             GetComponent<Animator>().enabled = true;
             inventory.UseItem("greenFlameCandle");
             Destroy(GameObject.Find("ToShowCandle"));
             crowbar.SetActive(true);
         }
         
+    }
+
+    private IEnumerator playPaintingSounds()
+    {
+        paintAudioSource.clip = PaintingMovingSound;
+        paintAudioSource.Play();
+
+        
+
+        if(whispAudioSource.isPlaying && whispAudioSource.clip == whispers)
+        {
+           // initial volume
+            float startVolume = whispAudioSource.volume;
+            // fading duration
+            float duration = 1.0f;
+
+            // Source : https://discussions.unity.com/t/fade-out-audio-source/585912
+            while(whispAudioSource.volume > 0 )
+            {
+                // volume = volume -(start volume value between 0 and 1 / duration)
+                whispAudioSource.volume -= startVolume * Time.deltaTime / duration;
+                yield return null;
+            }
+            whispAudioSource.Stop(); // stop whispers
+            //audioSource.loop = false; // stop the loop
+            // reset volume
+            whispAudioSource.volume = startVolume;
+        }
+
     }
 }
 

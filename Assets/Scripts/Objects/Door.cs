@@ -11,6 +11,11 @@ public class Door : MonoBehaviour
     private Transform canvasTransform; // Reference to the created canvas
     public Animator animatorDoor;
     public BoxCollider box;
+
+    public AudioClip keyUnlockSound; // Sound for unlocking with a key
+    public AudioClip doorOpenSound;  // Sound for when game finishes (door opens)
+    private AudioSource audioSource;
+
     void Start()
     {
         // If the player is not assigned manually in the inspector, find it automatically
@@ -19,6 +24,7 @@ public class Door : MonoBehaviour
             player = GameObject.Find("Julie").transform;
 
         }
+        audioSource = gameObject.AddComponent<AudioSource>();
     }
 
     void FixedUpdate()
@@ -68,11 +74,15 @@ public class Door : MonoBehaviour
             }
             animatorDoor.SetBool("IsIdle", true);
             box.enabled = false;  
+
+            audioSource.PlayOneShot(doorOpenSound);
         }
         }
         public void OpenLock()
         {
             lockopened = lockopened + 1;
+
+            audioSource.PlayOneShot(keyUnlockSound);
             //Debug.LogError("Lock opened: " + lockopened);
         }
         }

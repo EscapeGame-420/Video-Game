@@ -18,6 +18,9 @@ public class Obstacle : MonoBehaviour
     public GameObject shelf;
     public GameObject shelf1;
 public Inventory inventory;
+
+    public AudioClip fumee;
+    private AudioSource audioSource;
     void Awake()
     {
         // If the player is not assigned manually in the inspector, find it automatically
@@ -40,6 +43,11 @@ public Inventory inventory;
 
     void Update()
     {
+
+        audioSource =GetComponent<AudioSource>();
+        audioSource.playOnAwake = false;
+        audioSource.clip = fumee;
+
         if (player == null) return;
 
         float distance = Vector3.Distance(transform.position, player.position);
@@ -103,6 +111,7 @@ public Inventory inventory;
         // Delete the shelf
         if (shelf != null)
         {
+            audioSource.Stop(); 
             Destroy(shelf);
             Destroy(shelf1);
             Destroy(flames);
