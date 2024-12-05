@@ -11,9 +11,15 @@ public class Stove : MonoBehaviour
     public Sprite spritetorch;
     private Transform canvasTransform; // Reference to the created canvas
     public GameObject fireparticleEffect;
+    public AudioClip stoveSound;
+    private AudioSource audioSource;
     public string itemName;
     void Start()
     {
+        // Initialize AudioSource
+        audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource.playOnAwake = false;
+
         // If the player is not assigned manually in the inspector, find it automatically
         if (player == null)
         {
@@ -33,6 +39,12 @@ public class Stove : MonoBehaviour
             fireparticleEffect.SetActive(false);
         return;
         }else{
+            // Play stove sound
+            if (stoveSound != null)
+            {
+                audioSource.clip = stoveSound;
+                audioSource.Play();
+            }
             fireparticleEffect.SetActive(true);
         }
 

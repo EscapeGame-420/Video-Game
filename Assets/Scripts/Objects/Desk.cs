@@ -17,7 +17,7 @@ public class DrawerController : MonoBehaviour
     private bool isDrawerOpen = false; // Tracks the state of the drawer
     private bool isAnimating = false; // Prevents multiple activations during animation
     public static bool isOpenedOnce = false; // to make sure the player read the enigme before finding the object
-    public GameObject text ;
+    public GameObject text;
     private Vector3 closedPosition;
     private Vector3 openPosition;
 
