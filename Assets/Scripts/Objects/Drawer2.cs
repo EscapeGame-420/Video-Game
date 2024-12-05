@@ -24,6 +24,7 @@ public class Drawer2 : MonoBehaviour
 
     private Vector3 closedPosition;
     private Vector3 openPosition;
+    public GameObject text;
 
     // Start is called before the first frame update
     private void Start()
@@ -41,7 +42,9 @@ public class Drawer2 : MonoBehaviour
         {
             key.SetActive(false);
         }
-        
+
+        //Don't show text (The answer to the riddle was, indeed, A shirt)
+        text.SetActive(false);
     }
 
     // Update is called once per frame
@@ -61,10 +64,15 @@ public class Drawer2 : MonoBehaviour
                 {
                     //interactionCanvas.enabled = false; // Hide prompt during interaction
  
+                    //Show text (The answer to the riddle was, indeed, A shirt)
+                    text.SetActive(true);
+
                     Debug.Log("This drawer is locked. Find the required item to unlock it!");
                 }
                 else
                 {
+                    //Hide text (The answer to the riddle was, indeed, A shirt)
+                    //text.SetActive(false);
                     if (!isDrawerOpen)
                     {
                         StartCoroutine(OpenDrawer());
@@ -81,6 +89,8 @@ public class Drawer2 : MonoBehaviour
 
     public void UnlockDrawer()
     {
+        //Hide text (The answer to the riddle was, indeed, A shirt)
+        //text.SetActive(false);
         isLocked = false;
         Debug.Log("This drawer is now unlocked!");
     }

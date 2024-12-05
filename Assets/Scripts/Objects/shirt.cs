@@ -12,10 +12,12 @@ public class Shirt : MonoBehaviour
     [SerializeField] private Drawer2 drawer2; // Reference to Drawer2 script to unlock it
     
     
-    private Canvas canvas; // Canvas to show "F" prompt to let the player understand how to activate the shirt element
-    private TextMeshProUGUI textCanvas; // "F"  for press f
+    //private Canvas canvas; // Canvas to show "F" prompt to let the player understand how to activate the shirt element
+    //private TextMeshProUGUI textCanvas; // "F"  for press f
     private AudioSource audioSource;
     private bool shirtActivated = false; // if shirt has been activated
+    public GameObject text;
+    public GameObject text2;
 
     private void Start()
     {
@@ -24,7 +26,12 @@ public class Shirt : MonoBehaviour
         audioSource.playOnAwake = false;
 
         // create canvas with text
-        CreateCanvas();
+        //CreateCanvas();
+
+        //Don't show text (The answer to the riddle was, indeed, A shirt)
+        text.SetActive(false);
+        //Show text (This drawer is locked... )
+        //text2.SetActive(true);
     }
 
     private void Update()
@@ -37,23 +44,28 @@ public class Shirt : MonoBehaviour
         if (distance <= activationDistance && !shirtActivated)
         {
             // show canvas
-            ShowCanvas(true);
+           // ShowCanvas(true);
             if (Input.GetKeyDown(KeyCode.F))
             {
                 // hide canvas after starting animation
-                ShowCanvas(false);
+                //ShowCanvas(false);
                 StartCoroutine(PullOutShirt());
             }
         }
-        else 
-        {
+        //else 
+        //{
             // when not in activation distance hide
-            ShowCanvas(false);
-        }
+            //ShowCanvas(false);
+        //}
     }
 
     private IEnumerator PullOutShirt()
     {
+        //Hide text (This drawer is locked... )
+        text2.SetActive(false);
+        //show text (The answer to the riddle was, indeed, A shirt)
+        text.SetActive(true);
+
         shirtActivated = true;
 
         // Play pull sound (if available)
@@ -98,43 +110,43 @@ public class Shirt : MonoBehaviour
 
     }
 
-    private void CreateCanvas()
-    {
-        // Create Canvas GameObject
-        GameObject canvasGO = new GameObject("canvas");
-        canvas = canvasGO.AddComponent<Canvas>();
-        canvas.renderMode = RenderMode.WorldSpace;
+    // private void CreateCanvas()
+    // {
+    //     // Create Canvas GameObject
+    //     GameObject canvasGO = new GameObject("canvas");
+    //     canvas = canvasGO.AddComponent<Canvas>();
+    //     canvas.renderMode = RenderMode.WorldSpace;
 
-        // size and position
-        RectTransform canvasRect = canvas.GetComponent<RectTransform>();
-        canvasRect.sizeDelta = new Vector2(200, 100);
-        canvasRect.position = transform.position + Vector3.up * 1.5f; // position above the shirt
+    //     // size and position
+    //     RectTransform canvasRect = canvas.GetComponent<RectTransform>();
+    //     canvasRect.sizeDelta = new Vector2(200, 100);
+    //     canvasRect.position = transform.position + Vector3.up * 1.5f; // position above the shirt
 
-        // Create Text GameObject
-        GameObject textGO = new GameObject("text");
-        textGO.transform.SetParent(canvasGO.transform);
-        textCanvas = textGO.AddComponent<TextMeshProUGUI>();
+    //     // Create Text GameObject
+    //     GameObject textGO = new GameObject("text");
+    //     textGO.transform.SetParent(canvasGO.transform);
+    //     textCanvas = textGO.AddComponent<TextMeshProUGUI>();
 
-        //  configure Text "F" for Press F 
-        textCanvas.text = "F";
-        textCanvas.fontSize = 36;
-        textCanvas.alignment = TextAlignmentOptions.Center;
-        textCanvas.color = Color.white;
+    //     //  configure Text "F" for Press F 
+    //     textCanvas.text = "F";
+    //     textCanvas.fontSize = 36;
+    //     textCanvas.alignment = TextAlignmentOptions.Center;
+    //     textCanvas.color = Color.white;
 
-        // Set Text RectTransform
-        RectTransform textRect = textCanvas.GetComponent<RectTransform>();
-        textRect.sizeDelta = new Vector2(200, 100);
-        textRect.anchoredPosition = Vector2.zero;
+    //     // Set Text RectTransform
+    //     RectTransform textRect = textCanvas.GetComponent<RectTransform>();
+    //     textRect.sizeDelta = new Vector2(200, 100);
+    //     textRect.anchoredPosition = Vector2.zero;
 
-        // Hide Canvas initially
-        canvasGO.SetActive(false);
-    }
+    //     // Hide Canvas initially
+    //     canvasGO.SetActive(false);
+    // }
 
-    private void ShowCanvas(bool show)
-    {
-        if (canvas != null)
-        {
-            canvas.gameObject.SetActive(show);
-        }
-    }
+    // private void ShowCanvas(bool show)
+    // {
+    //     if (canvas != null)
+    //     {
+    //         canvas.gameObject.SetActive(show);
+    //     }
+    // }
 }
